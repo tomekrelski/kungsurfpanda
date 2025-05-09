@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Surf Panda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Kung Surf Panda</div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kite.html">Kite</a></li>
+            <li><a href="surf.html">Surf</a></li>
+        </ul>
+    </nav>
+
+    <section class="wrapper">
+        <div class="container">
+            <img src="images/prana.jpg" alt="Prana and Meditation Journey" />
+            <div class="description">
+                <p id="shortTextPrana">
+                    My journey with meditation began at the age of 12, when I started practicing Aikido and Yoga. That early
+                    exposure sparked a deep interest in mindfulness and inner awareness.
+                </p>
+                <p id="fullTextPrana" style="display: none;">
+                    I was fortunate to learn from experienced masters in the Himalayan tradition, where I studied Pranayama,
+                    Yoga Nidra, and various meditation techniques.<br><br>
+                    A true turning point came in 2018, when I completed my first 10-day Vipassana retreat in Thailand — a
+                    life-changing experience that reshaped my daily habits. I followed it up with a second retreat one year
+                    later.<br><br>
+                    Since that first Vipassana, meditation has become an essential part of my life. I’ve maintained a
+                    consistent daily practice, meditating for at least 10 minutes every single day.<br><br>
+                    I'm also deeply interested in breathwork, which helps me reach deeper meditative states, as well as
+                    dynamic body-mind practices like ecstatic dance.
+                </p>
+                <button class="read-more-btn" onclick="toggleTextPrana()">Read more</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="services">
+        <h2>Services</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="Personalized guidance in various meditation techniques to help cultivate inner stillness, presence, and clarity.">Meditation
+                Lesson</button>
+            <button class="btn btn-white"
+                data-service="Explore powerful breathing techniques that support emotional release, mental focus, and energetic balance.">Breathwork</button>
+            <button class="btn btn-black"
+                data-service="Free-form movement sessions to connect body and mind, release stress, and experience joy through dance.">Ecstatic
+                Dance</button>
+            <button class="btn btn-white"
+                data-service="Mindful walking practice to ground yourself in the present moment, harmonize breath and steps, and connect with nature.">Mindful
+                Walk</button>
+            <button class="btn btn-black"
+                data-service="Learn ancient yogic breathing practices to regulate energy, calm the nervous system, and enhance meditation.">Pranayama</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Service Info</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank"> WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com"> E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank"> Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

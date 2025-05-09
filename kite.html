@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda – Kite</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Kung Surf Panda</div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="surf.html">Surf</a></li>
+            <li><a href="prana.html">Prana</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="wrapper">
+            <div class="container">
+                <img src="images/kite.jpg" alt="Tomek Kitesurfing" />
+                <div class="description">
+                    <p id="shortText">
+                        My journey with kitesurfing began in 2004 at Lake Miedwie in Poland. It was a long and
+                        challenging path,
+                        learning on my own with my father from VHS tapes.
+                    </p>
+                    <p id="fullText" style="display: none;">
+                        In 2005, I spent my first summer in Tarifa and instantly fell in love with the place. I was
+                        kiting 5–6
+                        hours a day and spending all my time on the beach.<br><br>
+                        I trained across Europe and later moved to Tarifa permanently in 2011. Since 2017, I’ve been
+                        teaching at
+                        Alex Pastor Kite Club, helping students progress with safety and confidence.
+                    </p>
+                    <button class="read-more-btn" onclick="toggleText()">Read more</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Services</h2>
+            <div class="button-group">
+                <button class="btn btn-black" data-service="Personalized lessons tailored to your level and goals.">
+                    Kite Lesson
+                </button>
+                <button class="btn btn-white" data-service="Gear buying advice to avoid costly mistakes.">
+                    Equipment Advice
+                </button>
+                <button class="btn btn-black" data-service="Join beach workouts for mobility and strength.">
+                    Workout
+                </button>
+                <button class="btn btn-white" data-service="Consulting for launching a kite business.">
+                    Business Consulting
+                </button>
+                <button class="btn btn-black" data-service="Send riding videos for detailed feedback and drills.">
+                    Video Coaching
+                </button>
+                <button class="btn btn-white" data-service="1-on-1 instructor mentoring and teaching tips.">
+                    Instructor Coaching
+                </button>
+            </div>
+        </section>
+
+        <section class="section card-section">
+            <div class="info-card">
+                <p>Book your kitesurfing lesson with me directly and use your personal discount code!</p>
+                <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Book Now with Tomek</a>
+                <div class="discount-code">
+                    <span>Discount code:</span>
+                    <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                    <button class="copy-btn" onclick="copyCode('discountCode2')">Copy</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <p>Interested in other services? Reach out directly via WhatsApp, email, or Instagram:</p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                    <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                    <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Service Info</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

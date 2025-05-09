@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Kung Surf Panda</div>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="kite.html">Kite</a></li>
+            <li><a href="surf.html">Surf</a></li>
+            <li><a href="prana.html">Prana</a></li>
+        </ul>
+    </nav>
+
+    <div class="section">
+        <h1>Welcome to Kung Surf Panda</h1>
+        <p>I’m a Polish instructor living in Tarifa, Spain, ready to share my knowledge and experience in the following
+            skills:</p>
+    </div>
+
+    <div class="section gallery">
+        <a href="kite.html">
+            <img src="images/kite.jpg" alt="Kitesurfing" />
+            <p>Kite</p>
+        </a>
+        <a href="surf.html">
+            <img src="images/Surf.jpg" alt="Surfing" />
+            <p>Surf</p>
+        </a>
+        <a href="prana.html">
+            <img src="images/prana.jpg" alt="Prana" />
+            <p>Prana</p>
+        </a>
+    </div>
+
+    <div class="section card-section">
+        <div class="info-card">
+            <p><strong>I love working out</strong> and sharing my equipment and experience. I’ve created a WhatsApp
+                group where I post when and where I train — feel free to join and come along!</p>
+            <a href="https://chat.whatsapp.com/C2qd9zas8wWB2IAXCki95r" target="_blank" class="card-btn">Join WhatsApp
+                Workout Group</a>
+        </div>
+
+        <div class="info-card">
+            <p>I’ve worked for many years as a kitesurfing instructor at <strong>Alex Pastor Kite Club</strong>. You can
+                book lessons directly with me — don’t forget to use your special discount code!</p>
+            <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Reserve Kitesurfing
+                Lesson</a>
+            <div class="discount-code">
+                <span>Discount code:</span>
+                <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
+                <button class="copy-btn" onclick="copyCode()">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
