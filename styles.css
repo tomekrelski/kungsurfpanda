@@ -130,30 +130,54 @@ nav .nav-links li a {
 }
 
 /* === Gallery (index.html) === */
+
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
     justify-content: center;
-    gap: 20px;
+    padding: 16px;
 }
 
+/* Make anchor tags the flex items and control layout */
 .gallery a {
+    flex: 1 1 calc(50% - 16px); /* 2 per row by default */
     text-decoration: none;
     color: black;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gallery img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 300px; /* fixed height for all images */
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
+/* Hover effect */
 .gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
+/* Phone: 1 image per row, full width */
+@media (max-width: 600px) {
+    .gallery a {
+        flex: 1 1 100%;
+    }
+
+    .gallery img {
+        width: 100vw;
+        max-width: 100%;
+        height: 250px; /* same fixed height on mobile */
+        border-radius: 0; /* optional: flat edges on mobile */
+    }
+}
+
 
 /* === Cards === */
 .card-section {
@@ -196,7 +220,8 @@ nav .nav-links li a {
 .card-btn:hover,
 .copy-btn:hover,
 .read-more-btn:hover {
-    background-color: #333;
+    background-color: #fff;
+    color: #000;
 }
 
 .discount-code {
@@ -229,11 +254,18 @@ nav .nav-links li a {
     color: #333;
 }
 
-.button-group {
+.services .button-group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 16px; /* Optional: Add space between buttons */
+}
+
+.btn {
+    width: 100%; /* Ensure all buttons take up the full width of their container */
+    padding: 15px; /* Adjust padding for uniform button height */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Ensure text is the same size */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .btn {
@@ -250,16 +282,29 @@ nav .nav-links li a {
     color: #fff;
 }
 
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease; /* Smooth transition for color change */
+}
+
+.btn-black:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 .btn-white {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
+    transition: all 0.3s ease; /* Smooth transition for color change */
 }
 
-.btn-default {
-    background-color: #e0e0e0;
-    color: #333;
+.btn-white:hover {
+    background-color: #000;
+    color: #fff;
 }
+
 
 .btn:hover {
     opacity: 0.9;
@@ -335,20 +380,9 @@ footer {
     text-decoration: underline;
 }
 
-/* === Responsive Tweaks === */
-@media (max-width: 768px) {
-    .gallery img {
-        width: 300px;
-        height: 200px;
-    }
-}
 
 @media (max-width: 480px) {
-    .gallery img {
-        width: 200px;
-        height: 150px;
-    }
-
+ 
     .container {
         padding: 15px;
     }
