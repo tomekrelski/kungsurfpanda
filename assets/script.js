@@ -37,48 +37,49 @@ function copyCode() {
     alert("Copied: " + copyText.value);
 }
 
-// Read More Kite: 
+// Utility function for localized button text
+function getButtonText(language, expanded) {
+    const texts = {
+        en: { more: "Read more", less: "Read less" },
+        pl: { more: "Czytaj więcej", less: "Czytaj mniej" },
+        es: { more: "Leer más", less: "Leer menos" }
+    };
 
+    const lang = texts[language] ? language : "en";
+    return expanded ? texts[lang].less : texts[lang].more;
+}
+
+// Read More: Kite
 function toggleText() {
     const fullText = document.getElementById("fullText");
     const button = document.querySelector(".read-more-btn");
+    const language = document.documentElement.lang;
 
-    if (fullText.style.display === "none") {
-        fullText.style.display = "block";
-        button.textContent = "Read less";
-    } else {
-        fullText.style.display = "none";
-        button.textContent = "Read more";
-    }
+    const isExpanded = fullText.style.display === "block";
+    fullText.style.display = isExpanded ? "none" : "block";
+    button.textContent = getButtonText(language, !isExpanded);
 }
 
-// Read more Surf:
-
+// Read More: Surf
 function toggleSurfText() {
     const fullText = document.getElementById("surfFull");
     const button = document.querySelector(".read-more-btn");
+    const language = document.documentElement.lang;
 
-    if (fullText.style.display === "none") {
-        fullText.style.display = "block";
-        button.textContent = "Read less";
-    } else {
-        fullText.style.display = "none";
-        button.textContent = "Read more";
-    }
+    const isExpanded = fullText.style.display === "block";
+    fullText.style.display = isExpanded ? "none" : "block";
+    button.textContent = getButtonText(language, !isExpanded);
 }
 
-// Prana
-
+// Read More: Prana
 function toggleTextPrana() {
     const fullText = document.getElementById("fullTextPrana");
     const button = document.querySelector(".read-more-btn");
+    const language = document.documentElement.lang;
 
-    if (fullText.style.display === "none") {
-        fullText.style.display = "block";
-        button.textContent = "Read less";
-    } else {
-        fullText.style.display = "none";
-        button.textContent = "Read more";
-    }
+    const isExpanded = fullText.style.display === "block";
+    fullText.style.display = isExpanded ? "none" : "block";
+    button.textContent = getButtonText(language, !isExpanded);
 }
+
 

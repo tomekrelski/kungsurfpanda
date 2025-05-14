@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda – Kite</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="surf.html">Surf</a></li>
+            <li><a href="prana.html">Prana</a></li>
+            <li><a href="../en/kite.html" class="lang-link">English</a></li>
+            <li><a href="../pl/kite.html" class="lang-link">Polski</a></li>
+        </ul>
+    </nav>
+
+    <section class="wrapper">
+        <div class="container">
+            <img src="../assets/images/kite.jpg" alt="Tomek Kitesurfing" />
+            <div class="description">
+                <p id="shortText">
+                    Mi aventura en el kitesurf comenzó en 2004 en el Lago Miedwie, Polonia sin instructores, con un montón
+                    de cintas VHS y mi papá gritando consejos desde el agua mientras tratábamos de aprender juntos.
+                </p>
+                <p id="fullText" style="display: none;">
+                    En 2005, me enamoré perdidamente de Tarifa durante mi primer verano aquí, pasando todo el día en la
+                    playa, quemado por el sol y
+                    emocionado, tratando (y fallando) de aterrizar nuevos trucos. Básicamente, era kitesurf durante 5-6 horas al día, cayéndome gloriosamente y disfrutando de la vida entre el viento y
+                    el mar.
+                    <br><br>
+                    Desde ahí, viajé por el mundo con mi papá: Islas Canarias, Turquía, Egipto y más. Como local
+                    del Lago Miedwie, siempre estaba listo para hacer kitesurf, sin importar el pronóstico.
+                    <br><br>
+                    Avancemos hasta 2011, me mudé a Tarifa y trabajé como gerente en las mejores escuelas de kitesurf. En
+                    2015, cofundé mi propia escuela con mi hermana y su pareja. Fue una aventura empresarial salvaje
+                    y un montón de enseñanza ¡ahí fue cuando supe que esta es mi pasión!
+                    <br><br>
+                    Ahora, enseño en Alex Pastor Kite Club, compartiendo toda mi sabiduría adquirida con esfuerzo sobre el
+                    kitesurf con cualquiera que esté listo para aprender, tanto con la suave brisa de Poniente de Tarifa
+                    como con la salvaje y racheada bestia de Levante. Domina el viento aquí, y estarás listo para cualquier
+                    spot en el planeta.
+                    <br><br>
+                    Si buscas un instructor experimentado que haga que tu proceso de aprendizaje sea seguro, fluido y
+                    divertido ¡estás en buenas manos!
+                </p>
+                <button class="read-more-btn" onclick="toggleText()">Leer más</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <h2>Servicios</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="Lecciones personalizadas de kitesurf para todos los niveles, desde principiantes hasta avanzados. Enseño todos los estilos: twin tip, surfkite y foil. Adaptado a tus objetivos para que puedas navegar con confianza y estilo.">
+                Clases de Kitesurf – Todos los Niveles y Estilos
+            </button>
+            <button class="btn btn-white"
+                data-service="Con experiencia trabajando en una tienda, puedo ayudarte a elegir el equipo adecuado, ya sea nuevo o de segunda mano, y conseguir la mejor oferta. También me aseguraré de que tu equipo se adapte a tu spot, nivel de habilidad y estilo.">
+                Asesoría de Equipos – Nuevo y Usado
+            </button>
+            <button class="btn btn-black"
+                data-service="Únete a mis entrenamientos en la playa, centrados en el equilibrio, la coordinación y ejercicios adaptados a tus objetivos en el agua. Te ayudaré a desarrollar fuerza y superar cualquier dificultad que enfrentes.">
+                Entrenamiento – Equilibrio, Coordinación y Movilidad
+            </button>
+            <button class="btn btn-white"
+                data-service="Con experiencia dirigiendo mi propia escuela de kitesurf y trabajando en las mejores del sector, puedo ayudarte a hacer tu escuela de kitesurf más eficiente, mejorar el rendimiento del equipo y garantizar mejores prácticas de seguridad.">
+                Consultoría Empresarial – Eficiencia en Escuelas de Kitesurf
+            </button>
+            <button class="btn btn-black"
+                data-service="Puedo ayudarte a mejorar viendo tus videos de kitesurf, dándote retroalimentación detallada y proporcionando ejercicios para corregir errores y desarrollar mejores hábitos de kitesurf.">
+                Coaching de Video – Mejora Tus Habilidades de Kitesurf
+            </button>
+            <button class="btn btn-white"
+                data-service="He ayudado a muchos instructores a reducir dificultades y trabajar de manera más eficiente. Ya sea que estés comenzando tu carrera en el kitesurf o buscando mejorar tus habilidades de enseñanza, estoy aquí para guiarte.">
+                Coaching para Instructores – Mejora Tus Habilidades de Enseñanza
+            </button>
+        </div>
+    </section>
+
+    <section class="section card-section">
+        <div class="info-card">
+            <p>¡Reserva tu lección de kitesurf conmigo directamente y utiliza tu código de descuento personal!</p>
+            <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Reserva Ahora con Tomek</a>
+            <div class="discount-code">
+                <span>Código de descuento:</span>
+                <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
+            </div>
+        </div>
+    
+        <div class="info-card">
+            <p>¿Interesado en otros servicios? Contáctame directamente a través de:</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">Correo Electrónico</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Información del Servicio</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">Correo electrónico</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

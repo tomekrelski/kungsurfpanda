@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda – Prana</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="kite.html">Kite</a></li>
+            <li><a href="surf.html">Surf</a></li>
+            <li><a href="../en/prana.html" class="lang-link">English</a></li>
+            <li><a href="../pl/prana.html" class="lang-link">Polski</a></li>
+        </ul>
+    </nav>
+
+    <section class="wrapper">
+        <div class="container">
+            <img src="../assets/images/prana.jpg" alt="Viaje de Prana y Meditación" />
+            <div class="description">
+                <p id="shortTextPrana">
+                    Mi viaje interior comenzó a los 12 años, cuando practicaba Aikido, yoga y probablemente me hacía
+                    preguntas más profundas que muchos adultos.
+                </p>
+                <p id="fullTextPrana" style="display: none;">
+                    Tuve la suerte de aprender de verdaderos maestros del Himalaya, quienes me enseñaron los fundamentos del
+                    Pranayama, Yoga Nidra y otras formas de estar quieto sin quedarme dormido.
+                    <br><br>
+                    Pero el verdadero punto de inflexión llegó en 2018: un retiro de 10 días de silencio Vipassana en
+                    Tailandia. Sin teléfono, sin hablar, sin contacto visual solo yo, mis pensamientos, hasta 20 horas de
+                    meditación al día y un montón de picaduras de mosquitos. Me reprogramó el cerebro de la mejor manera.
+                    Incluso lo repetí al año siguiente (sí, por voluntad propia).
+                    <br><br>
+                    Desde entonces, la meditación no es solo algo que hago; es parte de quien soy. Cada día, al menos 10
+                    minutos sentado, observando mi respiración. Es como perforar una roca: lento, constante, pero con el
+                    tiempo, el cambio es inevitable.
+                    <br><br>
+                    También soy fanático del breathwork, la danza extática y cualquier práctica que me haga sentir más
+                    equilibrado, feliz, en calma y con la mente abierta. Todo se trata de sentirme más humano, más conectado
+                    a la tierra y en sintonía con el momento presente.
+                </p>
+                <button class="read-more-btn" onclick="toggleTextPrana()">Leer más</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="services">
+        <h2>Servicios Prana</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="¿Necesitas calmar tu mente y encontrar paz? Te guiaré con técnicas de meditación simples pero poderosas para desconectarte del ruido y aterrizar en el presente. No se requiere incienso ni túnica.">
+                Meditación – Calma Tu Mente Monito
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿Aguantando la respiración o sin saber cómo soltar? Aprenderás técnicas de respiración para mejorar tu enfoque, liberar tensión y cambiar tu energía. Exhalemos el estrés juntos.">
+                Respiración – Respira Conscientemente
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¡Sacúdelo y muévete! Estas sesiones de movimiento libre te ayudan a reconectar con tu cuerpo, subir el ánimo y quizás descubrir tu animal espiritual (o al menos tu lado más funky).">
+                Danza Extática – Mueve Tu Energía
+            </button>
+
+            <button class="btn btn-white"
+                data-service="Convierte un paseo en una meditación caminando. Te enseñaré a sincronizar respiración y pasos, calmar pensamientos y conectar con la naturaleza como un filósofo descalzo.">
+                Paseo Consciente – Presencia en Movimiento
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¿Listo para dominar tu energía vital? Te guiaré con técnicas ancestrales de pranayama para equilibrar tu energía, calmar tu sistema nervioso y potenciar tu meditación.">
+                Pranayama – Domina Tu Respiración
+            </button>
+        </div>
+    </div>
+
+    <div class="section card-section">
+        <div class="info-card">
+            <p>Si estás interesado en mis servicios, no dudes en contactarme a través de una de las siguientes plataformas:
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Información del Servicio</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">Correo electrónico</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda – Surf</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="kite.html">Kite</a></li>
+            <li><a href="prana.html">Prana</a></li>
+            <li><a href="../en/surf.html" class="lang-link">English</a></li>
+            <li><a href="../pl/surf.html" class="lang-link">Polski</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="../assets/images/Surf.jpg" alt="Surfing en Tarifa" />
+            <div class="description">
+                <p id="surfShort">
+                    Monté mi primera ola en 2008 en Balneario, Tarifa, y fue amor a primera desliz. Una sola ola perfecta y
+                    quedé completamente enganchado. Todavía recuerdo esa sensación: parte magia, parte pánico, y 100%
+                    transformadora. Desde ese día, no solo surfeaba olas, me metí de lleno en un estilo de vida de pelo
+                    salado, equipo lleno de arena y una búsqueda constante de adrenalina.
+                </p>
+                <p id="surfFull" style="display: none;">
+                    En 2009, me uní al programa Erasmus en Las Palmas de Gran Canaria — donde, de alguna manera, logré
+                    surfear todos los días durante 10 meses… ¡y me pagaban por ello! Un intercambio legendario.
+                    <br><br>
+                    Gracias a trabajos de temporada (y algo de presupuesto creativo), perseguí olas por todo el mundo: desde
+                    Marruecos y Portugal hasta Perú, Bali y más allá. Cada día sin viento en Tarifa se convertía en una
+                    misión de surf.
+                    <br><br>
+                    Me encanta surfear todo tipo de olas, con todo tipo de tablas: cortas, largas, blandas, raras… si flota,
+                    la surfeo.
+                    <br><br>
+                    Cuando el mar duerme, entreno en tierra con surfskate, slackline, tablas de equilibrio y ejercicios de
+                    movilidad, porque siempre se puede ser un poco más fluido, más rápido y más gracioso sobre una ola.
+                    Para mí, el surf no es solo un deporte, es una forma de vida (y una buena excusa para estar siempre
+                    lleno de sal y arena).
+                </p>
+                <button class="read-more-btn" onclick="toggleSurfText()">Leer más</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="services">
+        <h2>Servicios de Surf</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="Ya sea tu primera ola o si quieres perfeccionar tu giro inferior, ofrezco clases de surf personalizadas para todos los niveles. Trabajaremos técnica, sincronización y lectura de olas a tu ritmo – con unas risas garantizadas.">
+                Clases de Surf – Todos los Niveles Bienvenidos
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿No estás seguro de qué tabla usar o qué neopreno ponerte? Trabajé en una tienda de surf y sé cómo encontrar una buena oferta. Te ayudaré a elegir el equipo nuevo o de segunda mano que mejor se adapte a tu nivel, objetivos y a las olas locales.">
+                Asesoría de Equipo – Tablas, Neoprenos y Ofertas
+            </button>
+
+            <button class="btn btn-black"
+                data-service="Envíame tus vídeos de surf y los analizamos: remada, takeoff, posicionamiento, giros… Recibirás consejos de nivel profesional sin salir de casa. Perfecto para surfistas independientes que quieren mejorar rápido.">
+                Coaching en Video – Analiza y Mejora
+            </button>
+
+            <button class="btn btn-white"
+                data-service="Mis entrenamientos están enfocados en la forma física del surf – equilibrio, coordinación, fuerza de remada y movilidad. Usamos surfskate, slackline, bandas y ejercicios en la playa para preparar tu cuerpo para las olas y prevenir lesiones.">
+                Entrenamientos – Cuerpo Preparado para el Surf
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¿Quieres surfear más y perder menos tiempo? Te guiaré a los mejores spots locales según la marea, el viento y el swell – sin adivinanzas. Tranquilo o potente, tengo lo que buscas.">
+                Guía de Surf – Encuentra las Mejores Olas
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿Sin tabla? ¡No hay problema! El bodysurf es la forma más pura y divertida de surfear. Te enseño a usar solo tu cuerpo (y quizás unas aletas o handplane) para atrapar olas y sentir el océano como nunca antes.">
+                Bodysurf – Diversión Pura en el Océano
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¿Sin mar o día plano? No pasa nada – el surfskate es tu mejor aliado. Te enseño a carvear, bombear y fluir como si estuvieras en una ola. Mejora tu surf, tu equilibrio y diviértete sobre el asfalto.">
+                Clases de Surfskate – Entrena Como Surfeas
+            </button>
+        </div>
+    </div>
+    <div class="section card-section">
+        <div class="info-card">
+            <p>Si estás interesado en mis servicios, no dudes en contactarme a través de una de las siguientes plataformas:
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Información del Servicio</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">Correo electrónico</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

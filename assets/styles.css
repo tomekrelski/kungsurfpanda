@@ -102,7 +102,34 @@ nav .nav-links {
 nav .nav-links li a {
     color: #fff;
     font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+nav .nav-links li a:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px; /* Optional: makes it look like a button */
+    padding: 5px 10px;   /* Optional: adds spacing inside the hover effect */
+}
+
+
+
+.nav-links .lang-link {
+    background-color: white !important;
+    color: black !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.nav-links .lang-link:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+
 
 /* Hamburger (Mobile Nav) */
 @media (max-width: 768px) {

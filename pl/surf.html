@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Surf Panda – Surf</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">Kung Surf Panda</a>
+
+        <!-- Ikona menu hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="kite.html">Kite</a></li>
+            <li><a href="prana.html">Prana</a></li>
+            <li><a href="../en/surf.html" class="lang-link">English</a></li>
+            <li><a href="../es/surf.html" class="lang-link">Español</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="../assets/images/Surf.jpg" alt="Surfing w Tarifie" />
+            <div class="description">
+                <p id="surfShort">
+                    Pierwszą falę popłynąłem w 2008 roku w Balneario, Tarifa — od razu się zakochałem i praktycznie
+                    już nie patrzyłem wstecz.
+                </p>
+                <p id="surfFull" style="display: none;">
+                    W 2009 roku dołączyłem do programu Erasmus w Las Palmas de Gran Canaria — gdzie udało mi się
+                    surfować
+                    codziennie przez 10 miesięcy... i za to płacili! Legendarna wymiana studencka!
+                    <br><br>
+                    Dzięki sezonowym pracom (i trochę kreatywnemu budżetowaniu) ścigałem fale po całym świecie — od
+                    Maroka
+                    i Portugalii po Peru, Bali i inne miejsca. Każdy bezwietrzny dzień w Tarifie stał się misją
+                    surfingową.
+                    <br><br>
+                    Uwielbiam jeździć na wszystkich rodzajach fal, na wszystkich rodzajach desek — krótkich, długich,
+                    miękkich, dziwnie ukształtowanych... jeśli unosi się na wodzie, popłynę na niej.
+                    <br><br>
+                    Kiedy morze śpi, trenuję na lądzie z surfskatem, slackline, deskami do równowagi i ćwiczeniami
+                    mobilności
+                    — bo zawsze można być odrobinę płynniejszym, szybszym i zabawniejszym na fali.
+                    Dla mnie surfing to nie tylko sport — to styl życia (i pretekst, by zawsze być piaskowym i
+                    słonym).
+                </p>
+                <button class="read-more-btn" onclick="toggleSurfText()">Czytaj więcej</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h2>Usługi Surfingowe</h2>
+        <div class="button-group">
+            <button class="btn btn-black" data-service="Niezależnie od tego, czy to Twoja pierwsza fala, czy chcesz doskonalić swój skręt, oferuję
+                spersonalizowane lekcje surfingu dla każdego poziomu. Będziemy pracować nad techniką, timingiem i
+                odczytywaniem fal w Twoim tempie – z gwarantowaną dawką śmiechu.">
+                Lekcje Surfingu – Wszystkie Poziomy
+            </button>
+
+            <button class="btn btn-white" data-service="Nie wiesz, którą deskę wybrać lub jaki piankę założyć? Pracowałem w sklepie surfingowym i
+                wiem, jak znaleźć dobrą ofertę. Pomogę Ci wybrać odpowiedni nowy lub używany sprzęt, dopasowany do
+                Twojego poziomu, celów i lokalnych warunków.">
+                Porady Sprzętowe – Deski, Pianki & Oferty
+            </button>
+
+            <button class="btn btn-black" data-service="Wyślij mi swoje filmy z surfingu, a ja je przeanalizuję – paddling, starty, pozycjonowanie,
+                zwroty. Otrzymasz porady na poziomie profesjonalisty bez wychodzenia z domu. Idealne dla surferów
+                trenujących samodzielnie.">
+                Coaching Wideo – Analiza & Poprawa
+            </button>
+
+            <button class="btn btn-white" data-service="Moje treningi koncentrują się na fitnessie surfingowym – równowadze, koordynacji, sile
+                paddlingu i mobilności. Używamy surfskate, slackline, taśm i ćwiczeń na plaży, by przygotować Twoje
+                ciało do fal i zapobiec kontuzjom.">
+                Treningi – Przygotowanie Ciała do Surfingu
+            </button>
+
+            <button class="btn btn-black" data-service="Chcesz więcej surfować i mniej tracić czas? Pokażę Ci najlepsze lokalne spoty
+                surfingowe na podstawie pływów, wiatru i swella – bez zgadywania. Niezależnie od tego, czy fale
+                są spokojne, czy mocne, mam dla Ciebie odpowiednie miejsce.">
+                Przewodnik Surfingowy – Znajdź Najlepsze Fale
+            </button>
+
+            <button class="btn btn-white" data-service="Nie masz deski? Nie ma sprawy! Body surfing to najczystsza i najbardziej zabawna forma
+                surfingu. Nauczę Cię, jak używać tylko swojego ciała (a może też finów lub handplanu) do łapania
+                fal i poczucia oceanu jak nigdy wcześniej.">
+                Body Surfing – Czysta Zabawna Fala
+            </button>
+
+            <button class="btn btn-black" data-service="Ziemia, brak fal? Żaden problem – surfskating to Twój najlepszy przyjaciel. Nauczę Cię
+                jak jeździć na desce, jakbyś był na fali. Zwiększysz swoje umiejętności surfingowe, równowagę i
+                świetnie się bawisz na asfalcie.">
+                Lekcje Surfskate – Trenuj Jak na Fali
+            </button>
+        </div>
+    </div>
+
+    <div class="section card-section">
+        <div class="info-card">
+            <p>Jeśli jesteś zainteresowany moimi usługami, skontaktuj się ze mną na jednej z poniższych platform:</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Informacje o Usłudze</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>
