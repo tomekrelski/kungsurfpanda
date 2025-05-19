@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 /* === Base Styles === */
 body {
     font-family: 'Special Elite', cursive;
     margin: 0;
-    padding: 0;
+    padding-top: 60px; /* adjust this to your nav height */
+
     background: #fff;
     color: #000;
     line-height: 1.6;
@@ -73,15 +78,18 @@ nav {
     align-items: center;
     background: #000;
     padding: 15px 30px;
-    position: relative;
+    position: fixed;   /* change from relative to fixed */
+    top: 0;            /* stick to the top */
+    left: 0;           /* align left edge */
+    width: 100%;       /* full width */
+    z-index: 1000;     /* keep it above other elements */
 }
+
 
 nav .logo {
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: none;
-
 }
 
 nav .hamburger {
@@ -108,11 +116,9 @@ nav .nav-links li a {
 nav .nav-links li a:hover {
     background-color: #fff;
     color: #000;
-    border-radius: 5px; /* Optional: makes it look like a button */
-    padding: 5px 10px;   /* Optional: adds spacing inside the hover effect */
+    border-radius: 5px;
+    padding: 5px 10px;
 }
-
-
 
 .nav-links .lang-link {
     background-color: white !important;
@@ -121,7 +127,6 @@ nav .nav-links li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
 }
 
 .nav-links .lang-link:hover {
@@ -129,24 +134,23 @@ nav .nav-links li a:hover {
     color: white !important;
 }
 
-
-
-/* Hamburger (Mobile Nav) */
+/* === Hamburger Mobile Menu === */
 @media (max-width: 768px) {
     nav .hamburger {
         display: block;
     }
 
     nav .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
         position: absolute;
         top: 60px;
         right: 30px;
         background: #000;
-        flex-direction: column;
-        align-items: flex-start;
         padding: 10px;
         border-radius: 8px;
-        display: none;
+        z-index: 999;
     }
 
     nav .nav-links.active {
@@ -157,56 +161,6 @@ nav .nav-links li a:hover {
         margin: 10px 0;
     }
 }
-
-/* === Gallery (index.html) === */
-
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    padding: 16px;
-}
-
-/* Make anchor tags the flex items and control layout */
-.gallery a {
-    flex: 1 1 calc(50% - 16px); /* 2 per row by default */
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.gallery img {
-    width: 100%;
-    height: 300px; /* fixed height for all images */
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Phone: 1 image per row, full width */
-@media (max-width: 600px) {
-    .gallery a {
-        flex: 1 1 100%;
-    }
-
-    .gallery img {
-        width: 100vw;
-        max-width: 100%;
-        height: 250px; /* same fixed height on mobile */
-        border-radius: 0; /* optional: flat edges on mobile */
-    }
-}
-
 
 /* === Cards === */
 .card-section {
@@ -220,7 +174,7 @@ nav .nav-links li a:hover {
     background-color: #f9f9f9;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(43, 28, 28, 0.1);
     width: 100%;
     text-align: center;
 }
@@ -231,90 +185,35 @@ nav .nav-links li a:hover {
     color: #333;
 }
 
+/* === Buttons === */
 .card-btn,
 .copy-btn,
-.read-more-btn {
+.read-more-btn,
+.btn {
     background-color: #000;
     color: #fff;
     padding: 12px 25px;
     font-size: 16px;
     border-radius: 8px;
-    text-decoration: none;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
 .card-btn:hover,
 .copy-btn:hover,
-.read-more-btn:hover {
-    background-color: #fff;
-    color: #000;
+.read-more-btn:hover,
+.btn:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: none;
 }
 
-.discount-code {
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-.discount-code input {
-    font-size: 16px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-right: 10px;
-}
-
-/* === Services Section (kite.html) === */
-.services {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.services .button-group {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 16px; /* Optional: Add space between buttons */
-}
-
-.btn {
-    width: 100%; /* Ensure all buttons take up the full width of their container */
-    padding: 15px; /* Adjust padding for uniform button height */
-    text-align: center; /* Center the text */
-    font-size: 16px; /* Ensure text is the same size */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
+/* === Alternate Button Styles === */
 .btn-black {
     background-color: #000;
     color: #fff;
-}
-
-.btn-black {
-    background-color: #000;
-    color: #fff;
-    transition: all 0.3s ease; /* Smooth transition for color change */
 }
 
 .btn-black:hover {
@@ -326,17 +225,11 @@ nav .nav-links li a:hover {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
-    transition: all 0.3s ease; /* Smooth transition for color change */
 }
 
 .btn-white:hover {
     background-color: #000;
     color: #fff;
-}
-
-
-.btn:hover {
-    opacity: 0.9;
 }
 
 /* === Contact Buttons === */
@@ -352,6 +245,62 @@ nav .nav-links li a:hover {
         flex-direction: row;
         justify-content: center;
     }
+}
+
+/* === Gallery === */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+.gallery a {
+    flex: 1 1 calc(50% - 16px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .gallery a {
+        flex: 1 1 100%;
+    }
+
+    .gallery img {
+        width: 100vw;
+        max-width: 100%;
+        height: 250px;
+        border-radius: 0;
+    }
+}
+
+/* === Discount Code === */
+.discount-code {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.discount-code input {
+    font-size: 16px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 /* === Modal === */
@@ -386,6 +335,65 @@ nav .nav-links li a:hover {
     cursor: pointer;
 }
 
+/* SERVICES */
+
+.services {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;           /* Make all buttons full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-black:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn-white:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 /* === Footer === */
 footer {
     background-color: #000;
@@ -407,20 +415,4 @@ footer {
 
 .social a:hover {
     text-decoration: underline;
-}
-
-
-@media (max-width: 480px) {
- 
-    .container {
-        padding: 15px;
-    }
-
-    .description {
-        font-size: 14px;
-    }
-
-    .btn {
-        flex: 1 1 100%;
-    }
 }

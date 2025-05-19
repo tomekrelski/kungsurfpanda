@@ -1,0 +1,134 @@
+/* BLOGG */
+
+/* Filter Buttons Container */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Blog Posts Grid */
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Post card */
+.post-card {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #222;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Even posts: black bg, white text */
+.post-card:nth-child(even) {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 12px #555;
+}
+
+/* Odd posts: white bg, black text */
+.post-card:nth-child(odd) {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 12px #ccc;
+}
+
+/* Hover: invert background and text colors */
+.post-card:nth-child(even):hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 15px #000;
+  transform: scale(1.03);
+}
+
+.post-card:nth-child(odd):hover {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 15px #fff;
+  transform: scale(1.03);
+}
+
+/* Post category colors */
+.post-card:nth-child(even) .post-category {
+  color: #ccc;
+}
+
+.post-card:nth-child(odd) .post-category {
+  color: #555;
+}
+
+.post-card:nth-child(even):hover .post-category {
+  color: #555;
+}
+
+.post-card:nth-child(odd):hover .post-category {
+  color: #ccc;
+}
+
+.post-category {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+}
+
+
+.post-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Responsive: show 4 posts side by side on large screens */
+@media (min-width: 900px) {
+  .posts-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive: show 2 posts side by side on small screens */
+@media (max-width: 900px) {
+  .posts-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .posts-container {
+    grid-template-columns: 1fr;
+  }
+}

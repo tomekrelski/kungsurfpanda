@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        /* Animacja pojawiania się sekcji */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Odstępy pytań quizu */
+        #water-sport-quiz ol li {
+            margin-bottom: 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #water-sport-quiz ol li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="../kite.html">Kite</a></li>
+            <li><a href="../surf.html">Surf</a></li>
+            <li><a href="../prana.html">Prana</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../pl/index.html" class="lang-link">Polski</a></li>
+            <li><a href="../../es/blog/porquedebespracticardeportesacuticos.html" class="lang-link">Español</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Dlaczego warto uprawiać sporty wodne</h2>
+
+            <div class="info-card">
+                <h3>Co znajdziesz w tym wpisie:</h3>
+                <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+                    <li>💧 Historia, jak odkryłem sporty wodne</li>
+                    <li>🌊 Różne rodzaje sportów wodnych</li>
+                    <li>🔀 Dlaczego łączenie różnych sportów wodnych to najlepszy trik</li>
+                    <li>🏄‍♂️ Co wyróżnia każdy z nich</li>
+                    <li>🧠 Korzyści dla ciała i umysłu</li>
+                    <li>🧩 Quiz, który pomoże Ci znaleźć idealny sport dla Ciebie!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Moja podróż — i Twoja</h2>
+            <p>
+                Zacząłem uprawiać sporty wodne jako nastolatek. Moją pierwszą miłością był windsurfing — uczucie
+                ciągnięcia
+                przez żagiel i ściganie się po wodzie. Później odkryłem kitesurfing, którego uczyłem prawie 20 lat.
+                To było idealne połączenie wiatru i kontroli, techniczny taniec między Tobą a naturą. Potem pojawił się
+                surfing — bardziej surowy, oparty na odczuciach, mniej na sprzęcie.
+                Teraz po prostu uwielbiam bawić się falami, czasem nawet bez deski — bodysurfing przypomina, że ciało
+                wystarczy.
+            </p>
+            <p>
+                Ale to nie tylko moja historia. To także Twoja. Może zastanawiasz się, który sport mógłby otworzyć dla
+                Ciebie drzwi.
+                Oto kilka propozycji.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Rodzaje sportów wodnych i co je wyróżnia 🌊</h2>
+
+            <div class="info-card">
+                <h3>Kitesurfing 🪁 + 🌊</h3>
+                <p>
+                    Techniczny, dynamiczny sport łączący moc wiatru i żeglugę po wodzie. Nauczysz się kontroli latawca,
+                    równowagi na desce i ruchów w powietrzu. Idealny dla poszukiwaczy emocji i szybkich uczniów.
+                </p>
+                <p>
+                    Co go wyróżnia: Kitesurfing to taniec z wiatrem. Nie tylko jedziesz po falach — latasz nad nimi.
+                    Jest szybki, ekscytujący i idealny dla miłośników sprzętu, adrenaliny i poczucia wolności w
+                    powietrzu.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Surfing 🏄</h3>
+                <p>
+                    Więcej o płynięciu z falami i ich odczytywaniu. Nie potrzebujesz sprzętu poza deską.
+                    To medytacja połączona z wysiłkiem fizycznym. Surfing uczy cierpliwości i wyczucia czasu.
+                </p>
+                <p>
+                    Co go wyróżnia: Surfing łączy Cię głęboko z rytmem oceanu. Chodzi o uczucie, czas i grację.
+                    Bez silników, bez żagli — tylko Ty i idealna fala. To najczystsza forma i pełna duchowość.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Winging (Wing Foil) 🪂</h3>
+                <p>
+                    Połączenie surfingu i kitesurfingu. Trzymasz skrzydło i jedziesz na desce z foil’em.
+                    To futurystyczne, lekkie i prawie jak latanie — zupełnie nowe doznanie na wodzie.
+                </p>
+                <p>
+                    Co go wyróżnia: Wing foiling to jak ślizganie się po powietrzu. Hydrofoil unosi Cię nad wodą,
+                    a trzymane skrzydło daje moc i wolność.
+                    To płynne, bezciężarowe i bardzo zabawne dla poszukiwaczy przygód i innowatorów.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Body Surfing 🌊</h3>
+                <p>
+                    Minimalistyczny i czysty. Bez deski, bez latawca — tylko Ty i ocean.
+                    Uczysz się poruszać z falą i używać ciała jako pojazdu. To zabawa, lekkość i dostępność dla każdego.
+                </p>
+                <p>
+                    Co go wyróżnia: Body surfing to instynkt. To najbardziej naturalny sposób jazdy na falach —
+                    bez sprzętu, tylko timing, pozycjonowanie i radość.
+                    Spontaniczny, surowy i niekończenie zabawny.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Łącz to — Dlaczego mieszanie sportów wodnych jest super 🌤️</h2>
+            <div class="info-card">
+                <p>
+                    Jedną z najlepszych rzeczy w sportach wodnych jest ich elastyczność. Każdy dzień na oceanie jest
+                    inny —
+                    a posiadanie kilku umiejętności pozwala maksymalnie to wykorzystać:
+                </p>
+                <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+                    <li>💨 <strong>Wietrzny dzień?</strong> Chwyć latawiec lub skrzydło i leć po wodzie!</li>
+                    <li>🌊 <strong>Fale, ale bez wiatru?</strong> Czas pojeździć na desce lub nawet samym ciałem.</li>
+                    <li>🌪️ <strong>Trudne warunki?</strong> Idealne do bodysurfingu — bez sprzętu, tylko zabawa i
+                        kontakt z morzem.</li>
+                </ul>
+                <p style="margin-top: 1rem;">
+                    <strong>Tarifa</strong> to jedno z najlepszych miejsc na świecie do eksplorowania tej różnorodności.
+                    Znana jako wiatrze stolica Europy, oferuje mieszankę warunków, które sprawiają, że każdy dzień jest
+                    inny.
+                    Przy słabym wietrze z <em>Poniente</em> kite foiling lub wing foiling to Twój wybór — płynne,
+                    efektywne i idealne do wykorzystania każdego podmuchu.
+                    Gdy silny <em>Levante</em> zaczyna dmuchać, to czas na wielkie skoki, szybkie zjazdy i czystą
+                    adrenalinę z latawcem lub skrzydłem.
+                </p>
+                <p>
+                    A gdy wiatr się uspokaja, fale czekają na surferów i bodysurferów — naturalna magia oceanu.
+                    To właśnie różnorodność sprawia, że uprawianie sportów wodnych tutaj nigdy się nie nudzi.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Korzyści z uprawiania sportów wodnych 💪</h2>
+            <div class="info-card">
+                <p>
+                    Sporty wodne to nie tylko zabawa — to terapia dla ciała i umysłu. Oto, co się dzieje:
+                </p>
+                <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+                    <li>🏃‍♀️ Trening całego ciała: poprawia wytrzymałość, elastyczność i siłę.</li>
+                    <li>🧠 Jasność umysłu: uwalnia dopaminę i endorfiny — naturalne „hormony szczęścia”.</li>
+                    <li>🌊 Zimna woda wzmacnia odporność i krążenie — to naturalna kąpiel lodowa!</li>
+                    <li>💨 Woda morska oczyszcza zatoki i skórę, pozostawiając Cię świeżym i pełnym energii.</li>
+                    <li>⚡ Zastrzyk adrenaliny poprawia koncentrację i podejmowanie decyzji.</li>
+                    <li>☀️ Przebywanie na świeżym powietrzu zwiększa poziom witaminy D i poprawia nastrój.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Quiz: Który sport wodny jest dla Ciebie?</h2>
+            <form id="water-sport-quiz" class="info-card" onsubmit="return showResults();">
+                <p>Odpowiedz na pytania, aby znaleźć swój idealny sport!</p>
+        
+                <ol style="text-align:left; max-width: 600px; margin: 0 auto;">
+                    <li>
+                        Czy lubisz techniczne wyzwania?
+                        <br>
+                        <input type="radio" name="q1" value="kite" required> Zdecydowanie, uwielbiam skomplikowane zadania<br>
+                        <input type="radio" name="q1" value="wing"> Czasami, jeśli to zabawa<br>
+                        <input type="radio" name="q1" value="surf"> Nie za bardzo, wolę iść z prądem<br>
+                        <input type="radio" name="q1" value="body"> Wolę prostotę i naturalność<br>
+                    </li>
+                    <li>
+                        Jak dobrze pływasz?
+                        <br>
+                        <input type="radio" name="q2" value="body" required> Bardzo dobrze<br>
+                        <input type="radio" name="q2" value="surf"> Średnio<br>
+                        <input type="radio" name="q2" value="wing"> Podstawowe umiejętności pływackie<br>
+                        <input type="radio" name="q2" value="kite"> Nie czuję się pewnie w wodzie<br>
+                    </li>
+                    <li>
+                        Wolisz adrenalinę i szybkość czy spokój i rytm?
+                        <br>
+                        <input type="radio" name="q3" value="kite" required> Adrenalinę i szybkość<br>
+                        <input type="radio" name="q3" value="wing"> Szybkość z równowagą<br>
+                        <input type="radio" name="q3" value="surf"> Spokój i rytm<br>
+                        <input type="radio" name="q3" value="body"> Relaks i naturalność<br>
+                    </li>
+                    <li>
+                        Jakie masz preferencje co do sprzętu?
+                        <br>
+                        <input type="radio" name="q4" value="kite" required> Uwielbiam sprzęt i technologię<br>
+                        <input type="radio" name="q4" value="wing"> Trochę sprzętu jest okej<br>
+                        <input type="radio" name="q4" value="surf"> Minimalny sprzęt<br>
+                        <input type="radio" name="q4" value="body"> Bez sprzętu, tylko ja i woda<br>
+                    </li>
+                    <li>
+                        Jak oceniasz swoje umiejętności równowagi?
+                        <br>
+                        <input type="radio" name="q5" value="wing" required> Doskonała równowaga<br>
+                        <input type="radio" name="q5" value="surf"> Dobra równowaga<br>
+                        <input type="radio" name="q5" value="kite"> Nad tym pracuję<br>
+                        <input type="radio" name="q5" value="body"> Równowaga jest okej, ale nie idealna<br>
+                    </li>
+                    <li>
+                        Co sądzisz o lataniu lub skakaniu w sportach?
+                        <br>
+                        <input type="radio" name="q6" value="kite" required> Uwielbiam latać i robić akrobacje<br>
+                        <input type="radio" name="q6" value="wing"> Lubię się unosić i ślizgać<br>
+                        <input type="radio" name="q6" value="surf"> Wolę trzymać się blisko wody<br>
+                        <input type="radio" name="q6" value="body"> Niezbyt interesuje mnie latanie<br>
+                    </li>
+                    <li>
+                        Jakie środowisko towarzyskie preferujesz?
+                        <br>
+                        <input type="radio" name="q7" value="kite" required> Lubię energię grupy i tłumy<br>
+                        <input type="radio" name="q7" value="wing"> Małe grupy lub solo, w zależności od nastroju<br>
+                        <input type="radio" name="q7" value="surf"> Głównie solo, czasem z przyjaciółmi<br>
+                        <input type="radio" name="q7" value="body"> Wolę cichy czas sam na sam<br>
+                    </li>
+                    <li>
+                        Jak się czujesz w zimnej wodzie?
+                        <br>
+                        <input type="radio" name="q8" value="body" required> Uwielbiam zimną wodę i orzeźwiające kąpiele<br>
+                        <input type="radio" name="q8" value="surf"> Radzę sobie z chłodem<br>
+                        <input type="radio" name="q8" value="wing"> Wolę cieplejszą wodę<br>
+                        <input type="radio" name="q8" value="kite"> Zwykle unikam zimnej wody<br>
+                    </li>
+                    <li>
+                        Wolisz unosić się nad wodą czy ciąć przez fale?
+                        <br>
+                        <input type="radio" name="q9" value="wing" required> Płynnie unosić się nad wodą<br>
+                        <input type="radio" name="q9" value="surf"> Ciąć i jeździć na falach<br>
+                        <input type="radio" name="q9" value="kite"> Przemierzać wodę z prędkością<br>
+                        <input type="radio" name="q9" value="body"> Naturalnie się ślizgać<br>
+                    </li>
+                    <li>
+                        Jaką relację chcesz mieć z oceanem?
+                        <br>
+                        <input type="radio" name="q10" value="body" required> Głęboką, naturalną więź — chcę czuć się jej
+                        częścią<br>
+                        <input type="radio" name="q10" value="surf"> Płynne połączenie — chcę podążać za rytmem<br>
+                        <input type="radio" name="q10" value="wing"> Zabawną taneczną relację — chcę się ślizgać i
+                        eksperymentować<br>
+                        <input type="radio" name="q10" value="kite"> Ekscytujące wyzwanie — chcę zdobywać i latać<br>
+                    </li>
+                </ol>
+        
+                <button class="card-btn" type="submit">Zobacz mój wynik</button>
+            </form>
+        
+            <div id="quiz-result" class="info-card" style="display:none; margin-top: 1.5rem;"></div>
+        
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const sections = document.querySelectorAll(".section");
+                    const revealSection = (entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    };
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(revealSection);
+                    }, {
+                        threshold: 0.15,
+                    });
+                    sections.forEach(section => observer.observe(section));
+                });
+
+                function showResults() {
+                    const form = document.forms['water-sport-quiz'];
+                    const answers = Array.from(new FormData(form).values());
+
+                    if (answers.length < 10) {
+                        alert('Proszę odpowiedzieć na wszystkie pytania przed wysłaniem!');
+                        return false;
+                    }
+
+                    const count = {};
+                    answers.forEach(ans => {
+                        count[ans] = (count[ans] || 0) + 1;
+                    });
+
+                    const top = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
+
+                    const resultsHTML = {
+                        kite: `
+                            <h3>Jesteś stworzony do kitesurfingu!</h3>
+                            <p>Lubisz techniczne wyzwania i adrenalinę. Rozwijasz się w wietrznych warunkach i kochasz latać nad falami!</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Zarezerwuj sesję kitesurfingu</a>
+                            </div>
+                            <div class="discount-code">
+                                <span>Kod rabatowy:</span>
+                                <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                <button class="copy-btn" onclick="copyCode('discountCode2')">Kopiuj</button>
+                            </div>
+                        `,
+                        surf: `
+                            <h3>Surfing to Twój wybór!</h3>
+                            <p>Uwielbiasz rytm, połączenie z oceanem i surową siłę natury. Jesteś w harmonii z falami.</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="https://wa.me/+34610017397" class="card-btn">Zarezerwuj sesję surfingu</a>
+                            </div>
+                        `,
+                        wing: `
+                            <h3>Pasujesz do Wing Foilingu!</h3>
+                            <p>Jesteś nowoczesną duszą, która kocha latanie, równowagę i sporty przyszłości. Poczuj unoszenie się!</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Zarezerwuj sesję Wing Foil</a>
+                            </div>
+                            <div class="discount-code">
+                                <span>Kod rabatowy:</span>
+                                <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                <button class="copy-btn" onclick="copyCode('discountCode2')">Kopiuj</button>
+                            </div>
+                        `,
+                        body: `
+                            <h3>Body Surfing to Twój styl!</h3>
+                            <p>Prosty, surowy i głęboko związany z naturą. Bez sprzętu — tylko Twoje ciało i fale.</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="https://wa.me/+34610017397" class="card-btn">Zarezerwuj sesję Body Surfingu</a>
+                            </div>
+                        `
+                    };
+
+                    const resultContainer = document.getElementById("quiz-result");
+                    resultContainer.innerHTML = resultsHTML[top];
+                    resultContainer.style.display = "block";
+                    resultContainer.scrollIntoView({ behavior: 'smooth' });
+
+                    return false;
+                }
+            </script>
+        </section>
+
+
+       
+  
+</body>
+
+</html>
