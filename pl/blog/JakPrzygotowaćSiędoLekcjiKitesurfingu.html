@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="../kite.html">Kite</a></li>
+            <li><a href="../surf.html">Surf</a></li>
+            <li><a href="../prana.html">Prana</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../en/blog/HowtoPrepareforYourKitesurfingLesson.html" class="lang-link">English</a></li>
+            <li><a href="../../es/blog/CómoPrepararteparaTuClasedeKitesurf.html" class="lang-link">Español</a></li>
+        </ul>
+    </nav>
+
+    <main class="blog-post">
+        <article>
+            <h1>Jak Przygotować Się do Lekcji Kitesurfingu</h1>
+
+            <section class="section">
+                <h2>1. Przyjdź Wcześniej – Złap Klimat</h2>
+                <p>
+                    Pojawienie się trochę wcześniej przed lekcją to już świetny krok. Dlaczego?
+                    Po pierwsze: zero stresu. Nie musisz się spieszyć. Po drugie: możesz zacząć
+                    oswajać się z warunkami. Poczujesz wiatr, spojrzysz na wodę, weźmiesz oddech i uspokoisz umysł przed
+                    startem.
+                </p>
+                <p>
+                    Obserwuj innych kitesurferów. Zadaj sobie pytania: jakiego rozmiaru używają latawca? Pływają z mocą
+                    czy z trudem?
+                    Czy ten gość jest większy ode mnie? Czy płyną komfortowo, czy walczą z warunkami?
+                    Dzięki temu zaczniesz lepiej rozumieć wiatr i przygotujesz się mentalnie.
+                </p>
+                <p>
+                    Możesz nawet zauważyć kursantów na podobnym poziomie — ucz się na ich błędach,
+                    albo podpatrz dobrą technikę. Taka obserwacja bardzo pomaga w przyszłych samodzielnych sesjach.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>2. Pomyśl o Pytaniach Z Wyprzedzeniem</h2>
+                <p>
+                    Jeśli miałeś już lekcje lub oglądałeś poradniki w sieci — przygotuj kilka pytań.
+                    Może coś było wcześniej niejasne? Albo widziałeś coś na YouTube, czego nie zrozumiałeś?
+                    Zapytaj o to!
+                    Instruktor chętnie wyjaśni, a Ty nauczysz się szybciej.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>3. Jedz Mądrze – Ale Niezbyt Dużo</h2>
+                <p>
+                    Przed lekcją zjedz coś lekkiego. Czeka Cię wysiłek fizyczny — więc lepiej nie przychodź
+                    z pełnym żołądkiem. Unikaj ciężkich posiłków tuż przed lekcją.
+                    Coś prostego: owoc, tost, coś lekkiego, co doda energii, ale nie sprawi,
+                    że zaśniesz na desce!
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>4. Może... Nie Imprezuj Za Mocno</h2>
+                <p>
+                    Wiadomo, imprezy są super. Ale serio — nie przychodź na kacu 😅.
+                    Kitesurfing wymaga koncentracji, koordynacji i energii — a latawiec
+                    nie poczeka, aż minie Ci ból głowy. Zostaw imprezę na po lekcji.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>5. Komunikuj się z Instruktorem</h2>
+                <p>
+                    Masz wątpliwości, pytania albo coś Cię niepokoi przed lekcją?
+                    Nie wstydź się. Napisz do swojego instruktora. Niezależnie czy chodzi o miejsce, wiatr czy sprzęt —
+                    zawsze chętnie pomożemy. Lepiej być przygotowanym niż zaskoczonym.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Na Zakończenie</h2>
+                <p>
+                    Dobra sesja zaczyna się zanim jeszcze dotkniesz latawca. Przyjdź wcześniej, obserwuj,
+                    zjedz dobrze, zadawaj pytania i zostaw tequilę na później 🌞.
+                    Trochę przygotowania sprawi, że lekcja będzie płynniejsza, przyjemniejsza
+                    i szybciej zrobisz postępy. Do zobaczenia na plaży!
+                </p>
+            </section>
+        </article>
+
+        <section class="section card-section">
+            <div class="info-card">
+                <h2>Twoja przygoda z kitem zaczyna się teraz</h2>
+                <p>Nie tylko czytaj — przyjdź poczuć wiatr, złap fale i rozwiń swoje umiejętności. Zarezerwuj
+                    lekcję kitesurfingu już teraz i skorzystaj z osobistego rabatu!</p>
+
+                <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Zarezerwuj z
+                    Tomkiem</a>
+
+                <div class="discount-code">
+                    <span>Kod rabatowy:</span>
+                    <div class="code-box">
+                        <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                        <button class="copy-btn" onclick="copyCode('discountCode2')">Kopiuj</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../../assets/script.js"></script>
+    <script src="../../assets/blogen.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,12 @@ const posts = [
         title: 'Dlaczego warto uprawiać sporty wodne', // Polish title
         url: 'blog/dlaczegowartouprawiacsportywodne.html' // Polish URL path
     },
+    {
+    id: 'kite2',
+        category: ['kite', 'surf'],
+        title: 'Jak Przygotować Się do Lekcji Kitesurfingu', // Polish title
+        url: 'blog/JakPrzygotowaćSiędoLekcjiKitesurfingu.html' // Polish URL path
+    },
 ];
 
 // Function to render posts based on filter

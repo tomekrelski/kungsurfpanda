@@ -5,6 +5,13 @@ const posts = [
         title: 'Why You Should Do Water Sports',
         url: 'blog/whyyoushoulddowatersports.html'
     },
+
+    {
+        id: 'kite2',
+        category: ['kite'],
+        title: 'How to Prepare for Your Kitesurfing Lesson',
+        url: 'blog/HowtoPrepareforYourKitesurfingLesson.html'
+    },
  
 ];
 

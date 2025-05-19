@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kung Surf Panda</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="../kite.html">Kite</a></li>
+            <li><a href="../surf.html">Surf</a></li>
+            <li><a href="../prana.html">Prana</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../en/blog/HowtoPrepareforYourKitesurfingLesson.html" class="lang-link">English</a></li>
+            <li><a href="../../pl/blog/JakPrzygotowaćSiędoLekcjiKitesurfingu.html" class="lang-link">Polski</a></li>
+        </ul>
+    </nav>
+
+    <main class="blog-post">
+        <article>
+            <h1>Cómo Prepararte para Tu Clase de Kitesurf</h1>
+
+            <section class="section">
+                <h2>1. Llega Temprano – Conecta con el Ambiente</h2>
+                <p>
+                    Llegar un poco antes del comienzo de tu clase ya es un gran paso. ¿Por qué?
+                    Primero, cero estrés. No tienes que correr. Segundo, ya puedes comenzar a
+                    adaptarte a las condiciones. Puedes sentir el viento, mirar el agua, y simplemente
+                    respirar y calmarte antes de empezar.
+                </p>
+                <p>
+                    Observa a los demás kitesurfistas. Pregúntate: ¿Qué tamaño de cometa están usando? ¿Van con mucha
+                    potencia o poca?
+                    ¿Es esa persona más grande o más pequeña que yo? ¿Navegan cómodos o tienen dificultades?
+                    Esto te ayuda a empezar a reconocer las condiciones del viento y prepararte mentalmente.
+                </p>
+                <p>
+                    Incluso podrías ver a alumnos de tu mismo nivel — y así aprender de
+                    sus errores, o imitar buena técnica. Esta observación
+                    te ayuda muchísimo para tus futuras sesiones independientes.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>2. Piensa en Tus Preguntas Antes</h2>
+                <p>
+                    Si ya tomaste clases antes, o viste tutoriales online, es bueno venir
+                    con algunas preguntas en mente. ¿Tal vez algo no quedó claro la última vez? ¿Viste algo
+                    en YouTube que no entendiste? ¡Pregúntalo!
+                    A tu instructor le encantará explicarlo, y tú aprenderás más rápido.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>3. Come Inteligente – ¡Pero No Demasiado!</h2>
+                <p>
+                    Es muy importante comer algo ligero antes de la clase. Vas a realizar
+                    una actividad física — así que trata de no venir con el estómago lleno. Evita comidas pesadas justo
+                    antes.
+                    Manténlo simple: fruta, tostadas o algo liviano que te dé energía pero no te deje
+                    con ganas de dormir sobre la tabla.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>4. Tal Vez... No Te Vayas de Fiesta 😅</h2>
+                <p>
+                    Vale, vale. También nos encanta una buena fiesta. Pero en serio, intenta no llegar con resaca.
+                    El kitesurf requiere concentración, coordinación y energía — y créeme, la cometa
+                    no va a esperar a que se te pase el dolor de cabeza. Mejor celebra después de la sesión.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>5. Comunícate con Tu Instructor</h2>
+                <p>
+                    Si tienes dudas, problemas o simplemente algo no está claro antes de la clase,
+                    no tengas vergüenza. Manda un mensaje a tu instructor. Ya sea sobre el lugar, el viento o el equipo
+                    —
+                    siempre estamos felices de ayudarte. Mejor preparado que sorprendido.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Palabras Finales</h2>
+                <p>
+                    Una buena sesión comienza antes de tocar la cometa. Llega temprano, mantente atento,
+                    come bien, haz preguntas y deja los chupitos de tequila para después 🌞.
+                    Con un poco de preparación, tu clase será más fluida, divertida
+                    y progresarás mucho más rápido. ¡Nos vemos en la playa!
+                </p>
+            </section>
+        </article>
+
+        <section class="section card-section">
+            <div class="info-card">
+                <h2>¿Listo para Navegar?</h2>
+                <p>No solo lo leas — ven a sentir el viento, montar las olas y llevar tus habilidades al siguiente
+                    nivel. ¡Reserva
+                    tu clase de kitesurf conmigo ahora y obtén un descuento personal!</p>
+
+                <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Reserva con Tomek</a>
+
+                <div class="discount-code">
+                    <span>Código de descuento:</span>
+                    <div class="code-box">
+                        <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                        <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">Correo</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script src="../../assets/script.js"></script>
+    <script src="../../assets/blogen.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

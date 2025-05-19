@@ -5,6 +5,13 @@ const posts = [
         title: 'Por qué deberías practicar deportes acuáticos', // Translated title
         url: 'blog/porquedebespracticardeportesacuticos.html' // Spanish URL path
     },
+
+    {
+        id: 'kite2',
+        category: ['kite', 'surf'],
+        title: 'Cómo Prepararte para Tu Clase de Kitesurf', // Translated title
+        url: 'blog/CómoPrepararteparaTuClasedeKitesurf.html' // Spanish URL path
+    },
 ];
 
 // Function to render posts based on filter
