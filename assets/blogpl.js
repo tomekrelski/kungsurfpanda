@@ -7,7 +7,7 @@ const posts = [
     },
     {
     id: 'kite2',
-        category: ['kite', 'surf'],
+        category: ['kite'],
         title: 'Jak Przygotować Się do Lekcji Kitesurfingu', // Polish title
         url: 'blog/JakPrzygotowaćSiędoLekcjiKitesurfingu.html' // Polish URL path
     },

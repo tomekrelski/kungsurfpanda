@@ -8,7 +8,7 @@ const posts = [
 
     {
         id: 'kite2',
-        category: ['kite', 'surf'],
+        category: ['kite'],
         title: 'Cómo Prepararte para Tu Clase de Kitesurf', // Translated title
         url: 'blog/CómoPrepararteparaTuClasedeKitesurf.html' // Spanish URL path
     },
