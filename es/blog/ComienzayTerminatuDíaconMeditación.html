@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comienza y Termina tu Día con Meditación</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breath-guide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .breath-circle {
+            width: 150px;
+            height: 150px;
+            border: 5px solid black;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            background-color: black;
+            animation: breathe 9s ease-in-out infinite;
+            box-sizing: border-box;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                border-color: black;
+                background-color: black;
+            }
+
+            50% {
+                transform: scale(1.5);
+                border-color: gray;
+                background-color: gray;
+            }
+        }
+
+        ul.foundations {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        ul.foundations li {
+            margin-bottom: 0.8rem;
+        }
+
+        section.section ul,
+        section.section ol {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="../kite.html">Kite</a></li>
+            <li><a href="../surf.html">Surf</a></li>
+            <li><a href="../prana.html">Prana</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../en/blog/StartandEndYourDayWithMeditation.html" class="lang-link">English</a></li>
+            <li><a href="../../pl/blog/Zacznijizakończdzieńmedytacją.html" class="lang-link">Polski</a></li>
+        </ul>
+    </nav>
+
+    <main class="blog-post">
+        <article>
+            <h1>Comienza y Termina tu Día con Meditación</h1>
+
+            <section class="section">
+                <p>
+                    En un mundo que constantemente atrae nuestra atención hacia el exterior, hay un poder increíble en
+                    comenzar el día volviendo la mirada hacia adentro.
+                </p>
+                <p>
+                    En lugar de alcanzar tu teléfono al despertar, intenta esto: siéntate en silencio y medita durante
+                    solo 10 minutos. Este pequeño cambio puede transformar cómo te desenvuelves durante el día: con más
+                    equilibrio, enfoque y conexión.
+                </p>
+                <p>
+                    Y por la noche, en lugar de desplazarte por la pantalla hasta dormirte, prueba una meditación
+                    acostado. Libera las tensiones del día y sumérgete en el descanso con una conciencia tranquila.
+                    También puedes dejar tu teléfono lejos de la cama y ponerlo en modo silencio para evitar
+                    distracciones.
+                </p>
+                <p>
+                    Esto no es solo teoría para mí, es personal. He estado meditando consistentemente durante 7 años, y
+                    mi viaje comenzó con un retiro de Vipassana. Esa experiencia me enseñó lo que significa estar en el
+                    momento presente, sin juicio. Desde entonces, la meditación diaria se ha convertido en un pilar de
+                    mi vida. No siempre es fácil, pero siempre vale la pena.
+                </p>
+                <p>Permite que se convierta en un hábito, no solo una práctica, sino una forma de ser.</p>
+            </section>
+
+            <section class="section">
+                <h2>Cómo Comenzar con la Meditación Vipassana</h2>
+                <p>
+                    Vipassana significa "ver las cosas tal como son". Es una práctica de observar la realidad,
+                    especialmente dentro del cuerpo, con una mente calmada y equilibrada.
+                </p>
+                <ol>
+                    <li>Siéntate o recuéstate cómodamente.</li>
+                    <li>Cierra los ojos y lleva la atención a la respiración.</li>
+                    <li>Al <strong>inhalar</strong>, nota el <strong>ascenso de tu abdomen</strong>.</li>
+                    <li>Al <strong>exhalar</strong>, siente el <strong>descenso de tu abdomen</strong>.</li>
+                    <li>Solo observa, sin necesidad de controlar la respiración.</li>
+                    <li>Si la mente divaga (y lo hará), suavemente regresa al ascenso y descenso.</li>
+                </ol>
+                <p>Comienza con 5–10 minutos y aumenta a medida que te sientas preparado.</p>
+            </section>
+
+            <section class="section">
+                <h2>Las Cuatro Fundaciones de la Atención Plena</h2>
+                <p>(de las enseñanzas del Buda):</p>
+                <ul class="foundations">
+                    <li><strong>Atención Plena del Cuerpo</strong> – Observar la respiración, la postura, los
+                        movimientos y las sensaciones.</li>
+                    <li><strong>Atención Plena de las Sensaciones</strong> – Notar si las experiencias son agradables,
+                        desagradables o neutras.</li>
+                    <li><strong>Atención Plena de la Mente</strong> – Tomar conciencia de estados mentales como la ira,
+                        la alegría o la distracción.</li>
+                    <li><strong>Atención Plena de los Objetos Mentales</strong> – Observar pensamientos, creencias y
+                        patrones sin quedar atrapado en ellos.</li>
+                </ul>
+                <p>Este es el corazón de la práctica: estar plenamente presente con lo que sea que esté aquí, ahora.</p>
+            </section>
+
+            <section class="section">
+                <h2>La Meditación como Hábito</h2>
+                <p>
+                    Incorporar la meditación en tu rutina diaria la transforma de una simple práctica en un poderoso
+                    hábito que apoya tu bienestar general. La consistencia es clave: incluso unos pocos minutos cada día
+                    pueden ayudar a cultivar la calma, el enfoque y la resiliencia.
+                </p>
+                <p>
+                    Aquí hay algunos consejos para hacer de la meditación un hábito duradero:
+                </p>
+                <ul>
+                    <li><strong>Elige un momento específico:</strong> Medita a la misma hora todos los días, como al
+                        despertar o antes de dormir.</li>
+                    <li><strong>Crea un espacio dedicado:</strong> Establece un lugar tranquilo y cómodo donde puedas
+                        sentarte sin distracciones.</li>
+                    <li><strong>Comienza poco a poco:</strong> Empieza con 5 minutos diarios, aumentando gradualmente
+                        según te sientas cómodo.</li>
+                    <li><strong>Usa recordatorios:</strong> Configura alarmas o utiliza aplicaciones de meditación para
+                        recordarte tu práctica.</li>
+                    <li><strong>Sé paciente y amable:</strong> Algunos días serán más fáciles que otros; lo importante
+                        es presentarte regularmente.</li>
+                </ul>
+                <p>
+                    Con el tiempo, la meditación se convierte en menos una tarea y más una parte de quien eres: un
+                    hábito que nutre tu mente y cuerpo.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Video: Meditación Guiada para Principiantes</h2>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                    <iframe src="https://www.youtube.com/embed/mH2sEqrCza4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="section breath-guide-container">
+                <div class="breath-circle"></div>
+                <div class="breath-instructions">
+                    <p><strong>Guía de Meditación de Respiración</strong></p>
+                    <p>Sigue el círculo mientras se expande y contrae.</p>
+                    <p><em>Inhala</em> mientras crece, <em>exhala</em> mientras se encoge.</p>
+                    <p>Repite durante unos minutos para centrar tu mente.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>¡Si deseas meditar, contáctame!</h3>
+                <p>Comienza tu viaje hacia la calma y el enfoque. No dudes en comunicarte para obtener apoyo.</p>
+                <div style="margin-top: 1rem; margin-bottom: 1rem;">
+                    <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">Reservar Sesión de
+                        Meditación</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">Correo electrónico</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script>
+        // Fade-in sections on scroll using Intersection Observer
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Hamburger menu toggle if used in nav
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+    

@@ -12,6 +12,13 @@ const posts = [
         title: 'Cómo Prepararte para Tu Clase de Kitesurf', // Translated title
         url: 'blog/CómoPrepararteparaTuClasedeKitesurf.html' // Spanish URL path
     },
+    {
+        id: 'prana1',
+        category: ['prana'],
+        title: ' Comienza y Termina tu Día con Meditación', // Translated title
+        url: 'blog/ComienzayTerminatuDíaconMeditación.html' // Spanish URL path
+    },
+
 ];
 
 // Function to render posts based on filter

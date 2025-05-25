@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start and End Your Day With Meditation</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+
+
+
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Breath guide container */
+       .breath-guide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 400px; /* optional */
+            }
+
+        /* Circle for breath animation */
+        .breath-circle {
+            width: 150px;
+            height: 150px;
+            border: 5px solid black;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            background-color: black;
+            animation: breathe 9s ease-in-out infinite;
+            box-sizing: border-box;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                border-color: black;
+                background-color: black;
+            }
+
+            50% {
+                transform: scale(1.5);
+                border-color: gray;
+                background-color: gray;
+            }
+        }
+
+        /* Styling for lists in mindfulness section */
+        ul.foundations {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        ul.foundations li {
+                margin-bottom: 0.8rem;
+        }
+
+        section.section ul,
+        section.section ol {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="../kite.html">Kite</a></li>
+            <li><a href="../surf.html">Surf</a></li>
+            <li><a href="../prana.html">Prana</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../pl/blog/Zacznijizakończdzieńmedytacją.html" class="lang-link">Polski</a></li>
+            <li><a href="../../es/blog/ComienzayTerminatuDíaconMeditación.html" class="lang-link">Español</a></li>
+        </ul>
+    </nav>
+
+    <main class="blog-post">
+        <article>
+            <h1>Start and End Your Day With Meditation</h1>
+
+            <section class="section">
+                <p>
+                    In a world that constantly pulls our attention outward, there’s incredible power in starting the day
+                    by turning inward.
+                </p>
+                <p>
+                    Instead of reaching for your phone first thing in the morning, try this: sit quietly and meditate
+                    for just 10 minutes. This small shift can transform how you carry yourself throughout the
+                    day—grounded, focused, and connected.
+                </p>
+                <p>
+                    And at night, rather than scrolling yourself to sleep, try a laying-down meditation. Let go of the day’s tension and
+                    ease into rest with calm awareness. You can also leave your phone far from your bed and put it in silent mode to
+                    avoid distractions.
+                </p>
+                <p>
+                    This isn’t just theory for me—it’s personal. I’ve been meditating consistently for 7 years, and my
+                    journey began with a Vipassana retreat. That experience taught me what it means to be with the
+                    present moment, without judgment. Since then, daily meditation has become a pillar of my life. It’s
+                    not always easy, but it’s always worth it.
+                </p>
+                <p>Let it become a habit—not just a practice, but a way of being.</p>
+            </section>
+
+
+            <section class="section">
+                <h2>How to Start With Vipassana Meditation</h2>
+                <p>
+                    Vipassana means “to see things as they really are.” It’s a practice of observing reality—especially
+                    within the body—with a calm, balanced mind.
+                </p>
+                <ol>
+                    <li>Sit or lie down comfortably.</li>
+                    <li>Close your eyes and bring attention to the breath.</li>
+                    <li>As you <strong>breathe in</strong>, notice the <strong>rising of your belly</strong>.</li>
+                    <li>As you <strong>breathe out</strong>, feel the <strong>falling of your belly</strong>.</li>
+                    <li>Just observe—no need to control the breath.</li>
+                    <li>If the mind wanders (and it will), gently bring it back to the rising and falling.</li>
+                </ol>
+                <p>Start with 5–10 minutes and increase as you feel ready.</p>
+            </section>
+
+            <section class="section">
+                <h2>The Four Foundations of Mindfulness</h2>
+                <p>(from the Buddha’s teachings):</p>
+                <ul class="foundations">
+                    <li><strong>Mindfulness of the Body</strong> – Observing breathing, posture, movements, and
+                        sensations.</li>
+                    <li><strong>Mindfulness of Feelings</strong> – Noticing whether experiences feel pleasant,
+                        unpleasant, or neutral.</li>
+                    <li><strong>Mindfulness of the Mind</strong> – Becoming aware of mental states like anger, joy, or
+                        distraction.</li>
+                    <li><strong>Mindfulness of Mental Objects</strong> – Observing thoughts, beliefs, and patterns
+                        without getting caught in them.</li>
+                </ul>
+                <p>This is the heart of the practice: being fully present with whatever is here, right now.</p>
+            </section>
+
+        <section class="section">
+            <h2>Meditation as a Habit</h2>
+            <p>
+                Building meditation into your daily routine transforms it from a simple practice into a powerful habit that
+                supports your overall wellbeing. Consistency is key — even a few minutes each day can help cultivate calmness,
+                focus, and resilience.
+            </p>
+            <p>
+                Here are some tips to make meditation a lasting habit:
+            </p>
+            <ul>
+                <li><strong>Choose a specific time:</strong> Meditate at the same time every day, such as first thing in the
+                    morning or before bed.</li>
+                <li><strong>Create a dedicated space:</strong> Set up a quiet, comfortable spot where you can sit without
+                    distractions.</li>
+                <li><strong>Start small:</strong> Begin with 5 minutes daily, gradually increasing as it feels natural.</li>
+                <li><strong>Use reminders:</strong> Set alarms or use meditation apps to prompt your practice.</li>
+                <li><strong>Be patient and gentle:</strong> Some days will be easier than others; what matters is showing up
+                    regularly.</li>
+            </ul>
+            <p>
+                Over time, meditation becomes less of a task and more a part of who you are — a habit that nurtures your mind and
+                body.
+            </p>
+          
+        </section>
+
+        <section class="section">
+            <h2>Watch: Guided Meditation for Beginners</h2>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://www.youtube.com/embed/mH2sEqrCza4" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                </iframe>
+            </div>
+        </section>
+
+
+
+            <!-- Breath Guide Animation -->
+            <section class="section breath-guide-container">
+                <div class="breath-circle"></div>
+                <div class="breath-instructions">
+                    <p><strong>Breathing Meditation Guide</strong></p>
+                    <p>Follow the circle as it expands and contracts.</p>
+                    <p><em>Breathe in</em> as it grows, <em>breathe out</em> as it shrinks.</p>
+                    <p>Repeat for a few minutes to center your mind.</p>
+                </div>
+            </section>
+            <h3>If you want to meditate, contact me!</h3>
+            <p>Start your journey toward calm and focus. Reach out anytime to get support.</p>
+            <div style="margin-top: 1rem; margin-bottom: 1rem;">
+                <a href="https://wa.me/+34610017397" target="_blank">Contact Me</a>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
+            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Kung Surf Panda</p>
+    </footer>
+
+    <script>
+        // Fade-in sections on scroll using Intersection Observer
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Hamburger menu toggle if used in nav
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>

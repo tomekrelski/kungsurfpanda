@@ -11,6 +11,16 @@ const posts = [
         title: 'Jak Przygotować Się do Lekcji Kitesurfingu', // Polish title
         url: 'blog/JakPrzygotowaćSiędoLekcjiKitesurfingu.html' // Polish URL path
     },
+
+    
+    {
+    id: 'prana1',
+    category: ['prana'],
+    title: 'Zacznij i zakończ dzień medytacją', // Polish title
+        url: 'blog/Zacznijizakończdzieńmedytacją.html' // Polish URL path
+    },
+
+
 ];
 
 // Function to render posts based on filter

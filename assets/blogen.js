@@ -12,6 +12,12 @@ const posts = [
         title: 'How to Prepare for Your Kitesurfing Lesson',
         url: 'blog/HowtoPrepareforYourKitesurfingLesson.html'
     },
+    {
+        id: 'prana1',
+        category: ['prana'],
+        title: 'Start and End Your Day With Meditation',
+        url: 'blog/StartandEndYourDayWithMeditation.html'
+    },
  
 ];
 
