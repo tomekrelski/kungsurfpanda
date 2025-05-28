@@ -45,10 +45,10 @@ class KungNav extends HTMLElement {
     const page = this.getAttribute('page') || 'index';
     const lang = this.getAttribute('lang') || 'en';
 
-    const paths = {
-      en: { pl: `../../pl/${page}.html`, es: `../../es/${page}.html` },
-      pl: { en: `../../en/${page}.html`, es: `../../es/${page}.html` },
-      es: { en: `../../en/${page}.html`, pl: `../../pl/${page}.html` }
+    const basePaths = {
+      en: { pl: `../pl/${page}.html`, es: `../es/${page}.html` },
+      pl: { en: `../en/${page}.html`, es: `../es/${page}.html` },
+      es: { en: `../en/${page}.html`, pl: `../pl/${page}.html` }
     };
 
     const homeLabels = {
@@ -71,8 +71,8 @@ class KungNav extends HTMLElement {
       .join('');
 
     let langLinks = '';
-    if (paths[lang]) {
-      for (let [otherLang, href] of Object.entries(paths[lang])) {
+    if (basePaths[lang]) {
+      for (let [otherLang, href] of Object.entries(basePaths[lang])) {
         const label = otherLang === 'pl' ? 'Polski' : otherLang === 'es' ? 'Español' : 'English';
         langLinks += `<li><a href="${href}" class="lang-link">${label}</a></li>`;
       }
@@ -92,6 +92,7 @@ class KungNav extends HTMLElement {
 }
 
 customElements.define('ks-nav', KungNav);
+
 
 
 
