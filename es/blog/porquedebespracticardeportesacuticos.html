@@ -271,103 +271,98 @@
     
         <div id="quiz-result" class="info-card" style="display:none; margin-top: 1.5rem;"></div>
     
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const sections = document.querySelectorAll(".section");
-                const revealSection = (entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                };
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(revealSection);
-                }, {
-                    threshold: 0.15,
-                });
-                sections.forEach(section => observer.observe(section));
-            });
-
-            function showResults() {
-                const form = document.forms['water-sport-quiz'];
-                const answers = Array.from(new FormData(form).values());
-
-                if (answers.length < 10) {
-                    alert('¡Por favor, responde todas las preguntas antes de enviar!');
-                    return false;
-                }
-
-                const count = {};
-                answers.forEach(ans => {
-                    count[ans] = (count[ans] || 0) + 1;
-                });
-
-                const top = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
-
-                const resultsHTML = {
-                    kite: `
-                        <h3>¡Estás hecho para el Kitesurf!</h3>
-                        <p>Te gustan los desafíos técnicos y la adrenalina. Disfrutas del viento y de volar sobre las olas.</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Kitesurf</a>
-                        </div>
-                        <div class="discount-code">
-                            <span>Código de descuento:</span>
-                            <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
-                            <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
-                        </div>
-                    `,
-                    surf: `
-                        <h3>¡El Surf es tu deporte ideal!</h3>
-                        <p>Amas el ritmo, la conexión con el océano y la fuerza pura de la naturaleza. Estás en sintonía con las olas.</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Surf</a>
-                        </div>
-                    `,
-                    wing: `
-                        <h3>¡Lo tuyo es el Wing Foil!</h3>
-                        <p>Tienes un espíritu moderno y te encantan el equilibrio, la innovación y volar sobre el agua. ¡Siente el impulso!</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Wing Foil</a>
-                        </div>
-                        <div class="discount-code">
-                            <span>Código de descuento:</span>
-                            <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
-                            <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
-                        </div>
-                    `,
-                    body: `
-                        <h3>¡El Body Surf es tu estilo!</h3>
-                        <p>Simple, auténtico y profundamente conectado a la naturaleza. No necesitas equipo — solo tu cuerpo y las olas.</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Body Surf</a>
-                        </div>
-                    `
-                };
-
-                const resultContainer = document.getElementById("quiz-result");
-                resultContainer.innerHTML = resultsHTML[top];
-                resultContainer.style.display = "block";
-                resultContainer.scrollIntoView({ behavior: 'smooth' });
-
-                return false;
-            }
-        </script>
+      
     </section>
 
 
     </main>
 
-    <footer>
-        <div class="social">
-            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
-            <a href="mailto:tomekrelsi@gmail.com">Correo</a>
-            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
-        </div>
-        <p>&copy; 2025 Kung Surf Panda</p>
-    </footer>
-
+    <ks-footer></ks-footer>
+    
+    <script src="../../assets/components.js" type="module"></script>
     <script src="../../assets/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+            const revealSection = (entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(revealSection);
+            }, {
+                threshold: 0.15,
+            });
+            sections.forEach(section => observer.observe(section));
+        });
+
+        function showResults() {
+            const form = document.forms['water-sport-quiz'];
+            const answers = Array.from(new FormData(form).values());
+
+            if (answers.length < 10) {
+                alert('¡Por favor, responde todas las preguntas antes de enviar!');
+                return false;
+            }
+
+            const count = {};
+            answers.forEach(ans => {
+                count[ans] = (count[ans] || 0) + 1;
+            });
+
+            const top = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
+
+            const resultsHTML = {
+                kite: `
+                                    <h3>¡Estás hecho para el Kitesurf!</h3>
+                                    <p>Te gustan los desafíos técnicos y la adrenalina. Disfrutas del viento y de volar sobre las olas.</p>
+                                    <div style="margin-top: 1rem;">
+                                        <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Kitesurf</a>
+                                    </div>
+                                    <div class="discount-code">
+                                        <span>Código de descuento:</span>
+                                        <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                        <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
+                                    </div>
+                                `,
+                surf: `
+                                    <h3>¡El Surf es tu deporte ideal!</h3>
+                                    <p>Amas el ritmo, la conexión con el océano y la fuerza pura de la naturaleza. Estás en sintonía con las olas.</p>
+                                    <div style="margin-top: 1rem;">
+                                        <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Surf</a>
+                                    </div>
+                                `,
+                wing: `
+                                    <h3>¡Lo tuyo es el Wing Foil!</h3>
+                                    <p>Tienes un espíritu moderno y te encantan el equilibrio, la innovación y volar sobre el agua. ¡Siente el impulso!</p>
+                                    <div style="margin-top: 1rem;">
+                                        <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Wing Foil</a>
+                                    </div>
+                                    <div class="discount-code">
+                                        <span>Código de descuento:</span>
+                                        <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                        <button class="copy-btn" onclick="copyCode('discountCode2')">Copiar</button>
+                                    </div>
+                                `,
+                body: `
+                                    <h3>¡El Body Surf es tu estilo!</h3>
+                                    <p>Simple, auténtico y profundamente conectado a la naturaleza. No necesitas equipo — solo tu cuerpo y las olas.</p>
+                                    <div style="margin-top: 1rem;">
+                                        <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Body Surf</a>
+                                    </div>
+                                `
+            };
+
+            const resultContainer = document.getElementById("quiz-result");
+            resultContainer.innerHTML = resultsHTML[top];
+            resultContainer.style.display = "block";
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+
+            return false;
+        }
+    </script>
 </body>
 
 </html>

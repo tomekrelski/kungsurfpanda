@@ -288,7 +288,18 @@
         
             <div id="quiz-result" class="info-card" style="display:none; margin-top: 1.5rem;"></div>
         
-           <script>
+      
+
+        </section>
+
+    </main>
+
+    <ks-footer></ks-footer>
+
+    <script src="../../assets/components.js" type="module"></script>
+    <script src="../../assets/script.js"></script>
+
+        <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const sections = document.querySelectorAll(".section");
                 const revealSection = (entry) => {
@@ -323,43 +334,43 @@
 
                 const resultsHTML = {
                     kite: `
-                        <h3>You are made for Kitesurfing!</h3>
-                        <p>You like tech challenges and adrenaline. You thrive in windy conditions and love flying above the waves!</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Book Kitesurf Session</a>
-                        </div>
-                        <div class="discount-code">
-                            <span>Discount code:</span>
-                            <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
-                            <button class="copy-btn" onclick="copyCode('discountCode2')">Copy</button>
-                        </div>
-                    `,
+                                <h3>You are made for Kitesurfing!</h3>
+                                <p>You like tech challenges and adrenaline. You thrive in windy conditions and love flying above the waves!</p>
+                                <div style="margin-top: 1rem;">
+                                    <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Book Kitesurf Session</a>
+                                </div>
+                                <div class="discount-code">
+                                    <span>Discount code:</span>
+                                    <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                    <button class="copy-btn" onclick="copyCode('discountCode2')">Copy</button>
+                                </div>
+                            `,
                     surf: `
-                        <h3>Surfing is your match!</h3>
-                        <p>You love rhythm, connection with the ocean, and the raw power of nature. You’re in tune with the waves.</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://wa.me/+34610017397" class="card-btn">Book Surf Session</a>
-                        </div>
-                    `,
+                                <h3>Surfing is your match!</h3>
+                                <p>You love rhythm, connection with the ocean, and the raw power of nature. You’re in tune with the waves.</p>
+                                <div style="margin-top: 1rem;">
+                                    <a href="https://wa.me/+34610017397" class="card-btn">Book Surf Session</a>
+                                </div>
+                            `,
                     wing: `
-                        <h3>You’re into Wing Foiling!</h3>
-                        <p>You’re a modern soul with a love for flying, balance, and future-forward sports. Wing it and feel the lift!</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Book Wing Foil Session</a>
-                        </div>
-                        <div class="discount-code">
-                            <span>Discount code:</span>
-                            <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
-                            <button class="copy-btn" onclick="copyCode('discountCode2')">Copy</button>
-                        </div>
-                    `,
+                                <h3>You’re into Wing Foiling!</h3>
+                                <p>You’re a modern soul with a love for flying, balance, and future-forward sports. Wing it and feel the lift!</p>
+                                <div style="margin-top: 1rem;">
+                                    <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Book Wing Foil Session</a>
+                                </div>
+                                <div class="discount-code">
+                                    <span>Discount code:</span>
+                                    <input type="text" id="discountCode2" value="KUNGSURFPANDA" readonly />
+                                    <button class="copy-btn" onclick="copyCode('discountCode2')">Copy</button>
+                                </div>
+                            `,
                     body: `
-                        <h3>Body Surfing is your vibe!</h3>
-                        <p>Simple, raw, and deeply connected to nature. No gear needed — just your body and the waves.</p>
-                        <div style="margin-top: 1rem;">
-                            <a href="https://wa.me/+34610017397" class="card-btn">Book Body Surf Session</a>
-                        </div>
-                    `
+                                <h3>Body Surfing is your vibe!</h3>
+                                <p>Simple, raw, and deeply connected to nature. No gear needed — just your body and the waves.</p>
+                                <div style="margin-top: 1rem;">
+                                    <a href="https://wa.me/+34610017397" class="card-btn">Book Body Surf Session</a>
+                                </div>
+                            `
                 };
 
                 const resultContainer = document.getElementById("quiz-result");
@@ -370,21 +381,6 @@
                 return false;
             }
         </script>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="social">
-            <a href="https://wa.me/+34610017397" target="_blank">WhatsApp</a>
-            <a href="mailto:tomekrelsi@gmail.com">E-mail</a>
-            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
-        </div>
-        <p>&copy; 2025 Kung Surf Panda</p>
-    </footer>
-
-    <script src="../../assets/script.js"></script>
 </body>
 
 </html>
