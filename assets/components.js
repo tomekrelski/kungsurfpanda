@@ -46,7 +46,7 @@ class KungNav extends HTMLElement {
     const lang = this.getAttribute('lang') || 'en';
 
     const paths = {
-      en: { pl: `../pl/${page}.html`, es: `../es/${page}.html` },
+      en: { pl: `../../pl/${page}.html`, es: `../../es/${page}.html` },
       pl: { en: `../../en/${page}.html`, es: `../../es/${page}.html` },
       es: { en: `../../en/${page}.html`, pl: `../../pl/${page}.html` }
     };
