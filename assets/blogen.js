@@ -1,22 +1,22 @@
 const posts = [
     {
-        id: 'kite1',
+        id: 'post1',
         category: ['kite','surf'],
         title: 'Why You Should Do Water Sports',
-        url: 'blog/whyyoushoulddowatersports.html'
+        url: 'blog/post1.html'
     },
 
     {
-        id: 'kite2',
+        id: 'post2',
         category: ['kite'],
         title: 'How to Prepare for Your Kitesurfing Lesson',
-        url: 'blog/HowtoPrepareforYourKitesurfingLesson.html'
+        url: 'blog/post2.html'
     },
     {
-        id: 'prana1',
+        id: 'post3',
         category: ['prana'],
         title: 'Start and End Your Day With Meditation',
-        url: 'blog/StartandEndYourDayWithMeditation.html'
+        url: 'blog/post3.html'
     },
  
 ];

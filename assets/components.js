@@ -96,4 +96,52 @@ customElements.define('ks-nav', KungNav);
 
 
 
+class KungNavPost extends HTMLElement {
+  connectedCallback() {
+    const lang = this.getAttribute('lang') || 'en';
+    const post = this.getAttribute('post') || 'post1';
+
+    // Dynamic language links
+    const langPaths = {
+      en: {
+        pl: `../../pl/blog/${post}.html`,
+        es: `../../es/blog/${post}.html`
+      },
+      pl: {
+        en: `../../en/blog/${post}.html`,
+        es: `../../es/blog/${post}.html`
+      },
+      es: {
+        en: `../../en/blog/${post}.html`,
+        pl: `../../pl/blog/${post}.html`
+      }
+    };
+
+    let langLinks = '';
+    if (langPaths[lang]) {
+      for (const [otherLang, href] of Object.entries(langPaths[lang])) {
+        const label = otherLang === 'pl' ? 'Polski' : otherLang === 'es' ? 'Español' : 'English';
+        langLinks += `<li><a href="${href}" class="lang-link">${label}</a></li>`;
+      }
+    }
+
+    this.innerHTML = `
+      <nav>
+        <a href="../index.html" class="logo">Kung Surf Panda</a>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../kite.html">Kite</a></li>
+          <li><a href="../surf.html">Surf</a></li>
+          <li><a href="../prana.html">Prana</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          ${langLinks}
+        </ul>
+      </nav>
+    `;
+  }
+}
+
+customElements.define('ks-nav-post', KungNavPost);
+
 

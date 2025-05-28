@@ -1,23 +1,23 @@
 const posts = [
     {
-        id: 'kite1',
+        id: 'post1',
         category: ['kite', 'surf'],
         title: 'Dlaczego warto uprawiać sporty wodne', // Polish title
-        url: 'blog/dlaczegowartouprawiacsportywodne.html' // Polish URL path
+        url: 'blog/post1.html'
     },
     {
-    id: 'kite2',
+        id: 'post2',
         category: ['kite'],
         title: 'Jak Przygotować Się do Lekcji Kitesurfingu', // Polish title
-        url: 'blog/JakPrzygotowaćSiędoLekcjiKitesurfingu.html' // Polish URL path
+        url: 'blog/post2.html'
     },
 
     
     {
-    id: 'prana1',
-    category: ['prana'],
-    title: 'Zacznij i zakończ dzień medytacją', // Polish title
-        url: 'blog/Zacznijizakończdzieńmedytacją.html' // Polish URL path
+        id: 'post3',
+        category: ['prana'],
+        title: 'Zacznij i zakończ dzień medytacją', // Polish title
+        url: 'blog/post3.html'
     },
 
 
