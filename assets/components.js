@@ -17,6 +17,8 @@ class KungFooter extends HTMLElement {
 
 customElements.define('ks-footer', KungFooter);
 
+
+// used in index.html
 class KungGallery extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -146,3 +148,37 @@ class KungNavPost extends HTMLElement {
 customElements.define('ks-nav-post', KungNavPost);
 
 
+class KungShare extends HTMLElement {
+  connectedCallback() {
+    const url = this.getAttribute('url') || window.location.href;
+
+    this.innerHTML = `
+      <p class="share-cta">💬 Enjoyed this post? Share it with your friends!</p>
+      <img src="../../assets/images/share.png" alt="Share" id="shareBtn" style="cursor:pointer; width:100px;" />
+
+      <div id="shareModal" class="modal-share">
+        <div class="modal-share-content">
+          <span class="modal-share-close">&times;</span>
+          <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a>
+            <a href="https://wa.me/?text=${encodeURIComponent(url)}" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Modal functionality
+    const modal = this.querySelector("#shareModal");
+    const btn = this.querySelector("#shareBtn");
+    const closeBtn = this.querySelector(".modal-share-close");
+
+    btn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  }
+}
+
+customElements.define('ks-share', KungShare);

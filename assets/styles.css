@@ -394,6 +394,70 @@ nav .nav-links li a:hover {
     color: #fff;
 }
 
+/* ==== Social Share ====*/
+
+/* Modal Share Styling */
+.modal-share {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-share-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.modal-share-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-share-close:hover {
+  color: black;
+}
+
+/* Share Links */
+.social-share a {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.social-share a:hover {
+  background-color: #333;
+}
+
+.share-cta {
+  font-size: 24px;       /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+
+
 /* === Footer === */
 footer {
     background-color: #000;
