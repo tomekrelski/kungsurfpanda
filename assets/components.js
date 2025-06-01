@@ -80,6 +80,7 @@ class KungNav extends HTMLElement {
       }
     }
 
+    // Add dark mode toggle button
     this.innerHTML = `
       <nav>
         <a href="index.html" class="logo">Kung Surf Panda</a>
@@ -87,9 +88,32 @@ class KungNav extends HTMLElement {
         <ul class="nav-links">
           ${navLinks}
           ${langLinks}
+          <li><a href="#" id="themeToggle" class="lang-link" role="button">🌑 Dark Mode</a></li>
         </ul>
       </nav>
     `;
+
+    // Handle dark mode logic
+    const toggleButton = this.querySelector('#themeToggle');
+    const updateThemeUI = () => {
+      const isDark = document.body.classList.contains('reverse-theme');
+      toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
+    };
+
+    // Toggle dark mode on button click
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('reverse-theme');
+      const isDark = document.body.classList.contains('reverse-theme');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeUI();
+    });
+
+    // On load: apply saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('reverse-theme');
+    }
+    updateThemeUI();
   }
 }
 
@@ -104,7 +128,6 @@ class KungNavPost extends HTMLElement {
     const lang = this.getAttribute('lang') || 'en';
     const post = this.getAttribute('post') || 'post1';
 
-    // Dynamic language links
     const langPaths = {
       en: {
         pl: `../../pl/blog/${post}.html`,
@@ -128,6 +151,7 @@ class KungNavPost extends HTMLElement {
       }
     }
 
+    // Add HTML with theme toggle
     this.innerHTML = `
       <nav>
         <a href="../index.html" class="logo">Kung Surf Panda</a>
@@ -139,9 +163,31 @@ class KungNavPost extends HTMLElement {
           <li><a href="../prana.html">Prana</a></li>
           <li><a href="../blog.html">Blog</a></li>
           ${langLinks}
+          <li><a href="#" id="themeToggle" class="lang-link" role="button">🌑 Dark Mode</a></li>
         </ul>
       </nav>
     `;
+
+    // Theme toggle logic
+    const toggleButton = this.querySelector('#themeToggle');
+    const updateThemeUI = () => {
+      const isDark = document.body.classList.contains('reverse-theme');
+      toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
+    };
+
+    toggleButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('reverse-theme');
+      const isDark = document.body.classList.contains('reverse-theme');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeUI();
+    });
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('reverse-theme');
+    }
+    updateThemeUI();
   }
 }
 

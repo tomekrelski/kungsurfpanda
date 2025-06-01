@@ -1,3 +1,43 @@
+:root {
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-primary: #000;
+  --color-primary-hover: #fff;
+  --color-secondary: #fff;
+  --color-secondary-hover: #000;
+  --color-border: #eee;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-dark: rgba(43, 28, 28, 0.1);
+  --color-modal-bg: rgba(0, 0, 0, 0.5);
+  --color-modal-content-bg: #fff;
+  --color-link-hover-bg: #fff;
+  --color-link-hover-text: #000;
+  --color-lang-link-bg: #fff;
+  --color-lang-link-text: #000;
+  --color-lang-link-hover-bg: #000;
+  --color-lang-link-hover-text: #fff;
+}
+
+.reverse-theme {
+  --color-bg: #000;
+  --color-text: #fff;
+  --color-primary: #fff;
+  --color-primary-hover: #000;
+  --color-secondary: #000;
+  --color-secondary-hover: #fff;
+  --color-border: #333;
+  --color-shadow: rgba(255, 255, 255, 0.1);
+  --color-shadow-dark: rgba(248, 239, 239, 0.1);
+  --color-modal-bg: rgba(255, 255, 255, 0.5);
+  --color-modal-content-bg: #000;
+  --color-link-hover-bg: #000;
+  --color-link-hover-text: #fff;
+  --color-lang-link-bg: #000;
+  --color-lang-link-text: #fff;
+  --color-lang-link-hover-bg: #fff;
+  --color-lang-link-hover-text: #000;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -8,8 +48,8 @@ body {
     margin: 0;
     padding-top: 60px; /* adjust this to your nav height */
 
-    background: #fff;
-    color: #000;
+    background: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
     font-size: 18px;
     text-align: center;
@@ -37,7 +77,7 @@ a {
 }
 
 .section:not(:last-child) {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 40px;
 }
 
@@ -50,10 +90,10 @@ a {
 }
 
 .container {
-    background: #fff;
+    background: var(--color-bg);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--color-shadow);
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -68,7 +108,7 @@ a {
 .description {
     margin-top: 15px;
     font-size: 16px;
-    color: #333;
+    color: var(--color-text);
 }
 
 /* === Navbar === */
@@ -76,7 +116,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
+    background: var(--color-primary);
     padding: 15px 30px;
     position: fixed;   /* change from relative to fixed */
     top: 0;            /* stick to the top */
@@ -87,7 +127,7 @@ nav {
 
 
 nav .logo {
-    color: #fff;
+    color: var(--color-secondary);
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -95,7 +135,7 @@ nav .logo {
 nav .hamburger {
     display: none;
     font-size: 24px;
-    color: #fff;
+    color: var(--color-secondary);
     cursor: pointer;
 }
 
@@ -108,21 +148,21 @@ nav .nav-links {
 }
 
 nav .nav-links li a {
-    color: #fff;
+    color: var(--color-secondary);
     font-size: 1.2rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav .nav-links li a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-link-hover-bg);
+    color: var(--color-link-hover-text);
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 .nav-links .lang-link {
-    background-color: white !important;
-    color: black !important;
+    background-color: var(--color-lang-link-bg) !important;
+    color: var(--color-lang-link-text) !important;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
@@ -130,8 +170,8 @@ nav .nav-links li a:hover {
 }
 
 .nav-links .lang-link:hover {
-    background-color: black !important;
-    color: white !important;
+    background-color: var(--color-lang-link-hover-bg) !important;
+    color: var(--color-lang-link-hover-text) !important;
 }
 
 /* === Hamburger Mobile Menu === */
@@ -147,7 +187,7 @@ nav .nav-links li a:hover {
         position: absolute;
         top: 60px;
         right: 30px;
-        background: #000;
+        background: var(--color-primary);
         padding: 10px;
         border-radius: 8px;
         z-index: 999;
@@ -171,18 +211,20 @@ nav .nav-links li a:hover {
 }
 
 .info-card {
-    background-color: #f9f9f9;
+    background-color: var(--color-secondary);
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 12px rgba(43, 28, 28, 0.1);
+    box-shadow: 0 4px 12px var(--color-shadow-dark);
     width: 100%;
     text-align: center;
+    color: var(--color-text);
+
 }
 
 .info-card p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--color-text);
 }
 
 /* === Buttons === */
@@ -190,8 +232,8 @@ nav .nav-links li a:hover {
 .copy-btn,
 .read-more-btn,
 .btn {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 12px 25px;
     font-size: 16px;
     border-radius: 8px;
@@ -205,31 +247,31 @@ nav .nav-links li a:hover {
 .copy-btn:hover,
 .read-more-btn:hover,
 .btn:hover {
-    background-color: #fff !important;
-    color: #000 !important;
+    background-color: var(--color-primary-hover) !important;
+    color: var(--color-secondary-hover) !important;
     box-shadow: none;
 }
 
 /* === Alternate Button Styles === */
 .btn-black {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .btn-black:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .btn-white {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-white:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
 }
 
 /* === Contact Buttons === */
@@ -316,7 +358,8 @@ nav .nav-links li a:hover {
 }
 
 .modal-content {
-    background: #fff;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     padding: 20px;
     border-radius: 12px;
     max-width: 400px;
@@ -341,16 +384,17 @@ nav .nav-links li a:hover {
     max-width: 600px;
     margin: 80px auto;
     padding: 30px 20px;
-    background: #fff;
+    background: var(--color-secondary);
+    color: var(--color-primary);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--color-shadow-dark);
     text-align: center;
 }
 
 .services h2 {
     font-size: 26px;
     margin-bottom: 25px;
-    color: #333;
+    color: var(--color-primary);
 }
 
 .button-group {
@@ -370,28 +414,6 @@ nav .nav-links li a:hover {
     transition: all 0.3s ease;
     text-align: center;
     line-height: 1.4;
-}
-
-.btn-black {
-    background-color: #000;
-    color: #fff;
-}
-
-.btn-black:hover {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-}
-
-.btn-white {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-}
-
-.btn-white:hover {
-    background-color: #000;
-    color: #fff;
 }
 
 /* ==== Social Share ====*/
@@ -460,8 +482,8 @@ nav .nav-links li a:hover {
 
 /* === Footer === */
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 20px;
     text-align: center;
     margin-top: auto;
@@ -472,7 +494,7 @@ footer {
 }
 
 .social a {
-    color: #fff;
+    color: var(--color-secondary);
     margin: 0 15px;
     font-size: 18px;
 }
