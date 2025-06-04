@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Choose the Right Surfboard</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <ks-nav-post lang="en" post="post4"></ks-nav-post>
+
+    <main class="blog-post">
+        <article>
+            <h1>How to Choose the Right Surfboard (So You Actually Catch Waves)</h1>
+            
+            <section class="section">
+                <p>
+                    Not sure what kind of board is right for you? Let’s break it down.
+                </p>
+                <a href="#volumeCalcFormsection" class="btn btn-black"
+                    style="display:inline-block; margin: 10px 0; padding: 10px 20px; font-size:1rem;">
+                    👉 Jump to Volume Calculator
+                </a>
+            </section>
+    
+            <section class="section">
+                <p>
+                    Let’s be honest: choosing the wrong surfboard is like showing up to a sword fight with a butter knife.
+                    It happens all the time especially to beginners.
+                </p>
+                <p>
+                    One of the most common mistakes? Going for the “cool shortboard” look, and then spending the whole
+                    session
+                    <strong>bobbing around like a confused seal</strong>, wondering why you can’t catch anything.
+                </p>
+                <p>
+                    This post and custom surfboard volume calculator is here to stop that from happening.
+                </p>
+            </section>
+    
+            <section class="section">
+                <h2>🤔 What Actually Affects the Right Surfboard Volume?</h2>
+                <p>Think of your board like a dance partner. You don’t want one who steps on your toes you want someone who
+                    lifts you up and keeps you balanced.</p>
+            </section>
+    
+            <section class="section">
+                <h2>⚖️ 1. Your Weight</h2>
+                <p>The heavier you are, the more volume you need. It’s simple physics: more mass needs more float.</p>
+                <p><strong>Tip:</strong> Wearing a wetsuit adds 2–4 kg. Our calculator takes that into account.</p>
+            </section>
+    
+            <section class="section">
+                <h2>💪 2. Your Fitness (Pushups)</h2>
+                <p>If your pop-ups are slow and you tire easily, you need a more forgiving board with extra float.</p>
+                <p><strong>In the calculator:</strong> Choose the option that reflects how many pushups you can do
+                    comfortably.</p>
+            </section>
+    
+            <section class="section">
+                <h2>🏊 3. Swimming Ability</h2>
+                <p>If you're not super confident in the water, you want a board that supports you—not one that sinks when
+                    you shift your weight.</p>
+                <p><strong>In the calculator:</strong> Rate your swim ability from beginner to advanced.</p>
+            </section>
+    
+            <section class="section">
+                <h2>📅 4. Surfing Frequency</h2>
+                <p>If you only surf occasionally, your paddling strength and wave timing will need a boost. A higher-volume
+                    board gives you that edge.</p>
+                <p><strong>In the calculator:</strong> Tell us how often you surf—every session matters.</p>
+            </section>
+    
+            <section class="section">
+                <h2>🌊 5. Typical Wave Size</h2>
+                <p>Smaller waves = more volume needed to paddle and catch waves. Bigger waves = slightly lower volume for
+                    better control.</p>
+                <p><strong>In the calculator:</strong> Choose the size of waves you usually surf.</p>
+            </section>
+    
+            <section class="section">
+                <h2>🧥 6. Wetsuit or No Wetsuit?</h2>
+                <p>A soaked wetsuit adds extra weight. You’ll want a bit more volume to stay comfortably afloat.</p>
+                <p><strong>In the calculator:</strong> Just tell us if you surf with a wetsuit or not.</p>
+            </section>
+    
+            <section class="section">
+                <h2>🧠 7. Your Surfing Level</h2>
+                <p>Be honest: are you just starting out, or already slicing waves down the line?</p>
+                <p>The less experience you have, the more volume and forgiveness your board should offer.</p>
+                <p><strong>In the calculator:</strong> Select your surfing level from Beginner to Pro.</p>
+            
+                <!-- Level Buttons -->
+                <div style="display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: auto;">
+            
+                    <button onclick="toggleLevel('beginnerDesc')"
+                        style="padding: 15px; font-size: 1rem; background-color: #e0f7fa; color: #006064; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                        🟢 Beginner — Just starting out? <em>(Click to view details)</em>
+                    </button>
+                    <div id="beginnerDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li>You're just starting out with surfing</li>
+                            <li>Learning to stand up in whitewater</li>
+                            <li>Still building balance and paddling strength</li>
+                            <li>Not yet catching unbroken (green) waves consistently</li>
+                            <li>Feel most comfortable on a soft-top or longboard in small surf</li>
+                        </ul>
+                        <p><strong>You need:</strong> A big, stable board with lots of volume to help catch waves and stay upright.
+                        </p>
+                    </div>
+            
+                    <button onclick="toggleLevel('intermediateDesc')"
+                        style="padding: 15px; font-size: 1rem; background-color: #e3f2fd; color: #0d47a1; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                        🔵 Intermediate — Catching green waves? <em>(Click to view details)</em>
+                    </button>
+                    <div id="intermediateDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li>You can paddle into green waves on your own</li>
+                            <li>Starting to make basic turns (trimming, gentle cutbacks)</li>
+                            <li>Taking off at an angle and riding along the wave face</li>
+                            <li>Comfortable in moderate surf conditions</li>
+                            <li>Know basic surf etiquette</li>
+                        </ul>
+                        <p><strong>You need:</strong> A mid-volume board—less forgiving than a beginner board, but more agile and
+                            fun.</p>
+                    </div>
+            
+                    <button onclick="toggleLevel('advancedDesc')"
+                        style="padding: 15px; font-size: 1rem; background-color: #fff3e0; color: #e65100; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                        🟠 Advanced — Surfing confidently? <em>(Click to view details)</em>
+                    </button>
+                    <div id="advancedDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li>Confident in most surf conditions</li>
+                            <li>Good wave judgment and positioning</li>
+                            <li>Generating your own speed on the wave</li>
+                            <li>Executing solid bottom and top turns</li>
+                            <li>Surfing fluidly along the wave face</li>
+                        </ul>
+                        <p><strong>You need:</strong> A lower-volume board that gives control and precision for performance
+                            maneuvers.</p>
+                    </div>
+            
+                    <button onclick="toggleLevel('proDesc')"
+                        style="padding: 15px; font-size: 1rem; background-color: #ffebee; color: #b71c1c; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                        🔴 Pro — Ripping hard? <em>(Click to view details)</em>
+                    </button>
+                    <div id="proDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li>Surfing at a very high or professional level</li>
+                            <li>Linking advanced maneuvers (snaps, airs, floaters, barrels)</li>
+                            <li>Riding fast, powerful, and technical lines</li>
+                            <li>Comfortable in all wave conditions</li>
+                            <li>Possibly competing or surfing for sponsors</li>
+                        </ul>
+                        <p><strong>You need:</strong> A high-performance board with minimal volume, built for speed, control, and
+                            responsiveness.</p>
+                    </div>
+            
+                </div>
+            </section>
+            <section class="section">
+                <h2>⚫️⚪️ Choose Your Path: The Dark Side vs. The Wave Catcher</h2>
+                <p>You now stand at a crossroads.</p>
+    
+                <h3>⚫️ The Dark Side:</h3>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>You choose a too-small board</li>
+                    <li>Spend your session paddling in place</li>
+                    <li>Maybe catch one wave… if Poseidon pities you</li>
+                </ul>
+    
+                <h3>⚪️ The Way of the Wave Catcher:</h3>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>You ride a forgiving, floaty board</li>
+                    <li>Catch 20 waves a session</li>
+                    <li>Progress like a beast</li>
+                    <li>Bonus: you still look cool standing up on a real wave 😉</li>
+                </ul>
+            </section>
+    
+            <section class="section">
+                <h2>📢 Final Word</h2>
+                <p>
+                    If you don’t want to be <strong>the bouncy spectator</strong> just floating around waiting for waves—
+                    <strong>choose the right board</strong>. Big, floaty, forgiving. You’ll thank yourself later.
+                </p>
+                <p>
+                    The ocean doesn't care how "cool" your board looks. It rewards the ones who paddle smart and ride with
+                    style.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 id="volumeCalcFormsection">🏄 Surfboard Volume Calculator</h2>
+                <p>Fill in the details below, and we’ll recommend a volume range that fits your body, skill, and surf style.
+                </p>
+                <form id="volumeCalcForm" style="max-width:400px; margin:auto; text-align:left;">
+            
+                    <label for="level">Your surfing level:</label>
+                    <select id="level" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="pro">Pro</option>
+                    </select>
+            
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" min="30" max="150" step="1" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);" />
+            
+                    <label for="waveSize">Wave size you usually surf:</label>
+                    <select id="waveSize" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="0.25">0 - 0.5 m</option>
+                        <option value="0.75">0.5 - 1 m</option>
+                        <option value="1.5">1 - 2 m</option>
+                    </select>
+            
+                    <label for="pushups">How many pushups can you do?</label>
+                    <select id="pushups" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="low">Less than 10</option>
+                        <option value="medium">10 - 30</option>
+                        <option value="high">More than 30</option>
+                    </select>
+            
+                    <label for="swim">Swimming ability:</label>
+                    <select id="swim" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="low">Beginner</option>
+                        <option value="medium">Intermediate</option>
+                        <option value="high">Advanced</option>
+                    </select>
+            
+                    <label for="frequency">How often do you surf?</label>
+                    <select id="frequency" required
+                        style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="rare">Less than once a month</option>
+                        <option value="sometimes">1-3 times a month</option>
+                        <option value="weekly">Weekly or more</option>
+                    </select>
+            
+                    <label for="wetsuit">Do you wear a wetsuit?</label>
+                    <select id="wetsuit" required
+                        style="width:100%; padding:8px; margin-bottom:25px; border-radius:5px; border:1px solid var(--color-border);">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+            
+                    <button type="submit" class="btn btn-black" style="width:100%;">Calculate Volume</button>
+                </form>
+                <div id="result" style="margin-top:30px; font-weight:bold; font-size:1.2rem; color: var(--color-primary);"></div>
+            </section>
+    
+            <section class="section card-section">
+                <div class="info-card">
+                    <h2>Want to Catch More Waves?</h2>
+                    <p>
+                        Ready to ride more, fall less, and laugh a lot more? Book a surf session with me and let's put the
+                        right board under your feet.
+                    </p>
+                    <a href="https://wa.me/+34610017397" target="_blank" class="card-btn black">Book Surf Lesson with Kung
+                        Surf Panda</a>
+                </div>
+            </section>
+            
+            <ks-share url="https://tomekrelski.github.io/kungsurfpanda/en/blog/post4.html"
+                message="🏄‍♂️ Found the right board? Help your friends catch more waves too — share this guide!">
+            </ks-share>
+
+    
+        </article>
+    </main>
+
+    <ks-footer></ks-footer>
+
+    <script src="../../assets/components.js" type="module"></script>
+    <script src="../../assets/script.js"></script>
+    <script>
+        document.getElementById('volumeCalcForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const level = document.getElementById('level').value;
+            const weight = Number(document.getElementById('weight').value);
+            const waveSize = Number(document.getElementById('waveSize').value);
+            const pushups = document.getElementById('pushups').value;
+            const swim = document.getElementById('swim').value;
+            const frequency = document.getElementById('frequency').value;
+            const wetsuit = document.getElementById('wetsuit').value;
+
+            // Base volume factors by level
+            let baseMinFactor, baseMaxFactor;
+            switch (level) {
+                case 'beginner':
+                    baseMinFactor = 0.75;
+                    baseMaxFactor = 0.85;
+                    break;
+                case 'intermediate':
+                    baseMinFactor = 0.65;
+                    baseMaxFactor = 0.75;
+                    break;
+                case 'advanced':
+                    baseMinFactor = 0.55;
+                    baseMaxFactor = 0.65;
+                    break;
+                case 'pro':
+                    baseMinFactor = 0.45;
+                    baseMaxFactor = 0.55;
+                    break;
+                default:
+                    baseMinFactor = 0.6;
+                    baseMaxFactor = 0.7;
+            }
+
+            let minVolume = weight * baseMinFactor;
+            let maxVolume = weight * baseMaxFactor;
+
+            // Wave size adjustment
+            if (waveSize <= 0.5) {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (waveSize > 1) {
+                minVolume *= 0.9;
+                maxVolume *= 0.95;
+            }
+
+            // Pushups adjustment
+            if (pushups === 'low') {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (pushups === 'high') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Swimming ability adjustment
+            if (swim === 'low') {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (swim === 'high') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Surfing frequency adjustment
+            if (frequency === 'rare') {
+                minVolume *= 1.1;
+                maxVolume *= 1.15;
+            } else if (frequency === 'weekly') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Wetsuit adjustment
+            if (wetsuit === 'yes') {
+                minVolume *= 1.05;
+                maxVolume *= 1.05;
+            }
+
+            // Round volumes
+            minVolume = Math.round(minVolume);
+            maxVolume = Math.round(maxVolume);
+
+            // Board type advice with clear explanation when volumes span categories
+            let boardType = '';
+
+            if (minVolume >= 60) {
+                boardType = 'Big board: more than 60L — perfect for maximum stability, ease of paddling, and comfortable progression. Ideal for beginners or mellow waves.';
+            } else if (minVolume < 60 && maxVolume > 60) {
+                boardType = 'Your recommended volume spans both medium and big boards. If you want more control and quicker turns, choose a medium board (40–60L). For easier paddling or starting out, a big board (60L+) is better.';
+            } else if (minVolume < 40 && maxVolume >= 40 && maxVolume <= 50) {
+                boardType = 'Your volume spans small and medium boards. Medium boards (40–50L) offer a great balance of stability and control, while smaller boards (<40L) give you more maneuverability if you’re confident.';
+            } else if (minVolume >= 40 && maxVolume <= 50) {
+                boardType = 'Medium board: 40–50L — ideal mix of stability and performance. Perfect for progressing surfers and confident intermediates.';
+            } else if (minVolume >= 35 && maxVolume < 40) {
+                boardType = 'Close to small-medium range. Small boards (<40L) are agile and responsive, but if you want more paddle support, consider closer to 40L.';
+            } else {
+                boardType = 'Small board: less than 35L — designed for skilled surfers seeking high performance and responsiveness.';
+            }
+
+            document.getElementById('result').innerHTML = `
+                <p>Your recommended surfboard volume is between <strong>${minVolume}L</strong> and <strong>${maxVolume}L</strong>.</p>
+                <p><em>Minimum volume (${minVolume}L):</em> For days when you're fit and feeling strong. Offers better maneuverability and responsiveness.</p>
+                <p><em>Maximum volume (${maxVolume}L):</em> Helpful on slower days, small waves, or when you're tired. Adds buoyancy and helps catch more waves.</p>
+                <p>${boardType}</p>
+            `;
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+        // Toggle for levels
+        function toggleLevel(id) {
+                const desc = document.getElementById(id);
+                desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>

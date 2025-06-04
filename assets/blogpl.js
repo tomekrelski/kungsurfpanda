@@ -18,7 +18,14 @@ const posts = [
         category: ['prana'],
         title: 'Zacznij i zakończ dzień medytacją', // Polish title
         url: 'blog/post3.html'
-    },
+    }, 
+    {
+        id: 'post4',
+        category: ['surf'],
+         title: 'Jak Wybrać Odpowiednią Deskę Surfingową', // Polish title
+        url: 'blog/post4.html'
+    }, 
+
 
 
 ];

@@ -197,9 +197,10 @@ customElements.define('ks-nav-post', KungNavPost);
 class KungShare extends HTMLElement {
   connectedCallback() {
     const url = this.getAttribute('url') || window.location.href;
+    const message = this.getAttribute('message') || '💬 Enjoyed this post? Share it with your friends!';
 
     this.innerHTML = `
-      <p class="share-cta">💬 Enjoyed this post? Share it with your friends!</p>
+      <p class="share-cta">${message}</p>
       <img src="../../assets/images/share.png" alt="Share" id="shareBtn" style="cursor:pointer; width:100px;" />
 
       <div id="shareModal" class="modal-share">

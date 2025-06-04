@@ -18,6 +18,12 @@ const posts = [
         title: 'Start and End Your Day With Meditation',
         url: 'blog/post3.html'
     },
+    {
+        id: 'post3',
+        category: ['surf'],
+        title: ' How to Choose the Right Surfboard',
+        url: 'blog/post4.html'
+    }, 
  
 ];
 

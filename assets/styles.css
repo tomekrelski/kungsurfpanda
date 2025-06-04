@@ -42,6 +42,11 @@
     box-sizing: border-box;
 }
 
+
+:target {
+  scroll-margin-top: 100px; /* Adjust based on your header height */
+}
+
 /* === Base Styles === */
 body {
     font-family: 'Special Elite', cursive;
@@ -215,10 +220,12 @@ nav .nav-links li a:hover {
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 4px 12px var(--color-shadow-dark);
+    max-width: 600px;
     width: 100%;
+    margin: 0 auto; /* center horizontally */
     text-align: center;
     color: var(--color-text);
-
+    box-sizing: border-box; /* ensures padding stays within max-width */
 }
 
 .info-card p {
@@ -240,8 +247,11 @@ nav .nav-links li a:hover {
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: block;
+    width: 100%; /* make full width */
+    margin-top: 10px;
 }
+
 
 .card-btn:hover,
 .copy-btn:hover,

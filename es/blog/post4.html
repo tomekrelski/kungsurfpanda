@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo Elegir la Tabla de Surf Correcta</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <ks-nav-post lang="es" post="post4"></ks-nav-post>
+
+<main class="blog-post">
+    <article>
+        <h1>Cómo elegir la tabla de surf correcta (para que no pierdas ni una ola)</h1>
+
+        <section class="section">
+            <p>¿No estás seguro de qué tabla es adecuada para ti? Vamos a desglosarlo.</p>
+            <a href="#volumeCalcFormsection" class="btn btn-black"
+                style="display:inline-block; margin: 10px 0; padding: 10px 20px; font-size:1rem;">
+                👉 Ir al Calculador de Volumen
+            </a>
+        </section>
+
+        <section class="section">
+            <p>Seamos honestos: elegir la tabla de surf equivocada es como ir a una pelea con cuchillos... con una
+                cuchara.</p>
+            <p>¿El error más común? Elegir una shortboard “cool” y luego pasar toda la sesión
+                <strong>flotando como una foca confundida</strong>, preguntándote por qué no puedes surfear ninguna ola.
+            </p>
+            <p>Esta guía y calculador de volumen personalizado están aquí para que eso no te pase.</p>
+        </section>
+
+        <section class="section">
+            <h2>🤔 ¿Qué Factores Afectan el Volumen Correcto de una Tabla?</h2>
+            <p>Piensa en tu tabla como una pareja de baile. No quieres a alguien que te pise, sino a quien te eleve y te
+                mantenga en equilibrio.</p>
+        </section>
+
+        <section class="section">
+            <h2>⚖️ 1. Tu Peso</h2>
+            <p>Cuanto más pesas, más volumen necesitas. Es física simple: más masa requiere más flotabilidad.</p>
+            <p><strong>Consejo:</strong> Usar un traje de neopreno añade entre 2–4 kg. Nuestro calculador lo tiene en
+                cuenta.</p>
+        </section>
+
+        <section class="section">
+            <h2>💪 2. Tu Condición Física (Flexiones)</h2>
+            <p>Si te cuesta hacer pop-up o te cansas rápido, necesitas una tabla más indulgente con flotación extra.</p>
+            <p><strong>En el calculador:</strong> Elige cuántas flexiones puedes hacer cómodamente.</p>
+        </section>
+
+        <section class="section">
+            <h2>🏊 3. Habilidad para Nadar</h2>
+            <p>Si no te sientes seguro en el agua, necesitas una tabla que te apoye, no una que se hunda con tu peso.
+            </p>
+            <p><strong>En el calculador:</strong> Califica tu habilidad para nadar de principiante a avanzado.</p>
+        </section>
+
+        <section class="section">
+            <h2>📅 4. Frecuencia de Surf</h2>
+            <p>Si solo surfeas ocasionalmente, tu fuerza al remar y tu sincronización con las olas necesitarán ayuda.
+                Una tabla de mayor volumen te dará ventaja.</p>
+            <p><strong>En el calculador:</strong> Indícanos con qué frecuencia surfeas—cada sesión cuenta.</p>
+        </section>
+
+        <section class="section">
+            <h2>🌊 5. Tamaño Típico de Olas</h2>
+            <p>Olas pequeñas = más volumen para remar y surfear. Olas grandes = un poco menos de volumen para mayor
+                control.</p>
+            <p><strong>En el calculador:</strong> Elige el tamaño de las olas que sueles surfear.</p>
+        </section>
+
+        <section class="section">
+            <h2>🧥 6. ¿Con o Sin Traje de Neopreno?</h2>
+            <p>Un traje mojado añade peso extra. Necesitarás un poco más de volumen para mantenerte cómodo.</p>
+            <p><strong>En el calculador:</strong> Solo dinos si surfeas con traje o no.</p>
+        </section>
+
+        <section class="section">
+            <h2>🧠 7. Tu Nivel de Surf</h2>
+            <p>Sé honesto: ¿Estás dando tus primeros pasos o ya surfeas con confianza?</p>
+            <p>Cuanta menos experiencia tengas, más volumen y tolerancia debe tener tu tabla.</p>
+            <p><strong>En la calculadora:</strong> Selecciona tu nivel de surf desde Principiante hasta Pro.</p>
+        
+            <!-- Botones de Nivel -->
+            <div style="display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: auto;">
+        
+                <button onclick="toggleLevel('beginnerDesc')"
+                    style="padding: 15px; font-size: 1rem; background-color: #e0f7fa; color: #006064; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                    🟢 Principiante — ¿Estás empezando? <em>(Haz clic para ver detalles)</em>
+                </button>
+                <div id="beginnerDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>Estás comenzando a surfear</li>
+                        <li>Aprendiendo a pararte en la espuma</li>
+                        <li>Aún desarrollando equilibrio y fuerza de remada</li>
+                        <li>No surfeas olas verdes (sin romper) de forma consistente</li>
+                        <li>Te sientes más cómodo en una tabla soft o longboard en olas pequeñas</li>
+                    </ul>
+                    <p><strong>Necesitas:</strong> Una tabla grande, estable y con mucho volumen que te ayude a atrapar olas y
+                        mantenerte de pie.</p>
+                </div>
+        
+                <button onclick="toggleLevel('intermediateDesc')"
+                    style="padding: 15px; font-size: 1rem; background-color: #e3f2fd; color: #0d47a1; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                    🔵 Intermedio — ¿Atrapas olas verdes? <em>(Haz clic para ver detalles)</em>
+                </button>
+                <div id="intermediateDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>Puedes remar y atrapar olas verdes por tu cuenta</li>
+                        <li>Comienzas a hacer giros básicos (trimming, cutbacks suaves)</li>
+                        <li>Despegas en ángulo y surfeas por la cara de la ola</li>
+                        <li>Te sientes cómodo en condiciones moderadas</li>
+                        <li>Conoces la etiqueta básica del surf</li>
+                    </ul>
+                    <p><strong>Necesitas:</strong> Una tabla de volumen medio — menos permisiva que una de principiante, pero
+                        más ágil y divertida.</p>
+                </div>
+        
+                <button onclick="toggleLevel('advancedDesc')"
+                    style="padding: 15px; font-size: 1rem; background-color: #fff3e0; color: #e65100; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                    🟠 Avanzado — ¿Surfeas con confianza? <em>(Haz clic para ver detalles)</em>
+                </button>
+                <div id="advancedDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>Te sientes seguro en la mayoría de condiciones</li>
+                        <li>Buena lectura de olas y posicionamiento</li>
+                        <li>Generas tu propia velocidad sobre la ola</li>
+                        <li>Realizas giros sólidos de fondo y de cima</li>
+                        <li>Surfeas fluidamente por la cara de la ola</li>
+                    </ul>
+                    <p><strong>Necesitas:</strong> Una tabla de menor volumen que ofrezca control y precisión para maniobras
+                        técnicas.</p>
+                </div>
+        
+                <button onclick="toggleLevel('proDesc')"
+                    style="padding: 15px; font-size: 1rem; background-color: #ffebee; color: #b71c1c; border: none; border-radius: 8px; cursor: pointer; text-align: left;">
+                    🔴 Pro — ¿Lo das todo? <em>(Haz clic para ver detalles)</em>
+                </button>
+                <div id="proDesc" style="display:none; margin-top: 10px; padding-left: 20px;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>Surfeas a un nivel muy alto o profesional</li>
+                        <li>Enlazas maniobras avanzadas (snaps, aéreos, floaters, tubos)</li>
+                        <li>Surfeas líneas rápidas, potentes y técnicas</li>
+                        <li>Cómodo en cualquier tipo de ola</li>
+                        <li>Posiblemente compites o tienes patrocinadores</li>
+                    </ul>
+                    <p><strong>Necesitas:</strong> Una tabla de alto rendimiento con volumen mínimo, diseñada para velocidad,
+                        control y respuesta.</p>
+                </div>
+        
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>⚫️⚪️ Elige Tu Camino: El Lado Oscuro vs. El Cazador de Olas</h2>
+            <p>Ahora estás en una encrucijada.</p>
+
+            <h3>⚫️ El Lado Oscuro:</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>Eliges una tabla demasiado pequeña</li>
+                <li>Pasas la sesión remando sin avanzar</li>
+                <li>Tal vez atrapes una ola... si Poseidón te tiene lástima</li>
+            </ul>
+
+            <h3>⚪️ El Camino del Cazador de Olas:</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>Usas una tabla indulgente y flotante</li>
+                <li>Surfeas 20 olas por sesión</li>
+                <li>Progresas como un campeón</li>
+                <li>Bono: igual te ves genial de pie sobre una ola real 😉</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>📢 Palabras Finales</h2>
+            <p>
+                Si no quieres ser <strong>el espectador rebotante</strong> que solo flota esperando olas—<strong>elige
+                    bien tu tabla</strong>. Grande, flotante, indulgente. Te lo agradecerás después.
+            </p>
+            <p>
+                Al océano no le importa qué tan “cool” se ve tu tabla. Premia a quienes reman con inteligencia y surfean
+                con estilo.
+            </p>
+        </section>
+        <section class="section">
+            <h2 id="volumeCalcFormsection">🏄 Calculadora de Volumen de Tabla de Surf</h2>
+            <p>Completa los datos a continuación y te recomendaremos un rango de volumen que se adapte a tu cuerpo, nivel y
+                estilo de surf.</p>
+            <form id="volumeCalcForm" style="max-width:400px; margin:auto; text-align:left;">
+        
+                <label for="level">Tu nivel de surf:</label>
+                <select id="level" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="beginner">Principiante</option>
+                    <option value="intermediate">Intermedio</option>
+                    <option value="advanced">Avanzado</option>
+                    <option value="pro">Pro</option>
+                </select>
+        
+                <label for="weight">Peso (kg):</label>
+                <input type="number" id="weight" min="30" max="150" step="1" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);" />
+        
+                <label for="waveSize">Tamaño de olas que sueles surfear:</label>
+                <select id="waveSize" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="0.25">0 - 0.5 m</option>
+                    <option value="0.75">0.5 - 1 m</option>
+                    <option value="1.5">1 - 2 m</option>
+                </select>
+        
+                <label for="pushups">¿Cuántas flexiones puedes hacer?</label>
+                <select id="pushups" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="low">Menos de 10</option>
+                    <option value="medium">Entre 10 y 30</option>
+                    <option value="high">Más de 30</option>
+                </select>
+        
+                <label for="swim">Habilidad para nadar:</label>
+                <select id="swim" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="low">Principiante</option>
+                    <option value="medium">Intermedio</option>
+                    <option value="high">Avanzado</option>
+                </select>
+        
+                <label for="frequency">¿Con qué frecuencia surfeas?</label>
+                <select id="frequency" required
+                    style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="rare">Menos de una vez al mes</option>
+                    <option value="sometimes">1-3 veces al mes</option>
+                    <option value="weekly">Semanal o más</option>
+                </select>
+        
+                <label for="wetsuit">¿Usas traje de neopreno?</label>
+                <select id="wetsuit" required
+                    style="width:100%; padding:8px; margin-bottom:25px; border-radius:5px; border:1px solid var(--color-border);">
+                    <option value="yes">Sí</option>
+                    <option value="no">No</option>
+                </select>
+        
+                <button type="submit" class="btn btn-black" style="width:100%;">Calcular Volumen</button>
+            </form>
+            <div id="result" style="margin-top:30px; font-weight:bold; font-size:1.2rem; color: var(--color-primary);"></div>
+        </section>
+        
+        <section class="section card-section">
+            <div class="info-card">
+                <h2>¿Quieres surfear Más Olas?</h2>
+                <p>
+                    ¿Listo para surfear más, caer menos y reírte mucho más? Reserva una sesión de surf conmigo y pongamos la
+                    tabla correcta bajo tus pies.
+                </p>
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn black">Reservar Clase de Surf con Kung Surf
+                    Panda</a>
+            </div>
+        </section>
+        
+        <ks-share url="https://tomekrelski.github.io/kungsurfpanda/es/blog/post4.html"
+            message="🏄‍♂️ ¿Elegiste la tabla perfecta? Comparte esta guía con tus amigos surfistas.">
+        </ks-share>
+
+
+    </article>
+</main>
+
+
+        
+
+    <ks-footer></ks-footer>
+
+    <script src="../../assets/components.js" type="module"></script>
+    <script src="../../assets/script.js"></script>
+    <script>
+        document.getElementById('volumeCalcForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const level = document.getElementById('level').value;
+            const weight = Number(document.getElementById('weight').value);
+            const waveSize = Number(document.getElementById('waveSize').value);
+            const pushups = document.getElementById('pushups').value;
+            const swim = document.getElementById('swim').value;
+            const frequency = document.getElementById('frequency').value;
+            const wetsuit = document.getElementById('wetsuit').value;
+
+            // Factores base de volumen según nivel
+            let baseMinFactor, baseMaxFactor;
+            switch (level) {
+                case 'beginner':
+                    baseMinFactor = 0.75;
+                    baseMaxFactor = 0.85;
+                    break;
+                case 'intermediate':
+                    baseMinFactor = 0.65;
+                    baseMaxFactor = 0.75;
+                    break;
+                case 'advanced':
+                    baseMinFactor = 0.55;
+                    baseMaxFactor = 0.65;
+                    break;
+                case 'pro':
+                    baseMinFactor = 0.45;
+                    baseMaxFactor = 0.55;
+                    break;
+                default:
+                    baseMinFactor = 0.6;
+                    baseMaxFactor = 0.7;
+            }
+
+            let minVolume = weight * baseMinFactor;
+            let maxVolume = weight * baseMaxFactor;
+
+            // Ajuste por tamaño de ola
+            if (waveSize <= 0.5) {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (waveSize > 1) {
+                minVolume *= 0.9;
+                maxVolume *= 0.95;
+            }
+
+            // Ajuste por cantidad de flexiones
+            if (pushups === 'low') {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (pushups === 'high') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Ajuste por habilidad para nadar
+            if (swim === 'low') {
+                minVolume *= 1.05;
+                maxVolume *= 1.1;
+            } else if (swim === 'high') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Ajuste por frecuencia de surf
+            if (frequency === 'rare') {
+                minVolume *= 1.1;
+                maxVolume *= 1.15;
+            } else if (frequency === 'weekly') {
+                minVolume *= 0.95;
+                maxVolume *= 0.95;
+            }
+
+            // Ajuste por uso de traje de neopreno
+            if (wetsuit === 'yes') {
+                minVolume *= 1.05;
+                maxVolume *= 1.05;
+            }
+
+            // Redondear volúmenes
+            minVolume = Math.round(minVolume);
+            maxVolume = Math.round(maxVolume);
+
+            // Recomendación tipo de tabla con explicación clara cuando el volumen abarca varias categorías
+            let boardType = '';
+
+            if (minVolume >= 60) {
+                boardType = 'Tabla grande: más de 60L — perfecta para máxima estabilidad, facilidad de remada y progresión cómoda. Ideal para principiantes o olas suaves.';
+            } else if (minVolume < 60 && maxVolume > 60) {
+                boardType = 'Tu volumen recomendado abarca tablas medianas y grandes. Si prefieres más control y giros rápidos, elige una tabla mediana (40–60L). Para una remada más fácil o si estás empezando, una tabla grande (más de 60L) es mejor.';
+            } else if (minVolume < 40 && maxVolume >= 40 && maxVolume <= 50) {
+                boardType = 'Tu volumen abarca tablas pequeñas y medianas. Las tablas medianas (40–50L) ofrecen un buen equilibrio entre estabilidad y control, mientras que las tablas pequeñas (<40L) brindan mayor maniobrabilidad si tienes confianza.';
+            } else if (minVolume >= 40 && maxVolume <= 50) {
+                boardType = 'Tabla mediana: 40–50L — mezcla ideal de estabilidad y rendimiento. Perfecta para surfistas en progreso y con confianza.';
+            } else if (minVolume >= 35 && maxVolume < 40) {
+                boardType = 'Estás cerca del rango pequeño-mediano. Las tablas pequeñas (<40L) son ágiles y responden rápido, pero si quieres más soporte para remar, considera algo cercano a 40L.';
+            } else {
+                boardType = 'Tabla pequeña: menos de 35L — diseñada para surfistas expertos que buscan alto rendimiento y respuesta en el agua.';
+            }
+
+            document.getElementById('result').innerHTML = `
+                        <p>Tu volumen recomendado de tabla de surf está entre <strong>${minVolume}L</strong> y <strong>${maxVolume}L</strong>.</p>
+                        <p><em>Volumen mínimo (${minVolume}L):</em> Para los días en que te sientes fuerte y con energía. Ofrece mejor maniobrabilidad y respuesta.</p>
+                        <p><em>Volumen máximo (${maxVolume}L):</em> Útil en días lentos, olas pequeñas o cuando estás cansado. Añade flotabilidad y ayuda a atrapar más olas.</p>
+                        <p>${boardType}</p>
+                    `;
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        function toggleLevel(id) {
+                const desc = document.getElementById(id);
+                desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>

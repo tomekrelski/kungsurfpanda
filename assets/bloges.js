@@ -19,6 +19,13 @@ const posts = [
         url: 'blog/post3.html'
     },
 
+    {
+        id: 'post4',
+        category: ['surf'],
+        title: 'Cómo Elegir la Tabla de Surf Correcta', // Translated title
+        url: 'blog/post4.html'
+    },
+
 ];
 
 // Function to render posts based on filter
