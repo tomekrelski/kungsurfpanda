@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- English pages -->
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/blog.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/kite.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/surf.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/prana.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/blog/post1.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/blog/post2.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/blog/post3.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/en/blog/post4.html</loc></url>
+
+  <!-- Spanish pages -->
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/blog.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/kite.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/surf.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/prana.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/blog/post1.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/blog/post2.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/blog/post3.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/es/blog/post4.html</loc></url>
+
+  <!-- Polish pages -->
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/blog.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/kite.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/surf.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/prana.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/blog/post1.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/blog/post2.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/blog/post3.html</loc></url>
+  <url><loc>https://tomekrelski.github.io/kungsurfpanda/pl/blog/post4.html</loc></url>
+
+</urlset>
