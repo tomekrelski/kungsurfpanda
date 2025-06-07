@@ -22,20 +22,27 @@ customElements.define('ks-footer', KungFooter);
 class KungGallery extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div class="section gallery">
+     <div class="section gallery">
         <a href="kite.html">
-            <img src="../assets/images/kite.jpg" alt="Kitesurfing" />
-            <p>Kite</p>
+          <img src="../assets/images/kite.webp" 
+              alt="Kitesurfing lessons in Tarifa with Kung Surf Panda" 
+              width="600" height="400" loading="lazy" />
+          <p>Kite</p>
         </a>
         <a href="surf.html">
-            <img src="../assets/images/Surf.jpg" alt="Surfing" />
-            <p>Surf</p>
+          <img src="../assets/images/surf.webp" 
+              alt="Surfing in Tarifa with Kung Surf Panda – small groups and expert guidance" 
+              width="600" height="400" loading="lazy" />
+          <p>Surf</p>
         </a>
         <a href="prana.html">
-            <img src="../assets/images/prana.jpg" alt="Prana" />
-            <p>Prana</p>
+          <img src="../assets/images/prana.webp" 
+              alt="Morning prana and meditation with Kung Surf Panda on the beach in Tarifa" 
+              width="600" height="400" loading="lazy" />
+          <p>Prana</p>
         </a>
       </div>
+
     `;
   }
 }
