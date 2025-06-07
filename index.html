@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=en/" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you're not redirected, <a href="en/">click here</a>.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kung Surf Panda | Choose Your Language</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .flags {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .flags a {
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .flags a:hover {
+      transform: scale(1.1);
+    }
+
+    .flags img {
+      width: 60px;
+      height: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to Kung Surf Panda</h1>
+  <div class="flags">
+    <a href="en/">
+      <img src="assets/images/en.png" alt="English" />
+      <div>English</div>
+    </a>
+    <a href="pl/">
+      <img src="assets/images/pl.png" alt="Polski" />
+      <div>Polski</div>
+    </a>
+    <a href="es/">
+      <img src="assets/images/es.png" alt="Español" />
+      <div>Español</div>
+    </a>
+  </div>
+  <div class="note">Choose your language</div>
+
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith('pl')) {
+      window.location.href = 'pl/';
+    } else if (userLang.startsWith('es')) {
+      window.location.href = 'es/';
+    } else {
+      window.location.href = 'en/';
+    }
+  </script>
+</body>
+
 </html>
