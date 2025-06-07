@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tomekrelski.github.io/kungsurfpanda/sitemap.xml
+
