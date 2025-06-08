@@ -213,7 +213,7 @@ nav .nav-links li a:hover {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    min-height: 650px; /* rezerwuje przestrzeń na całą sekcję */
+    min-height: 350px; /* rezerwuje przestrzeń na całą sekcję */
 }
 
 .info-card {
@@ -277,7 +277,7 @@ nav .nav-links li a:hover {
 .btn-white {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-primary) !important;
 }
 
 .btn-white:hover {
@@ -487,6 +487,58 @@ nav .nav-links li a:hover {
   font-family: sans-serif;
   text-align: center;
 }
+
+
+/* Post navigation */
+
+.post-mag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.post-box {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 20px;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.post-box h4 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+
 
 
 
