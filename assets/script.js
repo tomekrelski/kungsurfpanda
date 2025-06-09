@@ -24,7 +24,11 @@ window.addEventListener('click', (e) => {
 
 // Hamburger Navbar
 function toggleMenu() {
-        document.querySelector('.nav-links').classList.toggle('active');
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
 }
 
 

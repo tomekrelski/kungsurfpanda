@@ -123,13 +123,12 @@ nav {
     align-items: center;
     background: var(--color-primary);
     padding: 15px 30px;
-    position: fixed;   /* change from relative to fixed */
-    top: 0;            /* stick to the top */
-    left: 0;           /* align left edge */
-    width: 100%;       /* full width */
-    z-index: 1000;     /* keep it above other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
-
 
 nav .logo {
     color: var(--color-secondary);
@@ -137,13 +136,36 @@ nav .logo {
     font-weight: bold;
 }
 
+/* === Hamburger Icon === */
 nav .hamburger {
     display: none;
-    font-size: 24px;
-    color: var(--color-secondary);
+    flex-direction: column;
+    gap: 5px;
     cursor: pointer;
+    z-index: 1001;
 }
 
+nav .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+nav .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+nav .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Desktop Nav Links === */
 nav .nav-links {
     list-style: none;
     display: flex;
@@ -179,23 +201,25 @@ nav .nav-links li a:hover {
     color: var(--color-lang-link-hover-text) !important;
 }
 
-/* === Hamburger Mobile Menu === */
+/* === Mobile Styles === */
 @media (max-width: 768px) {
     nav .hamburger {
-        display: block;
+        display: flex;
     }
 
     nav .nav-links {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         position: absolute;
-        top: 60px;
-        right: 30px;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: var(--color-primary);
-        padding: 10px;
-        border-radius: 8px;
-        z-index: 999;
+        padding: 20px 0;
+        z-index: 1000;
+        width: 100%;
+        border-top: 1px solid var(--color-secondary);
     }
 
     nav .nav-links.active {
@@ -203,9 +227,10 @@ nav .nav-links li a:hover {
     }
 
     nav .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
+
 
 /* === Cards === */
 .card-section {

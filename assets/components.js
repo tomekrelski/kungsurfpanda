@@ -91,7 +91,12 @@ class KungNav extends HTMLElement {
     this.innerHTML = `
       <nav>
         <a href="index.html" class="logo">Kung Surf Panda</a>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <ul class="nav-links">
           ${navLinks}
           ${langLinks}
@@ -162,7 +167,11 @@ class KungNavPost extends HTMLElement {
     this.innerHTML = `
       <nav>
         <a href="../index.html" class="logo">Kung Surf Panda</a>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../kite.html">Kite</a></li>
