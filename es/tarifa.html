@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Descubre Tarifa con un toque local: naturaleza, comida, rincones ocultos y conexión real. Guiado por Tomek, también conocido como Polarifeño, tu amigo polaco-tarifeño.">
+    <title>Descubre Tarifa con Tomek | Experiencias Locales, Rincones Secretos y Buenas Vibras</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <ks-nav page="tarifa" lang="es"></ks-nav>
+
+    <section class="wrapper">
+        <div class="container">
+            <img src="../assets/images/tarifa.webp"
+                alt="Vista costera de la playa de Tarifa con viento, naturaleza y el mar tocando el cielo" />
+            <div class="description">
+                <p id="shortTextTarifa">
+                    La primera vez que vine a Tarifa fue en 2005. Algo hizo clic de inmediato, como si este lugar me
+                    hablara a través del viento.
+                </p>
+                <p id="fullTextTarifa" style="display: none;">
+                    Tarifa es salvaje y auténtica. Es donde el Mediterráneo besa al Atlántico y el viento nunca deja de
+                    bailar.
+                    En aquel entonces fue solo una visita, un viaje. Pero la conexión fue real.
+                    <br><br>
+                    Volví. Una y otra vez. En 2011, finalmente me mudé. Desde entonces, este es mi hogar, mi base, mi
+                    rincón del alma.
+                    Me gusta llamarme **Polarifeño** – parte polaco, parte tarifeño. Es una palabra inventada, pero
+                    encaja perfectamente.
+                    <br><br>
+                    Conozco las playas, las callejuelas, los senderos escondidos y dónde comer el mejor pescado o tomar
+                    una cerveza viendo el atardecer.
+                    Tarifa no es solo fiesta o surf: es energía, viento, naturaleza, gente, silencio y sonido.
+                    <br><br>
+                    Ya sea que estés de paso o te quedes más tiempo, puedo ayudarte a conectar con la Tarifa real, no
+                    solo la versión turística.
+                </p>
+                <button class="read-more-btn" onclick="toggleTextTarifa()">Leer más</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="services">
+        <h2>Servicios en Tarifa</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="¿Quieres encontrar una playa secreta, el sendero perfecto o un mirador escondido para el atardecer? Te muestro Tarifa con ojos locales.">
+                Guía Local – Rincones Secretos
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿No sabes dónde comer o tomar una buena caña? Te recomiendo mis sitios favoritos, sin trampas para turistas, solo comida de verdad.">
+                Recomendaciones Gastronómicas – Donde Comen los Locales
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¡Vamos de ruta! Desde bares de tapas tranquilos hasta lugares de flamenco con energía, te muestro la noche tarifeña.">
+                Ruta de Bares – Vive la Noche de Tarifa
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿Necesitas ayuda para entender cómo llegar a Málaga, Cádiz o el aeropuerto? Te doy rutas, horarios y consejos reales.">
+                Asesoramiento de Viaje – Autobuses y Rutas
+            </button>
+
+            <button class="btn btn-black"
+                data-service="¿Te apetece una escapada en la naturaleza? Te guío por montañas, bosques o costa – sitios que pocos conocen.">
+                Paseos Naturales – Conexión Salvaje
+            </button>
+
+            <button class="btn btn-white"
+                data-service="¿Quieres surfear, hacer kite o simplemente relajarte en la playa? Te conecto con instructores y alquileres de confianza.">
+                Info Surf/Kite – Viento con Sentido
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Información del Servicio</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <div class="section card-section">
+        <div class="info-card">
+            <p>¿Quieres explorar Tarifa con alguien que realmente la vive? Contáctame por cualquiera de estos medios:
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <ks-footer></ks-footer>
+
+    <script src="../assets/components.js" type="module"></script>
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

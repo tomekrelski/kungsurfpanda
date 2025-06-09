@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore Tarifa with a local touch – nature, food, hidden spots, and real connection. Guided by Tomek, aka Polarifeño, your Polish-Tarifan friend.">
+    <title>Discover Tarifa with Tomek | Local Experiences, Hidden Spots & Good Vibes</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <ks-nav page="tarifa" lang="en"></ks-nav>
+
+    <section class="wrapper">
+        <div class="container">
+            <img src="../assets/images/tarifa.webp"
+                alt="Coastal view of Tarifa's beach with wind, nature, and sea meeting the sky" />
+            <div class="description">
+                <p id="shortTextTarifa">
+                    I first came to Tarifa in 2005. Something clicked immediately – like this place was whispering to me
+                    through the wind.
+                </p>
+                <p id="fullTextTarifa" style="display: none;">
+                    Tarifa is wild and raw. It's where the Mediterranean kisses the Atlantic and the wind never stops
+                    dancing.
+                    Back then, it was just a visit – a trip. But the connection was real.
+                    <br><br>
+                    I came back. Again and again. In 2011, I finally made the move. Since then, this has been home – my
+                    base, my space, my soul spot.
+                    I'm what I like to call a **Polarifeño** – part Polish, part Tarifeño. It's a made-up word, but it
+                    fits.
+                    <br><br>
+                    I know the beaches, the backstreets, the hidden hiking trails, and where to get the best local fish
+                    or that perfect sunset beer.
+                    Tarifa isn’t just about the party or the surf – it’s about energy, wind, nature, people, silence and
+                    sound.
+                    <br><br>
+                    Whether you're just passing through or staying a while, I can help you tap into the real Tarifa –
+                    not just the tourist version.
+                </p>
+                <button class="read-more-btn" onclick="toggleTextTarifa()">Read more</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="services">
+        <h2>Tarifa Services</h2>
+        <div class="button-group">
+            <button class="btn btn-black"
+                data-service="Want to find the secret beach, the perfect cliff walk, or a hidden sunset viewpoint? I’ll show you Tarifa through a local lens.">
+                Local Guiding – Discover Hidden Spots
+            </button>
+
+            <button class="btn btn-white"
+                data-service="Not sure where to eat or sip the perfect caña? I’ll point you to my favorite places – no tourist traps, just real good food.">
+                Food Tips – Where Locals Eat
+            </button>
+
+            <button class="btn btn-black"
+                data-service="Let’s hit the streets! From chill tapas bars to wild flamenco spots, I’ll show you Tarifa’s vibrant nightlife.">
+                Pub Crawl – Feel the Tarifa Night
+            </button>
+
+            <button class="btn btn-white"
+                data-service="Need help figuring out buses to Malaga, Cadiz or the airport? I got you – routes, times, and real talk.">
+                Travel Help – Bus & Trip Advice
+            </button>
+
+            <button class="btn btn-black"
+                data-service="Up for a nature escape? I can guide you on hikes through mountains, forests, or coastline – places most people miss.">
+                Nature Walks – Into the Wild
+            </button>
+
+            <button class="btn btn-white"
+                data-service="Keen to surf, kite, or just chill on the beach? I can connect you with trusted local instructors or gear rental.">
+                Surf/Kite Info – Wind Like You Mean It
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Service Info</h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <div class="section card-section">
+        <div class="info-card">
+            <p>Want to explore Tarifa with someone who truly lives it? Reach out below and let’s make it happen:</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
+                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
+                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <ks-footer></ks-footer>
+
+    <script src="../assets/components.js" type="module"></script>
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

@@ -41,6 +41,12 @@ class KungGallery extends HTMLElement {
               width="600" height="400" loading="lazy" />
           <p>Prana</p>
         </a>
+        <a href="tarifa.html">
+          <img src="../assets/images/tarifa.webp" 
+              alt="View of Tarifa Beach on a cloudy day with waves and distant mountains"
+              width="600" height="400" loading="lazy" />
+          <p>Tarifa</p>
+        </a>
       </div>
 
     `;
@@ -71,6 +77,7 @@ class KungNav extends HTMLElement {
       { name: 'Kite', page: 'kite' },
       { name: 'Surf', page: 'surf' },
       { name: 'Prana', page: 'prana' },
+      { name: 'Tarifa', page: 'tarifa' },
       { name: 'Blog', page: 'blog' }
     ];
 
@@ -177,6 +184,7 @@ class KungNavPost extends HTMLElement {
           <li><a href="../kite.html">Kite</a></li>
           <li><a href="../surf.html">Surf</a></li>
           <li><a href="../prana.html">Prana</a></li>
+          <li><a href="../prana.html">Tarifa</a></li>
           <li><a href="../blog.html">Blog</a></li>
           ${langLinks}
           <li><a href="#" id="themeToggle" class="lang-link" role="button">🌑 Dark Mode</a></li>

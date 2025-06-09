@@ -86,4 +86,15 @@ function toggleTextPrana() {
     button.textContent = getButtonText(language, !isExpanded);
 }
 
+// Read More: Tarifa
+function toggleTextTarifa() {
+    const fullText = document.getElementById("fullTextTarifa");
+    const button = document.querySelector(".read-more-btn");
+    const language = document.documentElement.lang;
+
+    const isExpanded = fullText.style.display === "block";
+    fullText.style.display = isExpanded ? "none" : "block";
+    button.textContent = getButtonText(language, !isExpanded);
+}
+
 
