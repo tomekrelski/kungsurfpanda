@@ -47,7 +47,11 @@
     </div>
 
     <div class="services">
-        <h2>Usługi Surfingowe</h2>
+        <h2>Usługi</h2>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Kliknij dowolną usługę, aby dowiedzieć się więcej.
+        </p>
+
         <div class="button-group">
             <button class="btn btn-black" data-service="Niezależnie od tego, czy to Twoja pierwsza fala, czy chcesz doskonalić swój skręt, oferuję
                 spersonalizowane lekcje surfingu dla każdego poziomu. Będziemy pracować nad techniką, timingiem i
@@ -93,16 +97,57 @@
         </div>
     </div>
 
-    <div class="section card-section">
-        <div class="info-card">
-            <p>Jeśli jesteś zainteresowany moimi usługami, skontaktuj się ze mną na jednej z poniższych platform:</p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
-                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
-                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+    <section style="text-align:center; max-width: 700px; margin: auto; margin-bottom:50px;">
+        <h2>Style Surfingu</h2>
+        <p>Przez lata surfing stał się ogromną częścią mojego stylu życia. W moim osobistym quiverze mam wszystko — od
+            handplana do body surfingu po longboard 9'4" — i zawsze znajdzie się miejsce na więcej! Czasem nawet pożyczam
+            deskę od mojej dziewczyny. Każda deska daje inne doświadczenie na fali. Oto moje ulubione style surfingu:</p>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Kliknij dowolny styl surfingu, aby zobaczyć więcej informacji.
+        </p>
+
+    
+        <div style="display: inline-flex; flex-direction: column; gap: 1rem; align-items: center;">
+    
+            <button class="btn btn-black" data-style="short-board" style="min-width: 280px;">
+                Short Board
+            </button>
+            <div class="style-info" id="short-board" hidden>
+                <p>Zacząłem surfować na zbyt małej desce, ale dorastanie na potężnych falach Wysp Kanaryjskich pozwoliło mi
+                    sobie z tym poradzić. Teraz uwielbiam shortboard, gdy fale mają ponad metr. Szybka, zwrotna, idealna do
+                    cięć i manewrów — to mój wybór na solidne dni.</p>
             </div>
+    
+            <button class="btn btn-white" data-style="mid-length" style="min-width: 280px;">
+                Mid Length
+            </button>
+            <div class="style-info" id="mid-length" hidden>
+                <p>Deski typu mid length to idealna równowaga między shortboardem a longboardem. Lubię ich płynność,
+                    różnorodne kąty skrętu, a szczególnie surfowanie na jednej stateczce. To świetny sposób na mieszanie
+                    stylów i eksperymentowanie z klasycznymi liniami.</p>
+            </div>
+    
+            <button class="btn btn-black" data-style="long-board" style="min-width: 280px;">
+                Long Board
+            </button>
+            <div class="style-info" id="long-board" hidden>
+                <p>Mój longboard to moja scena taneczna. Uwielbiam wyrażać się ruchem — spacerować po desce, kłaść się,
+                    surfować bokiem, czasem robię nawet stójkę na głowie. To nie tylko stanie na fali — to zabawa z falą.
+                </p>
+            </div>
+    
+            <button class="btn btn-white" data-style="body-surfing" style="min-width: 280px;">
+                Body Surfing
+            </button>
+            <div class="style-info" id="body-surfing" hidden>
+                <p>Body surfing to nie do końca surfing na desce, ale jedna z najlepszych form kontaktu z oceanem. W dni z
+                    zamykającymi się falami albo gdy zapomnę deski, i tak idę do wody. Nie potrzeba sprzętu — wystarczy
+                    ciało, ewentualnie handplane i płetwy. Czysta wolność w falach.</p>
+            </div>
+    
         </div>
-    </div>
+    </section>
+
 
     <!-- Modal -->
     <div class="modal" id="serviceModal">
@@ -110,6 +155,19 @@
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle">Informacje o Usłudze</h3>
             <p id="modalDescription"></p>
+
+            <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">
+                📲 Skontaktuj się przez WhatsApp – Kung Surf Panda
+            </a>
+            
+            <a href="mailto:tomekrelski@gmail.com" class="card-btn">
+                📧 Napisz do mnie e-mail
+            </a>
+            
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">
+                📸 Obserwuj mnie i napisz DM na Instagramie @kung_surf_panda
+            </a>
+
         </div>
     </div>
 

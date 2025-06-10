@@ -98,3 +98,18 @@ function toggleTextTarifa() {
 }
 
 
+// Styles
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const style = button.getAttribute('data-style');
+        const infoDiv = document.getElementById(style);
+
+        if (infoDiv.hasAttribute('hidden')) {
+            // Hide all other info
+            document.querySelectorAll('.style-info').forEach(div => div.setAttribute('hidden', ''));
+            infoDiv.removeAttribute('hidden');
+        } else {
+            infoDiv.setAttribute('hidden', '');
+        }
+    });
+});

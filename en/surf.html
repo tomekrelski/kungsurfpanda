@@ -46,7 +46,10 @@
     </div>
 
     <div class="services">
-        <h2>Surf Services</h2>
+        <h2>Services</h2>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Click any service to learn more about it.
+        </p>
         <div class="button-group">
             <button class="btn btn-black"
                 data-service="Whether it’s your first wave or you’re trying to polish your bottom turn, I offer personalized surf lessons for all levels. We’ll work on technique, timing, and wave reading at your pace – with a laugh or two guaranteed.">
@@ -85,23 +88,79 @@
         </div>
     </div>
 
-    <div class="section card-section">
-        <div class="info-card">
-            <p>If you're interested in my services, feel free to contact me on one of the platforms below:</p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
-                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
-                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
+    <section style="text-align:center; max-width: 700px; margin: auto; margin-bottom:50px;">
+        <h2>Surf Styles</h2>
+        <p>Over the years, surfing has become a huge part of my lifestyle. My personal quiver includes everything from a
+            handplane for bodysurfing to a 9'4" longboard — and there’s always room for more. Sometimes I even borrow my
+            girlfriend’s board! Each board brings something unique to the waves. Here are my favorite surf styles:</p>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Click any surf style to see more details.
+        </p>
+
+    
+        <div style="display: inline-flex; flex-direction: column; gap: 1rem; align-items: center;">
+    
+            <button class="btn btn-black" data-style="short-board" style="min-width: 280px;">
+                Short Board
+            </button>
+            <div class="style-info" id="short-board" hidden>
+                <p>I started surfing with a board that was too small, but growing up riding powerful waves in the Canary
+                    Islands made it work. Now, I love short boarding when the waves are over one meter. Fast, responsive,
+                    and perfect for carving — it’s my go-to for solid days.</p>
             </div>
+    
+            <button class="btn btn-white" data-style="mid-length" style="min-width: 280px;">
+                Mid Length
+            </button>
+            <div class="style-info" id="mid-length" hidden>
+                <p>Mid lengths are the perfect balance between a short board and a longboard. I enjoy the flow, the
+                    different angles, and especially surfing with a single fin. It’s a great way to blend styles and
+                    experiment with classic lines and turns.</p>
+            </div>
+    
+            <button class="btn btn-black" data-style="long-board" style="min-width: 280px;">
+                Long Board
+            </button>
+            <div class="style-info" id="long-board" hidden>
+                <p>My longboard is my dance floor. I love expressing myself through movement — walking the board, laying
+                    down, riding sideways, even throwing in a headstand now and then. It’s not just about standing up; it’s
+                    about playing with the wave.</p>
+            </div>
+    
+            <button class="btn btn-white" data-style="body-surfing" style="min-width: 280px;">
+                Body Surfing
+            </button>
+            <div class="style-info" id="body-surfing" hidden>
+                <p>Body surfing isn’t technically board surfing, but it’s one of the best ways to connect with the ocean. On
+                    days with closeouts or when I forget my board, I still go out. No gear needed — just your body, maybe a
+                    handplane and some fins if you like. Pure freedom in the waves.</p>
+            </div>
+    
         </div>
-    </div>
+    </section>
+
 
     <!-- Modal -->
     <div class="modal" id="serviceModal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle">Service Info</h3>
+    
+            <!-- Service description -->
             <p id="modalDescription"></p>
+            <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">
+                📲 Contact Kung Surf Panda on WhatsApp
+            </a>
+    
+            <a href="mailto:tomekrelski@gmail.com" class="card-btn">
+                📧 Send Me an Email
+            </a>
+    
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">
+                📸 Follow Me & DM on Instagram @kung_surf_panda
+            </a>
+    
+    
         </div>
     </div>
 

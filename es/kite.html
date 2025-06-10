@@ -51,6 +51,9 @@
 
     <section class="services">
         <h2>Servicios</h2>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Haz clic en cualquier servicio para saber más.
+        </p>
         <div class="button-group">
             <button class="btn btn-black"
                 data-service="Lecciones personalizadas de kitesurf para todos los niveles, desde principiantes hasta avanzados. Enseño todos los estilos: twin tip, surfkite y foil. Adaptado a tus objetivos para que puedas navegar con confianza y estilo.">
@@ -79,6 +82,50 @@
         </div>
     </section>
 
+    <section style="text-align:center; max-width: 700px; margin: auto;">
+        <h2>Estilos de Kite</h2>
+        <p>Con más de 20 años de experiencia en kitesurf, he explorado varios estilos que ofrecen emociones y desafíos
+            únicos. Aquí están los tres principales estilos en los que me especializo:</p>
+
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Haz clic en cualquier estilo de kite para ver más detalles.
+        </p>
+
+    
+        <div style="display: inline-flex; flex-direction: column; gap: 1rem; align-items: center;">
+    
+            <button class="btn btn-black" data-style="twin-tip" style="min-width: 280px;">
+                Twin Tip
+            </button>
+            <div class="style-info" id="twin-tip" hidden>
+                <p>El kitesurf con tabla twin tip es versátil y dinámico. Es perfecto para trucos freestyle, grandes saltos
+                    (big air) y para navegar en ambas direcciones sin cambiar la postura. Al inicio de mi trayectoria,
+                    disfrutaba dominar movimientos freestyle, superar límites y lograr saltos impresionantes con este
+                    estilo.</p>
+            </div>
+    
+            <button class="btn btn-white" data-style="surf-kite" style="min-width: 280px;">
+                Surf Kite
+            </button>
+            <div class="style-info" id="surf-kite" hidden>
+                <p>El surf kite utiliza la cometa para aprovechar la fuerza de las olas, combinando la emoción del surf con
+                    el control del kite. Es ideal para condiciones agitadas o con mucho viento cuando el surf tradicional se
+                    vuelve complicado, permitiéndote deslizarte con fluidez y potencia sobre las olas.</p>
+            </div>
+    
+            <button class="btn btn-black" data-style="kite-foil" style="min-width: 280px;">
+                Kite Foil
+            </button>
+            <div class="style-info" id="kite-foil" hidden>
+                <p>El kite foil abrió nuevos horizontes en días de poco viento. Usar una tabla con foil te eleva sobre el
+                    agua, permitiendo rides suaves y rápidos incluso con menos de 10 nudos. Es un estilo liberador, perfecto
+                    para explorar condiciones calmadas, solo o con amigos.</p>
+            </div>
+    
+        </div>
+    </section>
+
+
     <section class="section card-section">
         <div class="info-card">
             <p>¡Reserva tu lección de kitesurf conmigo directamente y utiliza tu código de descuento personal!</p>
@@ -87,15 +134,6 @@
                 <span>Código de descuento:</span>
                 <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
                 <button class="copy-btn" onclick="copyCode()">Copy</button>
-            </div>
-        </div>
-    
-        <div class="info-card">
-            <p>¿Interesado en otros servicios? Contáctame directamente a través de:</p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
-                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">Correo Electrónico</a>
-                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
             </div>
         </div>
     </section>
@@ -108,6 +146,18 @@
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle">Información del Servicio</h3>
             <p id="modalDescription"></p>
+            <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">
+                📲 Contáctame por WhatsApp – Kung Surf Panda
+            </a>
+            
+            <a href="mailto:tomekrelski@gmail.com" class="card-btn">
+                📧 Envíame un Correo
+            </a>
+            
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">
+                📸 Sígueme y mándame un DM en Instagram @kung_surf_panda
+            </a>
+
         </div>
     </div>
     <ks-footer></ks-footer>

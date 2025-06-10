@@ -451,7 +451,18 @@ nav .nav-links li a:hover {
     text-align: center;
     line-height: 1.4;
 }
-
+/* Kite and Surf Styles */
+   
+.style-info {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+}
 /* ==== Social Share ====*/
 
 /* Modal Share Styling */

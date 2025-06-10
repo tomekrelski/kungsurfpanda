@@ -47,7 +47,11 @@
 
 
     <div class="services">
-        <h2>Servicios de Surf</h2>
+        <h2>Servicios</h2>
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Haz clic en cualquier servicio para saber más.
+        </p>
+
         <div class="button-group">
             <button class="btn btn-black"
                 data-service="Ya sea tu primera ola o si quieres perfeccionar tu giro inferior, ofrezco clases de surf personalizadas para todos los niveles. Trabajaremos técnica, sincronización y lectura de olas a tu ritmo – con unas risas garantizadas.">
@@ -85,18 +89,59 @@
             </button>
         </div>
     </div>
-    <div class="section card-section">
-        <div class="info-card">
-            <p>Si estás interesado en mis servicios, no dudes en contactarme a través de una de las siguientes plataformas:
-            </p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">WhatsApp</a>
-                <a href="mailto:tomekrelsi@gmail.com" class="card-btn">E-mail</a>
-                <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">Instagram</a>
-            </div>
-        </div>
-    </div>
 
+    <section style="text-align:center; max-width: 700px; margin: auto; margin-bottom:50px;">
+        <h2>Estilos de Surf</h2>
+        <p>A lo largo de los años, el surf se ha convertido en una parte fundamental de mi estilo de vida. En mi quiver
+            personal tengo desde un handplane para body surf hasta una longboard de 9'4" — ¡y siempre hay espacio para más!
+            A veces incluso uso la tabla de mi pareja. Cada tabla ofrece algo único en las olas. Aquí te comparto mis
+            estilos favoritos:</p>
+        
+        <p style="text-align:center; font-style: italic; margin-top: 0.5rem;">
+            👉 Haz clic en cualquier estilo de surf para ver más detalles.
+        </p>
+
+    
+        <div style="display: inline-flex; flex-direction: column; gap: 1rem; align-items: center;">
+    
+            <button class="btn btn-black" data-style="short-board" style="min-width: 280px;">
+                Short Board
+            </button>
+            <div class="style-info" id="short-board" hidden>
+                <p>Empecé a surfear con una tabla demasiado pequeña, pero como crecí surfeando en las potentes olas de las
+                    Islas Canarias, me adapté. Ahora disfruto del shortboard cuando las olas superan un metro. Es rápida,
+                    sensible y perfecta para maniobras agresivas — mi elección ideal para días sólidos.</p>
+            </div>
+    
+            <button class="btn btn-white" data-style="mid-length" style="min-width: 280px;">
+                Mid Length
+            </button>
+            <div class="style-info" id="mid-length" hidden>
+                <p>Las mid length son el equilibrio perfecto entre short y longboard. Me encanta su fluidez, las diferentes
+                    líneas que se pueden trazar, y sobre todo surfear con una sola quilla. Es una forma genial de mezclar
+                    estilos y explorar maniobras clásicas.</p>
+            </div>
+    
+            <button class="btn btn-black" data-style="long-board" style="min-width: 280px;">
+                Long Board
+            </button>
+            <div class="style-info" id="long-board" hidden>
+                <p>Mi longboard es como una pista de baile. Me encanta expresarme a través del movimiento — caminar sobre la
+                    tabla, tumbarme, surfear de lado, incluso hacer paradas de cabeza a veces. No se trata solo de estar de
+                    pie, sino de jugar con la ola.</p>
+            </div>
+    
+            <button class="btn btn-white" data-style="body-surfing" style="min-width: 280px;">
+                Body Surfing
+            </button>
+            <div class="style-info" id="body-surfing" hidden>
+                <p>El body surfing no es exactamente surf con tabla, pero es una de las mejores formas de conectar con el
+                    mar. En días de cerrojos o cuando me olvido la tabla, igual salgo. No necesitas equipo — solo tu cuerpo,
+                    y si quieres, un handplane y unas aletas. Libertad total en las olas.</p>
+            </div>
+    
+        </div>
+    </section>
 
     <!-- Modal -->
     <div class="modal" id="serviceModal">
@@ -104,6 +149,18 @@
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle">Información del Servicio</h3>
             <p id="modalDescription"></p>
+            <a href="https://wa.me/+34610017397" target="_blank" class="card-btn">
+                📲 Contáctame por WhatsApp – Kung Surf Panda
+            </a>
+            
+            <a href="mailto:tomekrelski@gmail.com" class="card-btn">
+                📧 Envíame un Correo
+            </a>
+            
+            <a href="https://www.instagram.com/kung_surf_panda/" target="_blank" class="card-btn">
+                📸 Sígueme y mándame un DM en Instagram @kung_surf_panda
+            </a>
+
         </div>
     </div>
 
