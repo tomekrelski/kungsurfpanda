@@ -76,14 +76,13 @@ a {
 /* === Layout Containers === */
 .section {
     max-width: 1000px;
-    margin: 60px auto;
+    margin: 10px auto;
     padding: 0 20px;
     text-align: center;
 }
 
 .section:not(:last-child) {
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: 40px;
 }
 
 .wrapper {
@@ -238,7 +237,13 @@ nav .nav-links li a:hover {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    min-height: 350px; /* rezerwuje przestrzeń na całą sekcję */
+    min-height: 350px; /* reserves space for entire section */
+}
+
+.card-section.two-cards-row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .info-card {
@@ -246,19 +251,49 @@ nav .nav-links li a:hover {
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 4px 12px var(--color-shadow-dark);
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto; /* center horizontally */
-    text-align: center;
     color: var(--color-text);
-    box-sizing: border-box; /* ensures padding stays within max-width */
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card-section.two-cards-row .info-card {
+    max-width: 400px;
+    flex: 1 1 300px;
 }
 
 .info-card p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: var(--color-text);
 }
+
+/* === Discount Code === */
+.discount-code {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.discount-code input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    width: 200px;
+    text-align: center;
+}
+
+/* === Copy Button === */
+.copy-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    width: auto;
+}
+
+
 
 /* === Buttons === */
 .card-btn,
@@ -367,19 +402,7 @@ nav .nav-links li a:hover {
     }
 }
 
-/* === Discount Code === */
-.discount-code {
-    margin-top: 15px;
-    font-size: 16px;
-}
 
-.discount-code input {
-    font-size: 16px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-right: 10px;
-}
 
 /* === Modal === */
 .modal {
@@ -418,7 +441,7 @@ nav .nav-links li a:hover {
 
 .services {
     max-width: 600px;
-    margin: 80px auto;
+    margin: 10px auto;
     padding: 30px 20px;
     background: var(--color-secondary);
     color: var(--color-primary);
