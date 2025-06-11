@@ -33,6 +33,16 @@
         #water-sport-quiz ol li:last-child {
             border-bottom: none;
         }
+
+         .image-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -79,7 +89,10 @@
             <h2>Rodzaje sportów wodnych i co je wyróżnia 🌊</h2>
 
             <div class="info-card">
-                <h3>Kitesurfing 🪁 + 🌊</h3>
+                <h3>Kitesurfing</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/kite.png" alt="Designe by Eni Kite with Strutts">
+                </div>
                 <p>
                     Techniczny, dynamiczny sport łączący moc wiatru i żeglugę po wodzie. Nauczysz się kontroli latawca,
                     równowagi na desce i ruchów w powietrzu. Idealny dla poszukiwaczy emocji i szybkich uczniów.
@@ -92,7 +105,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Surfing 🏄</h3>
+                <h3>Surfing</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/surfLongboard.png" alt="Beautiful design of longboard made by Eni">
+                </div>
                 <p>
                     Więcej o płynięciu z falami i ich odczytywaniu. Nie potrzebujesz sprzętu poza deską.
                     To medytacja połączona z wysiłkiem fizycznym. Surfing uczy cierpliwości i wyczucia czasu.
@@ -104,7 +120,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Winging (Wing Foil) 🪂</h3>
+                <h3>Wing Foil</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/wing.png" alt="Wing Foil Design Graphic by Eni">
+                </div>
                 <p>
                     Połączenie surfingu i kitesurfingu. Trzymasz skrzydło i jedziesz na desce z foil’em.
                     To futurystyczne, lekkie i prawie jak latanie — zupełnie nowe doznanie na wodzie.
@@ -117,7 +136,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Body Surfing 🌊</h3>
+                <h3>Body Surfing</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/bodySurfHandpan.png" alt="Body Surf Handpan to catch waves print by Eni">
+                </div>
                 <p>
                     Minimalistyczny i czysty. Bez deski, bez latawca — tylko Ty i ocean.
                     Uczysz się poruszać z falą i używać ciała jako pojazdu. To zabawa, lekkość i dostępność dla każdego.
@@ -328,6 +350,9 @@
                     const resultsHTML = {
                         kite: `
                             <h3>Jesteś stworzony do kitesurfingu!</h3>
+                            <div class="image-container">
+                                <img src="../../assets/images/EniDesigne/kite.png" alt="Designe by Eni Kite with Strutts">
+                            </div>
                             <p>Lubisz techniczne wyzwania i adrenalinę. Rozwijasz się w wietrznych warunkach i kochasz latać nad falami!</p>
                             <div style="margin-top: 1rem;">
                                 <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Zarezerwuj sesję kitesurfingu</a>
@@ -340,6 +365,9 @@
                         `,
                         surf: `
                             <h3>Surfing to Twój wybór!</h3>
+                            <div class="image-container">
+                                <img src="../../assets/images/EniDesigne/surfLongboard.png" alt="Beautiful design of longboard made by Eni">
+                            </div>
                             <p>Uwielbiasz rytm, połączenie z oceanem i surową siłę natury. Jesteś w harmonii z falami.</p>
                             <div style="margin-top: 1rem;">
                                 <a href="https://wa.me/+34610017397" class="card-btn">Zarezerwuj sesję surfingu</a>
@@ -347,6 +375,9 @@
                         `,
                         wing: `
                             <h3>Pasujesz do Wing Foilingu!</h3>
+                            <div class="image-container">
+                                <img src="../../assets/images/EniDesigne/wing.png" alt="Wing Foil Design Graphic by Eni">
+                            </div>
                             <p>Jesteś nowoczesną duszą, która kocha latanie, równowagę i sporty przyszłości. Poczuj unoszenie się!</p>
                             <div style="margin-top: 1rem;">
                                 <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Zarezerwuj sesję Wing Foil</a>
@@ -359,6 +390,9 @@
                         `,
                         body: `
                             <h3>Body Surfing to Twój styl!</h3>
+                            <div class="image-container">
+                                <img src="../../assets/images/EniDesigne/bodySurfHandpan.png" alt="Body Surf Handpan to catch waves print by Eni">
+                            </div>
                             <p>Prosty, surowy i głęboko związany z naturą. Bez sprzętu — tylko Twoje ciało i fale.</p>
                             <div style="margin-top: 1rem;">
                                 <a href="https://wa.me/+34610017397" class="card-btn">Zarezerwuj sesję Body Surfingu</a>

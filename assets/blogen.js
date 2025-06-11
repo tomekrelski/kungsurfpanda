@@ -19,7 +19,7 @@ const posts = [
         url: 'blog/post3.html'
     },
     {
-        id: 'post3',
+        id: 'post4',
         category: ['surf'],
         title: ' How to Choose the Right Surfboard',
         url: 'blog/post4.html'

@@ -33,6 +33,16 @@
         #water-sport-quiz ol li:last-child {
             border-bottom: none;
         }
+
+         .image-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -76,7 +86,10 @@
             <h2>Tipos de Deportes Acuáticos y Qué Hace Único a Cada Uno 🌊</h2>
 
             <div class="info-card">
-                <h3>Kitesurf 🪁 + 🌊</h3>
+                <h3>Kitesurf</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/kite.png" alt="Designe by Eni Kite with Strutts">
+                </div>
                 <p>
                     Un deporte técnico y dinámico que combina la potencia del viento con la navegación acuática.
                     Aprendes a controlar la cometa, equilibrarte en la tabla y hacer maniobras aéreas.
@@ -88,7 +101,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Surf 🏄</h3>
+                <h3>Surf</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/surfLongboard.png" alt="Beautiful design of longboard made by Eni">
+                </div>
                 <p>
                     Se trata más del flujo y de leer las olas. No dependes de más equipo que una tabla. Es meditativo,
                     pero físicamente intenso.
@@ -99,7 +115,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Wing Foil 🪂</h3>
+                <h3>Wing Foil</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/wing.png" alt="Wing Foil Design Graphic by Eni">
+                </div>
                 <p>
                     Una mezcla entre surf y kite. Sostienes un ala y navegas con una tabla foil. Es ligero, futurista, y
                     se siente como volar.
@@ -111,7 +130,10 @@
             </div>
 
             <div class="info-card">
-                <h3>Bodysurf 🌊</h3>
+                <h3>Bodysurf</h3>
+                <div class="image-container">
+                    <img src="../../assets/images/EniDesigne/bodySurfHandpan.png" alt="Body Surf Handpan to catch waves print by Eni">
+                </div>
                 <p>
                     Minimalista y puro. Sin tabla, sin cometa — solo tú y el océano. Usas tu cuerpo para moverte con la
                     ola.
@@ -319,6 +341,9 @@
             const resultsHTML = {
                 kite: `
                                     <h3>¡Estás hecho para el Kitesurf!</h3>
+                                    <div class="image-container">
+                                        <img src="../../assets/images/EniDesigne/kite.png" alt="Designe by Eni Kite with Strutts">
+                                    </div>
                                     <p>Te gustan los desafíos técnicos y la adrenalina. Disfrutas del viento y de volar sobre las olas.</p>
                                     <div style="margin-top: 1rem;">
                                         <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Kitesurf</a>
@@ -331,6 +356,9 @@
                                 `,
                 surf: `
                                     <h3>¡El Surf es tu deporte ideal!</h3>
+                                    <div class="image-container">
+                                        <img src="../../assets/images/EniDesigne/surfLongboard.png" alt="Beautiful design of longboard made by Eni">
+                                    </div>
                                     <p>Amas el ritmo, la conexión con el océano y la fuerza pura de la naturaleza. Estás en sintonía con las olas.</p>
                                     <div style="margin-top: 1rem;">
                                         <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Surf</a>
@@ -338,6 +366,9 @@
                                 `,
                 wing: `
                                     <h3>¡Lo tuyo es el Wing Foil!</h3>
+                                    <div class="image-container">
+                                        <img src="../../assets/images/EniDesigne/wing.png" alt="Wing Foil Design Graphic by Eni">
+                                    </div>
                                     <p>Tienes un espíritu moderno y te encantan el equilibrio, la innovación y volar sobre el agua. ¡Siente el impulso!</p>
                                     <div style="margin-top: 1rem;">
                                         <a href="https://alexpastorkiteclub.com/instructors/tomek/" class="card-btn">Reserva sesión de Wing Foil</a>
@@ -350,6 +381,9 @@
                                 `,
                 body: `
                                     <h3>¡El Body Surf es tu estilo!</h3>
+                                    <div class="image-container">
+                                        <img src="../../assets/images/EniDesigne/bodySurfHandpan.png" alt="Body Surf Handpan to catch waves print by Eni">
+                                    </div>
                                     <p>Simple, auténtico y profundamente conectado a la naturaleza. No necesitas equipo — solo tu cuerpo y las olas.</p>
                                     <div style="margin-top: 1rem;">
                                         <a href="https://wa.me/+34610017397" class="card-btn">Reserva sesión de Body Surf</a>
