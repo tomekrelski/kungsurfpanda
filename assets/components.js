@@ -10,6 +10,7 @@ class KungFooter extends HTMLElement {
           <a href="https://www.instagram.com/kung_surf_panda/" target="_blank">Instagram</a>
         </div>
         <p>&copy; 2025 Kung Surf Panda</p>
+        <p>Graphic made by <a href="https://www.instagram.com/prints.by.eni/" target="_blank" style="font-weight: bold; text-decoration: underline;">prints by eni</a></p>
       </footer>
     `;
     }

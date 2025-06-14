@@ -26,6 +26,14 @@ const posts = [
         url: 'blog/post4.html'
     }, 
 
+    {
+        id: 'post4',
+        category: ['tarifa'],
+        title: 'Cztery Pory Roku w Tarifie', // Polish title
+        url: 'blog/post5.html'
+    }, 
+
+
 
 
 ];

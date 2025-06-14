@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Las cuatro estaciones en Tarifa: cómo cambian el viento, las olas y los trajes de neopreno a lo largo del año. Consejos prácticos para kitesurfistas y surfistas que planean un viaje a Tarifa.">
+    <title>Las cuatro estaciones en Tarifa | Kitesurf, Olas y Neoprenos</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        /* Animación de entrada de la sección */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Imágenes en la temporada */
+        .season img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Grid para las tarjetas: viento, olas, neoprenos */
+        .season-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        /* Tarjeta individual de temporada */
+        .season-card {
+            background-color: #ffffff;
+            /* Fondo blanco – legible en modo oscuro */
+            color: #000000;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            flex: 1 1 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 420px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Imágenes dentro de las tarjetas */
+        .season-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Títulos de las tarjetas */
+        .season-card h3 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Efecto hover – ligero aumento */
+        .season-card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Responsividad para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .season-grid {
+                flex-direction: column;
+            }
+
+            .season-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ks-nav-post lang="es" post="post5"></ks-nav-post>
+
+    <main class="blog-post">
+        <article>
+            <h1>Las cuatro estaciones en Tarifa</h1>
+
+            <section class="section">
+                <p>
+                    Tarifa es más que solo viento — es un lugar con alma. Cada día aquí se siente diferente, ya que cada
+                    viento trae su
+                    propio microclima único.
+                    Sin siquiera salir del pueblo, puedes sentir que estás en un lugar completamente distinto. Es un
+                    paraíso para gente activa —
+                    kitesurf, windsurf, surf, ciclismo, escalada, trekking — todo al alcance.
+                </p>
+                <p>
+                    Tarifa nunca es igual — el viento puede sorprenderte con su dirección, fuerza o temperatura. No se
+                    puede predecir por completo,
+                    y eso es justo lo que lo hace mágico.
+
+                    Aunque es solo un pequeño rincón de tierra que parece el fin de Europa, todo está a la vuelta de la
+                    esquina. Nunca hace demasiado calor ni demasiado frío,
+                    y en verano, el agua puede refrescarte agradablemente después de un día soleado. Hay un flujo
+                    constante de energía aquí — no solo por el viento — la gente va y viene
+                    como las estaciones: surfistas, nómadas, creativos escapando de la ciudad.
+                </p>
+                <p>
+                    Tarifa también es un punto de transición — muchos viajeros continúan hacia Marruecos desde aquí,
+                    pero dejan un pedazo
+                    de sí mismos atrás.
+                    Por eso puedes conocer gente increíble, tener conversaciones inesperadas,
+                    y sentir que todo lo que necesitas ya está aquí. Porque Tarifa puede ser un pueblo pequeño, pero
+                    tiene un corazón
+                    más grande que muchas grandes ciudades.
+                </p>
+            </section>
+
+            <section class="season section">
+                <h2>🌞 Verano (junio – agosto)</h2>
+                <p>
+                    El verano en Tarifa significa multitudes, altas temperaturas y días largos. Las playas están llenas de energía,
+                    pero pueden estar muy concurridas. Se aplican zonas para kitesurf (15.06–15.09), por lo que la práctica está
+                    más regulada con silbatos y patrullas. Los restaurantes y los aparcamientos requieren paciencia, pero el clima
+                    casi siempre es excelente. El agua está cálida y el ambiente es claramente vacacional.
+                </p>
+            
+                <div class="season-grid">
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wind.png" alt="Viento en Tarifa durante el verano">
+                        <h3>Viento</h3>
+                        <p>
+                            En verano predominan los térmicos y el Levante. Los vientos son constantes y regulares, pero la
+                            popularidad del lugar
+                            significa más gente y restricciones de zonas. Ideal para freeride y aprendizaje.
+                        </p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wave.png" alt="Olas en Tarifa durante el verano">
+                        <h3>Olas</h3>
+                        <p>
+                            Mayormente planas – perfectas para freestyle. Las marejadas son raras, pero puede haber alguna microola
+                            agradable.
+                            Para surfistas, es más temporada de longboard o sesiones matutinas con agua cristalina.
+                        </p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/shortwetsuit.png"
+                            alt="Trajes de neopreno para el verano en Tarifa">
+                        <h3>Neoprenos</h3>
+                        <p>
+                            El agua está alrededor de 20°C. Los shorties o trajes ligeros de 2/2 mm son suficientes. Las personas
+                            sensibles al frío
+                            podrían preferir 3/2 mm. El sol es fuerte, así que no olvides protección UV.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="season section">
+                <h2>🍂 Otoño (septiembre – noviembre)</h2>
+                <p>
+                    El otoño en Tarifa es una época dorada – aún cálida, pero sin las multitudes del verano. Las playas se calman y
+                    las condiciones
+                    para navegar suelen ser ideales. Aparecen las primeras marejadas más grandes y Levante y Poniente se disputan el
+                    protagonismo.
+                    El sol aún brilla intensamente y se siente el equilibrio entre verano e invierno en el aire.
+                </p>
+            
+                <div class="season-grid">
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wind.png" alt="Viento en Tarifa durante el otoño">
+                        <h3>Viento</h3>
+                        <p>Levante y Poniente se alternan con frecuencia. Los días con buen viento son habituales.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wave.png" alt="Olas en Tarifa durante el otoño">
+                        <h3>Olas</h3>
+                        <p>Comienzan a llegar marejadas más fuertes – una época excelente para surf y kite de olas.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Trajes de neopreno para el otoño en Tarifa">
+                        <h3>Neoprenos</h3>
+                        <p>El agua está entre 18–20°C. Un traje 3/2 mm es la elección clásica, pero quienes sienten más frío pueden
+                            optar por 4/3 mm.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="season section">
+                <h2>❄️ Invierno (diciembre – febrero)</h2>
+                <p>
+                    El invierno es la estación más impredecible, pero también una de las más emocionantes. Cuando llega el Levante,
+                    puede ser seco y cálido, dando la ilusión de primavera. También son posibles tormentas, olas fuertes y
+                    espectáculos
+                    naturales en estado puro. El agua está casi vacía y el ambiente es más local y agreste.
+                </p>
+            
+                <div class="season-grid">
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wind.png" alt="Viento en Tarifa durante el invierno">
+                        <h3>Viento</h3>
+                        <p>Vientos fuertes de Levante y Poniente. Días tormentosos – indicado para riders avanzados.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wave.png" alt="Olas en Tarifa durante el invierno">
+                        <h3>Olas</h3>
+                        <p>Las marejadas invernales traen las mejores condiciones para surf y kite de olas. Olas potentes y
+                            frecuentes.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Trajes de neopreno para el invierno en Tarifa">
+                        <h3>Neoprenos</h3>
+                        <p>El agua baja a 16–17°C. Normalmente un 4/3 mm es suficiente, pero para quienes son sensibles al frío se
+                            recomienda 5/4 mm.
+                            Cuando soplan vientos del norte, considera usar capucha o escarpines – puede refrescar bastante.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="season section">
+                <h2>🌸 Primavera (marzo – mayo)</h2>
+                <p>
+                    La primavera es la estación del despertar. El clima se vuelve más cálido, pero aún sin multitudes. Los días se
+                    alargan y
+                    el viento vuelve a entrar en juego. Es el momento perfecto para explorar – ideal para ciclismo, escalada y
+                    kitesurf.
+                    Las olas aún pueden sorprenderte y la energía entre la gente empieza a crecer de nuevo.
+                </p>
+            
+                <div class="season-grid">
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wind.png" alt="Viento en Tarifa durante la primavera">
+                        <h3>Viento</h3>
+                        <p>Días con más viento térmico. Levante y Poniente aparecen alternadamente.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wave.png" alt="Olas en Tarifa durante la primavera">
+                        <h3>Olas</h3>
+                        <p>Marejadas residuales del invierno y algunas sorpresas primaverales.</p>
+                    </div>
+                    <div class="season-card">
+                        <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Trajes de neopreno para la primavera en Tarifa">
+                        <h3>Neoprenos</h3>
+                        <p>El agua está entre 17–19°C. 3/2 mm es el estándar, pero los riders sensibles al frío pueden usar 4/3 mm.
+                            En días más cálidos,
+                            los shorties también son una opción.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Quiz: ¿Cuál es la mejor época para visitar Tarifa?</h2>
+                <form id="season-quiz" class="info-card" onsubmit="return showSeasonResult();">
+                    <p>Responde unas preguntas y te diremos qué estación de Tarifa te conviene más.</p>
+            
+                    <ol style="text-align:left; max-width: 600px; margin: 0 auto;">
+                        <li>
+                            ¿Qué valoras más al viajar?
+                            <br>
+                            <input type="radio" name="q1" value="summer" required> Mucho sol y ambiente vacacional<br>
+                            <input type="radio" name="q1" value="autumn"> Menos gente pero buenas condiciones<br>
+                            <input type="radio" name="q1" value="winter"> Soledad, naturaleza salvaje y pura<br>
+                            <input type="radio" name="q1" value="spring"> Un equilibrio entre calma y energía<br>
+                        </li>
+                        <li>
+                            ¿Cómo manejas las multitudes?
+                            <br>
+                            <input type="radio" name="q2" value="summer" required> Me gusta la gente y el ambiente<br>
+                            <input type="radio" name="q2" value="autumn"> Está bien si las condiciones son buenas<br>
+                            <input type="radio" name="q2" value="winter"> Prefiero tranquilidad y calma<br>
+                            <input type="radio" name="q2" value="spring"> Depende del día<br>
+                        </li>
+                        <li>
+                            ¿Qué temperatura del agua te resulta cómoda?
+                            <br>
+                            <input type="radio" name="q3" value="summer" required> Caliente, preferiblemente más de 20°C<br>
+                            <input type="radio" name="q3" value="autumn"> Aún agradable<br>
+                            <input type="radio" name="q3" value="winter"> No me importa el frío<br>
+                            <input type="radio" name="q3" value="spring"> Más frío está bien, pero no congelado<br>
+                        </li>
+                        <li>
+                            ¿Qué deportes quieres practicar en Tarifa?
+                            <br>
+                            <input type="radio" name="q4" value="summer" required> Freestyle, relax, ambiente de playa<br>
+                            <input type="radio" name="q4" value="autumn"> Kitesurf, surf, ¡todo!<br>
+                            <input type="radio" name="q4" value="winter"> Surf y condiciones salvajes<br>
+                            <input type="radio" name="q4" value="spring"> Kitesurf, trekking, ciclismo<br>
+                        </li>
+                        <li>
+                            ¿Cómo reaccionas al viento?
+                            <br>
+                            <input type="radio" name="q5" value="summer" required> Me gusta, pero no muy fuerte<br>
+                            <input type="radio" name="q5" value="autumn"> Puede ser fuerte – da potencia<br>
+                            <input type="radio" name="q5" value="winter"> Cuanto más fuerte, mejor<br>
+                            <input type="radio" name="q5" value="spring"> Me gusta la variabilidad y las sorpresas<br>
+                        </li>
+                    </ol>
+            
+                    <button class="card-btn" type="submit">Ver mi resultado</button>
+                </form>
+            
+                <div id="season-result" class="info-card" style="display:none; margin-top: 1.5rem;"></div>
+            </section>
+            
+            <section class="section card-section">
+                <div class="info-card">
+                    <h2>¿Quieres sentir la vibra de Tarifa?</h2>
+                    <p>No solo leas, planifica tu viaje, reserva una clase, usa el código de descuento y comienza tu aventura de
+                        kitesurf.</p>
+            
+                    <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Reserva con Kung Surf Panda</a>
+            
+                    <div class="discount-code">
+                        <span>Código de descuento:</span>
+                        <div class="code-box">
+                            <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
+                            <button class="copy-btn" onclick="copyCode()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <ks-share url="https://tomekrelski.github.io/kungsurfpanda/en/blog/post5.html"
+                message="🪁 Mira cómo es Tarifa durante todo el año – olas, viento y equipamiento. ¡Comparte con tu grupo!">
+            </ks-share>
+            
+            <div class="post-mag-grid">
+                <a href="post4.html" class="post-box">
+                    <div class="text">
+                        <span class="label">Anterior:</span>
+                        <h4>Cómo elegir la tabla de surf adecuada</h4>
+                    </div>
+                </a>
+            </div>
+            <ks-footer></ks-footer>
+</main>
+
+<script src="../../assets/components.js" type="module"></script>
+<script src="../../assets/script.js"></script>
+<script src="../../assets/blogen.js"> </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+<script>
+     function showSeasonResult() {
+            const form = document.getElementById("season-quiz");
+            const resultDiv = document.getElementById("season-result");
+            const formData = new FormData(form);
+            const counts = { summer: 0, autumn: 0, winter: 0, spring: 0 };
+
+            for (let value of formData.values()) {
+                counts[value]++;
+            }
+
+            // Find top season
+            let top = null, max = 0;
+            for (let season in counts) {
+                if (counts[season] > max) {
+                    max = counts[season];
+                    top = season;
+                }
+            }
+
+            const descriptions = {
+                summer: {
+                    title: "🌞 Verano – ¡Un tiempo lleno de sol y energía!",
+                    desc: "Te encanta el calor, la gente y el ambiente de playa. Tarifa en verano es tiempo de fiesta con mucha gente, pero también con excelentes condiciones para freestyle y relajarte al sol."
+                },
+                autumn: {
+                    title: "🍂 Otoño – ¡Un balance dorado entre tranquilidad y acción!",
+                    desc: "Menos gente pero aún muy buenas condiciones. El otoño es la estación favorita para los locales – surf, kite y naturaleza en su mejor momento."
+                },
+                winter: {
+                    title: "❄️ Invierno – ¡Para quienes aman la naturaleza en estado puro!",
+                    desc: "El invierno es para los valientes. Playas vacías, poderoso viento Levante y una conexión profunda con la naturaleza. Si no temes al frío, ¡esta es tu estación!"
+                },
+                spring: {
+                    title: "🌸 Primavera – ¡Nueva energía y balance perfecto!",
+                    desc: "Inicio de temporada, condiciones cambiantes y naturaleza hermosa. La primavera es ideal para personas activas que quieren sentir un poco de todo – viento, sol y calma."
+                }
+            };
+
+            resultDiv.innerHTML = `<h3>${descriptions[top].title}</h3><p>${descriptions[top].desc}</p>`;
+            resultDiv.style.display = "block";
+
+            return false; // evitar recarga del formulario
+        }
+
+
+</script>
+
+</body>
+
+</html>

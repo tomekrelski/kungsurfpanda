@@ -26,6 +26,13 @@ const posts = [
         url: 'blog/post4.html'
     },
 
+    {
+        id: 'post5',
+        category: ['tarifa'],
+        title: 'Las cuatro estaciones en Tarifa', // Translated title
+        url: 'blog/post5.html'
+    },
+
 ];
 
 // Function to render posts based on filter

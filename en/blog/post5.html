@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="The four seasons in Tarifa – how the wind, waves, and wetsuits change throughout the year. Practical tips for kitesurfers and surfers planning a trip to Tarifa.">
+    <title>The four seasons in Tarifa | Kite, Waves & Wetsuits</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+    <style>
+        /* Animacja wejścia sekcji */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Obrazki w sezonie */
+        .season img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Grid dla kart: wiatr, fale, pianki */
+        .season-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        /* Pojedyncza karta sezonu */
+        .season-card {
+            background-color: #ffffff;
+            /* Białe tło – czytelne na dark mode */
+            color: #000000;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            flex: 1 1 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 420px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Obrazki wewnątrz kart */
+        .season-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Tytuły kart */
+        .season-card h3 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Efekt hover – lekkie powiększenie */
+        .season-card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Responsywność na mniejsze ekrany */
+        @media (max-width: 768px) {
+            .season-grid {
+                flex-direction: column;
+            }
+
+            .season-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<ks-nav-post lang="en" post="post5"></ks-nav-post>
+
+<main class="blog-post">
+    <article>
+    <h1>The four seasons in Tarifa</h1>
+
+    <section class="section">
+        <p>
+            Tarifa is more than just wind — it's a place with soul. Every day here feels different, as each wind brings its
+            own unique microclimate.
+            Without even leaving town, you can feel like you're in a completely different place. It's a haven for active
+            people —
+            kitesurfing, windsurfing, surfing, cycling, climbing, trekking — all within reach.
+        </p>
+        <p>
+            Tarifa is never the same — the wind can surprise you with its direction, strength, or temperature. You can’t
+            fully predict it,
+            and that’s exactly what makes it magical.
+    
+            Even though it’s just a small corner of land that looks like the end of Europe, everything is within arm’s
+            reach. It’s never too hot, never too cold,
+            and in summer, the water can pleasantly cool you off after a sun-filled day. There’s a constant flow of energy
+            here — not just from the wind — people come and go
+            like the seasons: surfers, nomads, creatives escaping city life.
+        </p>
+        <p>
+            Tarifa is also a transition point — many travelers head on to Morocco from here, but they leave a piece of
+            themselves behind.
+            That’s why you can meet amazing people, have unexpected conversations,
+            and feel like everything you need is already right here. Because Tarifa may be a small town, but it has a heart
+            bigger than many big cities.
+        </p>
+    </section>
+
+    <section class="season section">
+        <h2>🌞 Summer (June – August)</h2>
+        <p>
+            Summer in Tarifa means crowds, high temperatures, and long days. The beaches are buzzing with energy – but they
+            can get packed. Kite zones are enforced (15.06–15.09), so riding is more regulated with whistles and patrols.
+            Restaurants and parking spots require patience, but the weather is nearly always great. The water is warm, and
+            the vibe is unmistakably holiday-like.
+        </p>
+    
+        <div class="season-grid">
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wind.png" alt="Wind in Tarifa during summer">
+                <h3>Wind</h3>
+                <p>
+                    In summer, thermals and Levante dominate. Winds are steady and consistent, but the spot’s popularity
+                    means more people and zone restrictions. Ideal for freeride and learning.
+                </p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wave.png" alt="Waves in Tarifa during summer">
+                <h3>Waves</h3>
+                <p>
+                    Mostly flat – perfect for freestyle. Swells are rare, but you might get a nice micro-wave. For surfers,
+                    it’s more of a longboard season or early morning glassy sessions.
+                </p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/shortwetsuit.png" alt="Wetsuits for summer in Tarifa">
+                <h3>Wetsuits</h3>
+                <p>
+                    Water is around 20°C. Shorties or light 2/2 mm wetsuits are enough. Cold-sensitive folks might prefer
+                    3/2 mm. The sun is strong, so don’t forget UV protection.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="season section">
+        <h2>🍂 Autumn (September – November)</h2>
+        <p>
+            Autumn in Tarifa is a golden time – still warm, but without the summer crowds. Beaches calm down, and the riding
+            conditions often become ideal. The first bigger swells might appear, and Levante and Poniente fight for
+            dominance. The sun still shines bright, and you can feel the balance between summer and winter in the air.
+        </p>
+    
+        <div class="season-grid">
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wind.png" alt="Wind in Tarifa during autumn">
+                <h3>Wind</h3>
+                <p>Levante and Poniente alternate frequently. Good wind days occur regularly.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wave.png" alt="Waves in Tarifa during autumn">
+                <h3>Waves</h3>
+                <p>Stronger swells start to arrive – a great time for surfing and wave kiting.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Wetsuits for autumn in Tarifa">
+                <h3>Wetsuits</h3>
+                <p>Water is 18–20°C. A 3/2 mm suit is a classic choice, but colder folks might opt for a 4/3 mm.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="season section">
+        <h2>❄️ Winter (December – February)</h2>
+        <p>
+            Winter is the most unpredictable season, but also one of the most exciting. When Levante comes, it can be dry
+            and warm – giving the illusion of spring. Storms, strong waves, and nature’s raw spectacle are also possible.
+            The water is almost empty, and the vibe is more local and rugged.
+        </p>
+    
+        <div class="season-grid">
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wind.png" alt="Wind in Tarifa during winter">
+                <h3>Wind</h3>
+                <p>Strong Levante and Poniente winds. Stormy days happen – suited for advanced riders.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wave.png" alt="Waves in Tarifa during winter">
+                <h3>Waves</h3>
+                <p>Winter swells bring the best surfing and wave kiting conditions. Powerful and frequent waves.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Wetsuits for winter in Tarifa">
+                <h3>Wetsuits</h3>
+                <p>Water drops to 16–17°C. 4/3 mm is usually enough, but for those sensitive to cold, 5/4 mm is recommended.
+                    When northern winds hit, consider adding a hood or booties – it can get brisk.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="season section">
+        <h2>🌸 Spring (March – May)</h2>
+        <p>
+            Spring is the awakening season. Warmer weather returns, but still without the crowds. Days get longer, and the
+            wind comes back into play. It’s the perfect time for exploring – ideal for biking, climbing, and kitesurfing.
+            Waves can still surprise you, and the energy among people starts to build again.
+        </p>
+    
+        <div class="season-grid">
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wind.png" alt="Wind in Tarifa during spring">
+                <h3>Wind</h3>
+                <p>More and more thermal wind days. Levante and Poniente appear alternately.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wave.png" alt="Waves in Tarifa during spring">
+                <h3>Waves</h3>
+                <p>Leftover winter swells and some spring surprises.</p>
+            </div>
+            <div class="season-card">
+                <img src="../../assets/images/EniDesigne/wetsuit.png" alt="Wetsuits for spring in Tarifa">
+                <h3>Wetsuits</h3>
+                <p>Water is 17–19°C. 3/2 mm is the standard, but cold-sensitive riders might wear 4/3 mm. On warmer days,
+                    shorties are an option too.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Quiz: When is the best time to visit Tarifa?</h2>
+        <form id="season-quiz" class="info-card" onsubmit="return showSeasonResult();">
+            <p>Answer a few questions, and we’ll tell you which season in Tarifa suits you best!</p>
+    
+            <ol style="text-align:left; max-width: 600px; margin: 0 auto;">
+                <li>
+                    What do you value most when traveling?
+                    <br>
+                    <input type="radio" name="q1" value="summer" required> Lots of sunshine and holiday vibes<br>
+                    <input type="radio" name="q1" value="autumn"> Fewer people but good conditions<br>
+                    <input type="radio" name="q1" value="winter"> Emptiness, wildness, and raw nature<br>
+                    <input type="radio" name="q1" value="spring"> A balance between calm and energy<br>
+                </li>
+                <li>
+                    How do you handle crowds?
+                    <br>
+                    <input type="radio" name="q2" value="summer" required> I like people and the atmosphere<br>
+                    <input type="radio" name="q2" value="autumn"> It’s okay if conditions are good<br>
+                    <input type="radio" name="q2" value="winter"> I prefer quiet and calm<br>
+                    <input type="radio" name="q2" value="spring"> Depends on the day<br>
+                </li>
+                <li>
+                    What water temperature is comfortable for you?
+                    <br>
+                    <input type="radio" name="q3" value="summer" required> Warm, preferably 20°C+<br>
+                    <input type="radio" name="q3" value="autumn"> Still pleasant<br>
+                    <input type="radio" name="q3" value="winter"> I don’t mind the cold<br>
+                    <input type="radio" name="q3" value="spring"> Cooler is okay, but not freezing<br>
+                </li>
+                <li>
+                    What sports do you want to do in Tarifa?
+                    <br>
+                    <input type="radio" name="q4" value="summer" required> Freestyle, relaxing, beach vibes<br>
+                    <input type="radio" name="q4" value="autumn"> Kitesurfing, surfing, everything!<br>
+                    <input type="radio" name="q4" value="winter"> Surfing and wild conditions<br>
+                    <input type="radio" name="q4" value="spring"> Kitesurfing, trekking, biking<br>
+                </li>
+                <li>
+                    How do you react to wind?
+                    <br>
+                    <input type="radio" name="q5" value="summer" required> I like it, but not too strong<br>
+                    <input type="radio" name="q5" value="autumn"> It can be strong – gives power<br>
+                    <input type="radio" name="q5" value="winter"> The stronger, the better<br>
+                    <input type="radio" name="q5" value="spring"> I like variability and surprises<br>
+                </li>
+            </ol>
+    
+            <button class="card-btn" type="submit">See my result</button>
+        </form>
+    
+        <div id="season-result" class="info-card" style="display:none; margin-top: 1.5rem;"></div>
+    </section>
+    
+    <section class="section card-section">
+        <div class="info-card">
+            <h2>Want to feel the vibe of Tarifa?</h2>
+            <p>Don’t just read – plan your trip, book a lesson, use the discount code, and start your kite adventure.</p>
+    
+            <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Book with Kung Surf Panda</a>
+    
+            <div class="discount-code">
+                <span>Discount code:</span>
+                <div class="code-box">
+                    <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
+                    <button class="copy-btn" onclick="copyCode()">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <ks-share url="https://tomekrelski.github.io/kungsurfpanda/en/blog/post5.html"
+        message="🪁 Check out what Tarifa looks like all year round – waves, wind, and gear. Share with your crew!">
+    </ks-share>
+    
+    <div class="post-mag-grid">
+        <a href="post4.html" class="post-box">
+            <div class="text">
+                <span class="label">Previous:</span>
+                <h4>How to Choose the Right Surfboard</h4>
+            </div>
+        </a>
+    </div>
+    <ks-footer></ks-footer>
+</main>
+    
+    <script src="../../assets/components.js" type="module"></script>
+    <script src="../../assets/script.js"></script>
+    <script src="../../assets/blogen.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <script>
+        function showSeasonResult() {
+            const form = document.getElementById("season-quiz");
+            const resultDiv = document.getElementById("season-result");
+            const formData = new FormData(form);
+            const counts = { summer: 0, autumn: 0, winter: 0, spring: 0 };
+
+            for (let value of formData.values()) {
+                counts[value]++;
+            }
+
+            // Find top season
+            let top = null, max = 0;
+            for (let season in counts) {
+                if (counts[season] > max) {
+                    max = counts[season];
+                    top = season;
+                }
+            }
+
+            const descriptions = {
+                summer: {
+                    title: "🌞 Summer – A time full of sun and energy!",
+                    desc: "You love warmth, crowds, and beach vibes. Tarifa in summer is party time with lots of people, but also great conditions for freestyle and chilling in the sun."
+                },
+                autumn: {
+                    title: "🍂 Autumn – A golden balance between chill and action!",
+                    desc: "Fewer crowds but still great conditions. Autumn is the favorite season for local riders – surf, kite, and nature at their best."
+                },
+                winter: {
+                    title: "❄️ Winter – For those who love rawness!",
+                    desc: "Winter is for tough ones. Empty spots, powerful Levante wind, and a deep connection with nature. If you’re not afraid of cold – this is your season!"
+                },
+                spring: {
+                    title: "🌸 Spring – New energy and perfect balance!",
+                    desc: "Season start, changing conditions, and beautiful nature. Spring is the ideal time for active people who want to feel a bit of everything – wind, sun, and calm."
+                }
+            };
+
+            resultDiv.innerHTML = `<h3>${descriptions[top].title}</h3><p>${descriptions[top].desc}</p>`;
+            resultDiv.style.display = "block";
+
+            return false; // prevent form reload
+        }
+
+    </script>
+
+</body>
+
+</html>

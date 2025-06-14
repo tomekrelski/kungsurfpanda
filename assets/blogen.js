@@ -24,6 +24,13 @@ const posts = [
         title: ' How to Choose the Right Surfboard',
         url: 'blog/post4.html'
     }, 
+
+    {
+        id: 'post5',
+        category: ['tarifa'],
+        title: 'The four seasons in Tarifa',
+        url: 'blog/post5.html'
+    }, 
  
 ];
 
