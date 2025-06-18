@@ -27,7 +27,7 @@
 }
 
 /* Blog Posts Grid */
-.posts-container {
+.posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -116,20 +116,20 @@
 
 /* Responsive: show 4 posts side by side on large screens */
 @media (min-width: 900px) {
-  .posts-container {
+  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* Responsive: show 2 posts side by side on small screens */
 @media (max-width: 900px) {
-  .posts-container {
+  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .posts-container {
+  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container {
     grid-template-columns: 1fr;
   }
 }

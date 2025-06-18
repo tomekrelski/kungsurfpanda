@@ -7,6 +7,7 @@
     <meta name="description" content="I'm Kung Surf Panda, a kitesurf, surf and meditation instructor based in Tarifa. I offer personalized lessons and mindful ocean experiences for individuals and small groups. Let's ride, surf, and breathe together.">
     <title>Kitesurf, Surf and Meditation Lessons in Tarifa | Kung Surf Panda</title>
     <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../assets/blog.css" />
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
 </head>
 
@@ -21,19 +22,22 @@
 
     <div class="section card-section two-cards-row">
         <div class="info-card">
-            <p>Join my WhatsApp group for training updates!</p>
-            <a href="https://chat.whatsapp.com/C2qd9zas8wWB2IAXCki95r" target="_blank" class="card-btn">Join WhatsApp
-                Group</a>
+            <p>Join the group for training in <strong>Tarifa</strong>, designed for the kitesurfer or surfer. Focus on mobility, balance, concentration, and dynamic strength to boost your performance on and off the water.</p>
+            <a href="https://chat.whatsapp.com/C2qd9zas8wWB2IAXCki95r" target="_blank" class="card-btn">
+                Join WhatsApp Group
+            </a>
         </div>
     
         <div class="info-card">
-            <p>Book kitesurf lessons at <strong>Alex Pastor Kite Club</strong> with a discount!</p>
+            <p>Book your kitesurf lesson with <strong>Kung Surf Panda</strong>, an experienced instructor at <strong>Alex Pastor
+                    Kite Club</strong> and get a discount!</p>
             <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Book Lesson</a>
             <div class="discount-code">
                 <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
                 <button class="copy-btn" onclick="copyCode()">Copy</button>
             </div>
         </div>
+
     </div>
 
 
@@ -41,11 +45,19 @@
 
     <ks-gallery></ks-gallery>
 
+    <h2>Latest Blog Posts</h2>
+    <div class="latest-posts-container" id="latestPostsContainer">
+        <!-- Latest blog posts will be injected here -->
+    </div>
+
+
 
     <ks-footer></ks-footer>
 
     <script src="../assets/components.js" type="module"></script>
     <script src="../assets/script.js"></script>
+    <script src="../assets/blogen.js"> </script>
+
 </body>
 
 </html>

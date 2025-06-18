@@ -7,6 +7,7 @@
     <title>Clases de Kitesurf, Surf y Meditación en Tarifa | Kung Surf Panda</title>
     <meta name="description" content="Soy Tomek, instructor de surf, kitesurf y meditación en Tarifa. Ofrezco clases personalizadas y experiencias conscientes en el mar para individuos y grupos reducidos.">
     <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../assets/blog.css" />
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
 </head>
 
@@ -23,30 +24,41 @@
 
     <div class="section card-section two-cards-row">
         <div class="info-card">
-            <p>¡Únete a mi grupo de WhatsApp para recibir actualizaciones sobre los entrenamientos!</p>
-            <a href="https://chat.whatsapp.com/C2qd9zas8wWB2IAXCki95r" target="_blank" class="card-btn">Unirse al grupo de
-                WhatsApp</a>
+            <p>Únete al grupo para entrenamientos en <strong>Tarifa</strong>, pensado para kitesurfer y surfer. Nos enfocamos en
+                movilidad, equilibrio, concentración y fuerza dinámica para mejorar tu rendimiento dentro y fuera del agua.</p>
+            <a href="https://chat.whatsapp.com/C2qd9zas8wWB2IAXCki95r" target="_blank" class="card-btn">
+                Únete al grupo en WhatsApp
+            </a>
         </div>
-    
         <div class="info-card">
-            <p>¡Reserva clases de kitesurf en <strong>Alex Pastor Kite Club</strong> con descuento!</p>
+            <p>Reserva tu clase de kitesurf con <strong>Kung Surf Panda</strong>, un instructor con experiencia en <strong>Alex
+                    Pastor Kite Club</strong> ¡y obtén un descuento!</p>
             <a href="https://alexpastorkiteclub.com/es/instructores/tomek/" class="card-btn">Reservar clase</a>
             <div class="discount-code">
                 <input type="text" id="discountCode" value="KUNGSURFPANDA" readonly />
                 <button class="copy-btn" onclick="copyCode()">Copiar</button>
             </div>
         </div>
+
     </div>
 
 
 
     <ks-gallery></ks-gallery>
 
+    <h2>Los Últimos Artículos del Blog</h2>
+    <div class="latest-posts-container" id="latestPostsContainer">
+        <!-- Aquí se mostrarán los artículos más recientes del blog -->
+    </div>
+
+
 
     <ks-footer></ks-footer>
 
     <script src="../assets/components.js" type="module"></script>
     <script src="../assets/script.js"></script>
+    <script src="../assets/bloges.js"> </script>
+
 </body>
 
 </html>
