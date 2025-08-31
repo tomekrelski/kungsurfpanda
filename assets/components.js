@@ -95,16 +95,17 @@ class KungNav extends HTMLElement {
       }
     }
 
-    // Add dark mode toggle button
+    // Navbar HTML
     this.innerHTML = `
-      <nav>
-        <a href="index.html" class="logo">Kung Surf Panda</a>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="../../assets/images/logo/Panda4.svg" alt="Logo" class="logo-img" />
+        </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
         </div>
-
         <ul class="nav-links">
           ${navLinks}
           ${langLinks}
@@ -113,22 +114,29 @@ class KungNav extends HTMLElement {
       </nav>
     `;
 
-    // Handle dark mode logic
     const toggleButton = this.querySelector('#themeToggle');
+    const logoImg = this.querySelector('.logo-img');
+
+    // Update UI: button text + logo swap
     const updateThemeUI = () => {
       const isDark = document.body.classList.contains('reverse-theme');
       toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
+      logoImg.src = isDark
+        ? '../../assets/images/logo/Panda2.svg' // dark mode logo
+        : '../../assets/images/logo/Panda4.svg'; // light mode logo
     };
 
     // Toggle dark mode on button click
     toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('reverse-theme');
-      const isDark = document.body.classList.contains('reverse-theme');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      localStorage.setItem(
+        'theme',
+        document.body.classList.contains('reverse-theme') ? 'dark' : 'light'
+      );
       updateThemeUI();
     });
 
-    // On load: apply saved theme
+    // On page load: apply saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('reverse-theme');
@@ -136,6 +144,7 @@ class KungNav extends HTMLElement {
     updateThemeUI();
   }
 }
+
 
 customElements.define('ks-nav', KungNav);
 
@@ -171,10 +180,12 @@ class KungNavPost extends HTMLElement {
       }
     }
 
-    // Add HTML with theme toggle
+    // Add navbar HTML
     this.innerHTML = `
-      <nav>
-        <a href="../index.html" class="logo">Kung Surf Panda</a>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="../../assets/images/logo/Panda4.svg" alt="Logo" class="logo-img" />
+        </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -185,7 +196,7 @@ class KungNavPost extends HTMLElement {
           <li><a href="../kite.html">Kite</a></li>
           <li><a href="../surf.html">Surf</a></li>
           <li><a href="../prana.html">Prana</a></li>
-          <li><a href="../prana.html">Tarifa</a></li>
+          <li><a href="../tarifa.html">Tarifa</a></li>
           <li><a href="../blog.html">Blog</a></li>
           ${langLinks}
           <li><a href="#" id="themeToggle" class="lang-link" role="button">🌑 Dark Mode</a></li>
@@ -193,21 +204,30 @@ class KungNavPost extends HTMLElement {
       </nav>
     `;
 
-    // Theme toggle logic
     const toggleButton = this.querySelector('#themeToggle');
+    const logoImg = this.querySelector('.logo-img'); // select logo
+
+    // Update button text and logo
     const updateThemeUI = () => {
       const isDark = document.body.classList.contains('reverse-theme');
       toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
+      logoImg.src = isDark
+        ? '../../assets/images/logo/Panda2.svg' // dark mode logo
+        : '../../assets/images/logo/Panda4.svg'; // light mode logo
     };
 
+    // Toggle dark mode on click
     toggleButton.addEventListener('click', (e) => {
       e.preventDefault();
       document.body.classList.toggle('reverse-theme');
-      const isDark = document.body.classList.contains('reverse-theme');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      localStorage.setItem(
+        'theme',
+        document.body.classList.contains('reverse-theme') ? 'dark' : 'light'
+      );
       updateThemeUI();
     });
 
+    // Apply saved theme on page load
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('reverse-theme');
