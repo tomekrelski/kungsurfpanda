@@ -99,7 +99,7 @@ class KungNav extends HTMLElement {
     this.innerHTML = `
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="../../assets/images/logo/Panda4.svg" alt="Logo" class="logo-img" />
+          <img src="../assets/images/logo/Panda4.svg" alt="Logo" class="logo-img" />
         </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
@@ -122,8 +122,8 @@ class KungNav extends HTMLElement {
       const isDark = document.body.classList.contains('reverse-theme');
       toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
       logoImg.src = isDark
-        ? '../../assets/images/logo/Panda2.svg' // dark mode logo
-        : '../../assets/images/logo/Panda4.svg'; // light mode logo
+        ? '../assets/images/logo/Panda2.svg' // dark mode logo
+        : '../assets/images/logo/Panda4.svg'; // light mode logo
     };
 
     // Toggle dark mode on button click
