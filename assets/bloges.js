@@ -35,6 +35,12 @@ const posts = [
         title: 'Las cuatro estaciones en Tarifa', // Translated title
         url: 'blog/post5.html'
     },
+    {
+        id: 'post6',
+        category: ['kite','surf'],
+        title: 'Del Equilibrio al Caos: Reto de 8 Niveles', // Translated title
+        url: 'blog/post6.html'
+    },
 
 ];
 
@@ -48,7 +54,7 @@ function renderPostsToContainer(postList, containerId) {
 
     container.innerHTML = '';
 
-    postList.forEach((post) => {
+    postList.slice().reverse().forEach((post) => {
         const postCard = document.createElement('div');
         postCard.classList.add('post-card');
         postCard.setAttribute('data-category', post.category.join(', '));
@@ -64,6 +70,7 @@ function renderPostsToContainer(postList, containerId) {
         container.appendChild(postCard);
     });
 }
+
 
 // ===================
 // 3. Filtered Renderer

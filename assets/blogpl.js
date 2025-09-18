@@ -30,13 +30,17 @@ const posts = [
     }, 
 
     {
-        id: 'post4',
+        id: 'post5',
         category: ['tarifa'],
         title: 'Cztery Pory Roku w Tarifie', // Polish title
         url: 'blog/post5.html'
+    },
+    {
+        id: 'post6',
+        category: ['kite','surf'],
+        title: 'Od Równowagi do Chaosu: 8 Poziomów Wyzwania', // Polish title
+        url: 'blog/post6.html'
     }, 
-
-
 
 
 ];
@@ -50,7 +54,7 @@ function renderPostsToContainer(postList, containerId) {
 
     container.innerHTML = '';
 
-    postList.forEach((post) => {
+    postList.slice().reverse().forEach((post) => {
         const postCard = document.createElement('div');
         postCard.classList.add('post-card');
         postCard.setAttribute('data-category', post.category.join(', '));
