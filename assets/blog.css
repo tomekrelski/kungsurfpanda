@@ -1,33 +1,44 @@
-/* BLOGG */
-
-/* Filter Buttons Container */
+/* === Blog Filter Buttons (Unified with Collection Buttons) === */
 .filter-buttons {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 35px;
+  padding: 0 10px;
 }
 
 .filter-buttons button {
   background-color: #fff;
   color: #000;
   border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 12px 22px;
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 120px;
+  text-align: center;
 }
 
 .filter-buttons button.active,
 .filter-buttons button:hover {
   background-color: #000;
   color: #fff;
-  border: 2px solid #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 
-/* Blog Posts Grid */
-.posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container{
+/* === Blog Posts Grid === */
+.posts-container,
+.kite-posts-container,
+.surf-posts-container,
+.prana-posts-container,
+.tarifa-posts-container,
+.latest-posts-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -35,54 +46,58 @@
   margin: 0 auto;
 }
 
-/* Post card */
+/* === Post Card === */
 .post-card {
   cursor: pointer;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #222;
+  border-radius: 12px;
   min-height: 180px;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: 
-    background-color 0.3s ease, 
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Even posts: black bg, white text */
+/* Dark/Light Alternating Posts */
 .post-card:nth-child(even) {
   background-color: #000;
   color: #fff;
-  box-shadow: 0 0 12px #555;
 }
 
-/* Odd posts: white bg, black text */
 .post-card:nth-child(odd) {
   background-color: #fff;
   color: #000;
-  box-shadow: 0 0 12px #ccc;
 }
 
-/* Hover: invert background and text colors */
+/* Hover Lift & Invert Colors */
+.post-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
 .post-card:nth-child(even):hover {
   background-color: #fff;
   color: #000;
-  box-shadow: 0 0 15px #000;
-  transform: scale(1.03);
 }
 
 .post-card:nth-child(odd):hover {
   background-color: #000;
   color: #fff;
-  box-shadow: 0 0 15px #fff;
-  transform: scale(1.03);
 }
 
-/* Post category colors */
+/* === Typography === */
+.post-category {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  opacity: 0.8;
+}
+
 .post-card:nth-child(even) .post-category {
   color: #ccc;
 }
@@ -99,37 +114,43 @@
   color: #ccc;
 }
 
-.post-category {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 1.2px;
-}
-
-
 .post-title {
+  font-family: 'Inter', Arial, sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   margin-top: 10px;
 }
 
-/* Responsive: show 4 posts side by side on large screens */
+/* === Responsive Layout === */
 @media (min-width: 900px) {
-  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container {
+  .posts-container,
+  .kite-posts-container,
+  .surf-posts-container,
+  .prana-posts-container,
+  .tarifa-posts-container,
+  .latest-posts-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Responsive: show 2 posts side by side on small screens */
 @media (max-width: 900px) {
-  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container{
+  .posts-container,
+  .kite-posts-container,
+  .surf-posts-container,
+  .prana-posts-container,
+  .tarifa-posts-container,
+  .latest-posts-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .posts-container, .kite-posts-container, .surf-posts-container, .prana-posts-container, .tarifa-posts-container, .latest-posts-container {
+  .posts-container,
+  .kite-posts-container,
+  .surf-posts-container,
+  .prana-posts-container,
+  .tarifa-posts-container,
+  .latest-posts-container {
     grid-template-columns: 1fr;
   }
 }
