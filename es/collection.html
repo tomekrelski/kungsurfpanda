@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Colección | Kung Surf Panda</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../assets/collection.css" />
+</head>
+
+<body>
+    <ks-nav page="collection" lang="es"></ks-nav>
+
+    <h1 id="collectionTitle">Mi Colección</h1>
+
+    <!-- Filter Buttons -->
+    <div class="collection-filters">
+        <button class="active" data-filter="all" id="filterAll">Todo</button>
+        <button data-filter="Deportes" id="filterSports">Deportes</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="collection-container" id="collectionContainer"></div>
+
+    <ks-footer></ks-footer>
+
+    <script src="../assets/components.js" type="module"></script>
+    <script>
+        const lang = "es"; // Only Spanish
+
+        const texts = {
+            es: {
+                buy: 'Comprar:',
+                readMore: 'Leer Más:'
+            }
+        };
+
+        let products = [];
+
+        // Fetch JSON
+        fetch('collection/collections.json')
+            .then(res => res.json())
+            .then(data => {
+                products = data;
+                renderProducts(products);
+            });
+
+        function renderProducts(items) {
+            const container = document.getElementById("collectionContainer");
+            container.innerHTML = "";
+
+            items.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "product-card";
+
+                let buyLinksHtml = "";
+                if (item.buyLinks && item.buyLinks.length > 0) {
+                    buyLinksHtml = item.buyLinks.map(link =>
+                        `<a href="${link.url}" target="_blank">${link.label}</a>`
+                    ).join(" | ");
+                }
+
+                let blogPostsHtml = "";
+                if (item.blogPosts && item.blogPosts.length > 0) {
+                    blogPostsHtml = item.blogPosts.map(post =>
+                        `<a href="${post.url}">${post.title}</a>`
+                    ).join("<br>");
+                }
+
+                card.innerHTML = `
+                    <a href="${item.buyLinks && item.buyLinks[0] ? item.buyLinks[0].url : '#'}" target="_blank">
+                        <img src="${item.image}" alt="${item.name}">
+                    </a>
+                    <div class="product-category">${item.category}</div>
+                    <div class="product-title">${item.name}</div>
+                    <p>${item.description}</p>
+                    <div class="product-links">
+                        <strong>${texts[lang].buy}</strong> ${buyLinksHtml}
+                    </div>
+                    <div class="related-blogs">
+                        <strong>${texts[lang].readMore}</strong><br>${blogPostsHtml}
+                    </div>
+                    <collection-share 
+                        share-links='${JSON.stringify(item.buyLinks)}' 
+                        message="💥 ¡Mira ${item.name}!"></collection-share>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Filtering
+        document.querySelectorAll(".collection-filters button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".collection-filters button").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const filter = btn.dataset.filter;
+                if (filter === "all") {
+                    renderProducts(products);
+                } else {
+                    renderProducts(products.filter(p => p.category === filter));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -73,13 +73,21 @@ class KungNav extends HTMLElement {
       es: 'Inicio'
     };
 
+    const collectionLabels = {
+      en: 'Collection',
+      pl: 'Kolekcja',
+      es: 'Colección'
+    };
+
     const navPages = [
       { name: homeLabels[lang] || 'Home', page: 'index' },
       { name: 'Kite', page: 'kite' },
       { name: 'Surf', page: 'surf' },
       { name: 'Prana', page: 'prana' },
       { name: 'Tarifa', page: 'tarifa' },
-      { name: 'Blog', page: 'blog' }
+      { name: 'Blog', page: 'blog' },
+      { name: collectionLabels[lang] || 'Collection', page: 'collection' }
+
     ];
 
     const navLinks = navPages
@@ -158,20 +166,12 @@ class KungNavPost extends HTMLElement {
     const post = this.getAttribute('post') || 'post1';
 
     const langPaths = {
-      en: {
-        pl: `../../pl/blog/${post}.html`,
-        es: `../../es/blog/${post}.html`
-      },
-      pl: {
-        en: `../../en/blog/${post}.html`,
-        es: `../../es/blog/${post}.html`
-      },
-      es: {
-        en: `../../en/blog/${post}.html`,
-        pl: `../../pl/blog/${post}.html`
-      }
+      en: { pl: `../../pl/blog/${post}.html`, es: `../../es/blog/${post}.html` },
+      pl: { en: `../../en/blog/${post}.html`, es: `../../es/blog/${post}.html` },
+      es: { en: `../../en/blog/${post}.html`, pl: `../../pl/blog/${post}.html` }
     };
 
+    // Language links for navbar
     let langLinks = '';
     if (langPaths[lang]) {
       for (const [otherLang, href] of Object.entries(langPaths[lang])) {
@@ -179,6 +179,15 @@ class KungNavPost extends HTMLElement {
         langLinks += `<li><a href="${href}" class="lang-link">${label}</a></li>`;
       }
     }
+
+    // Translate specific page labels
+    const translations = {
+      Home: { en: 'Home', pl: 'Strona główna', es: 'Inicio' },
+      Collection: { en: 'Collection', pl: 'Kolekcja', es: 'Colección' }
+    };
+
+    const homeLabel = translations.Home[lang] || 'Home';
+    const collectionLabel = translations.Collection[lang] || 'Collection';
 
     // Add navbar HTML
     this.innerHTML = `
@@ -192,31 +201,31 @@ class KungNavPost extends HTMLElement {
           <span></span>
         </div>
         <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">${homeLabel}</a></li>
           <li><a href="../kite.html">Kite</a></li>
           <li><a href="../surf.html">Surf</a></li>
           <li><a href="../prana.html">Prana</a></li>
           <li><a href="../tarifa.html">Tarifa</a></li>
           <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../collection.html">${collectionLabel}</a></li>
           ${langLinks}
           <li><a href="#" id="themeToggle" class="lang-link" role="button">🌑 Dark Mode</a></li>
         </ul>
       </nav>
     `;
 
+    // Theme toggle functionality
     const toggleButton = this.querySelector('#themeToggle');
-    const logoImg = this.querySelector('.logo-img'); // select logo
+    const logoImg = this.querySelector('.logo-img');
 
-    // Update button text and logo
     const updateThemeUI = () => {
       const isDark = document.body.classList.contains('reverse-theme');
       toggleButton.textContent = isDark ? '🌕 Light Mode' : '🌑 Dark Mode';
       logoImg.src = isDark
-        ? '../../assets/images/logo/Panda2.svg' // dark mode logo
-        : '../../assets/images/logo/Panda4.svg'; // light mode logo
+        ? '../../assets/images/logo/Panda2.svg'
+        : '../../assets/images/logo/Panda4.svg';
     };
 
-    // Toggle dark mode on click
     toggleButton.addEventListener('click', (e) => {
       e.preventDefault();
       document.body.classList.toggle('reverse-theme');
@@ -227,11 +236,8 @@ class KungNavPost extends HTMLElement {
       updateThemeUI();
     });
 
-    // Apply saved theme on page load
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('reverse-theme');
-    }
+    if (savedTheme === 'dark') document.body.classList.add('reverse-theme');
     updateThemeUI();
   }
 }
@@ -255,6 +261,10 @@ class KungShare extends HTMLElement {
             <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a>
             <a href="https://wa.me/?text=${encodeURIComponent(url)}" target="_blank">WhatsApp</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}" target="_blank">LinkedIn</a>
+            <button id="copyLinkBtn" style="margin-top:10px; padding:6px 12px; border-radius:6px; border:none; cursor:pointer; background:#000; color:#fff;">
+              Copy Link
+            </button>
+            <span id="copyFeedback" style="display:none; margin-left:8px; font-size:0.9rem; color:green;">✅ Copied!</span>
           </div>
         </div>
       </div>
@@ -270,7 +280,94 @@ class KungShare extends HTMLElement {
     window.addEventListener("click", e => {
       if (e.target === modal) modal.style.display = "none";
     });
+
+    // Copy Link functionality
+    const copyBtn = this.querySelector("#copyLinkBtn");
+    const feedback = this.querySelector("#copyFeedback");
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        feedback.style.display = "inline";
+        setTimeout(() => {
+          feedback.style.display = "none";
+        }, 2000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+        copyBtn.textContent = "❌ Error";
+      }
+    });
   }
 }
 
+
+
 customElements.define('ks-share', KungShare);
+
+
+class CollectionShare extends HTMLElement {
+  connectedCallback() {
+    const shareLinks = JSON.parse(this.getAttribute('share-links') || '[]');
+    const defaultMessage = this.getAttribute('message') || '💬 Check this product!';
+    let currentUrl = shareLinks.length ? shareLinks[0].url : window.location.href;
+
+    this.innerHTML = `
+      <div class="collection-share" style="margin-top:8px; display:flex; justify-content: center; gap:8px;">
+        ${shareLinks.length > 1 ? `<select id="shareSelect" style="padding:4px 6px; font-size:0.85rem;">${shareLinks.map(link => `<option value="${link.url}">${link.label}</option>`).join('')}</select>` : ''}
+        <img src="../../assets/images/share.png" alt="Share" id="shareBtn" style="cursor:pointer; width:24px; height:24px;" />
+      </div>
+
+      <div id="shareModal" class="modal-share" style="display:none;">
+        <div class="modal-share-content">
+          <span class="modal-share-close" style="cursor:pointer; font-size:1.5rem;">&times;</span>
+          <p>${defaultMessage}</p>
+          <div class="social-share" style="display:flex; flex-direction:column; gap:8px;">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}" target="_blank">Facebook</a>
+            <a href="https://wa.me/?text=${encodeURIComponent(currentUrl)}" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}" target="_blank">LinkedIn</a>
+            <button id="copyLinkBtn" style="padding:6px 12px; border-radius:6px; border:none; cursor:pointer; background:#000; color:#fff;">
+              Copy Link
+            </button>
+            <span id="copyFeedback" style="display:none; font-size:0.9rem; color:green;">✅ Copied!</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const modal = this.querySelector("#shareModal");
+    const btn = this.querySelector("#shareBtn");
+    const closeBtn = this.querySelector(".modal-share-close");
+    const copyBtn = this.querySelector("#copyLinkBtn");
+    const feedback = this.querySelector("#copyFeedback");
+
+    btn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(currentUrl);
+        feedback.style.display = "inline";
+        setTimeout(() => feedback.style.display = "none", 2000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+        copyBtn.textContent = "❌ Error";
+      }
+    });
+
+    if (shareLinks.length > 1) {
+      const select = this.querySelector("#shareSelect");
+      select.addEventListener("change", () => {
+        currentUrl = select.value;
+        const links = this.querySelectorAll(".social-share a");
+        links[0].href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+        links[1].href = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
+        links[2].href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`;
+      });
+    }
+  }
+}
+
+customElements.define('collection-share', CollectionShare);
+
+

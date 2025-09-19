@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Nunchaku",
+        "category": "Sport",
+        "description": "Narzędzie sztuk walki rozwijające rytm, koordynację i płynność ruchu.",
+        "image": "https://m.media-amazon.com/images/I/61EDqZpi7FL._AC_SX679_.jpg",
+        "buyLinks": [
+            {
+                "label": "Amazon.es",
+                "url": "https://amzn.to/4n7RLQI"
+            }
+        ],
+        "blogPosts": [
+            {
+                "title": "Od równowagi do chaosu: wyzwanie 8 poziomów",
+                "url": "blog/post6.html"
+            }
+        ]
+    },
+    {
+        "name": "Piłka bokserska refleks",
+        "category": "Sport",
+        "description": "Trenuje szybkość, czas reakcji i koncentrację. Utrzymuje Cię w gotowości.",
+        "image": "https://m.media-amazon.com/images/I/61MdrlmRbwL._AC_SX425_.jpg",
+        "buyLinks": [
+            {
+                "label": "Amazon.es",
+                "url": "https://amzn.to/47IgnLa"
+            }
+        ],
+        "blogPosts": [
+            {
+                "title": "Od równowagi do chaosu: wyzwanie 8 poziomów",
+                "url": "blog/post6.html"
+            }
+        ]
+    },
+    {
+        "name": "Deska równoważna",
+        "category": "Sport",
+        "description": "Buduje siłę core i równowagę. Idealna dla surferów i riderów.",
+        "image": "https://m.media-amazon.com/images/I/81XI+XM23tL._AC_SX425_.jpg",
+        "buyLinks": [
+            {
+                "label": "Amazon.es",
+                "url": "https://amzn.to/47MTXsg"
+            }
+        ],
+        "blogPosts": [
+            {
+                "title": "Od równowagi do chaosu: wyzwanie 8 poziomów",
+                "url": "blog/post6.html"
+            }
+        ]
+    }
+]
