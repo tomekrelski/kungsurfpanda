@@ -314,7 +314,7 @@ class CollectionShare extends HTMLElement {
     this.innerHTML = `
       <div class="collection-share" style="margin-top:8px; display:flex; justify-content: center; gap:8px;">
         ${shareLinks.length > 1 ? `<select id="shareSelect" style="padding:4px 6px; font-size:0.85rem;">${shareLinks.map(link => `<option value="${link.url}">${link.label}</option>`).join('')}</select>` : ''}
-        <img src="../../assets/images/share.png" alt="Share" id="shareBtn" style="cursor:pointer; width:24px; height:24px;" />
+        <img src="../assets/images/share.png" alt="Share" id="shareBtn" style="cursor:pointer; width:24px; height:24px;" />
       </div>
 
       <div id="shareModal" class="modal-share" style="display:none;">
